@@ -1,14 +1,23 @@
 import os
 import re
 import smtplib
-import sys
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from playwright.sync_api import sync_playwright
 
 TARGET_URL = "https://prometheusapartments.com/ca/sunnyvale-apartments/spruce"
 GMAIL_USER = "saifeemustafaq@gmail.com"
+SNAPSHOT_PATH = "scraper/snapshot.txt"
 
+# Set as a GitHub repo variable (Settings → Variables → Actions):
+#   TRACKING_MODE = bmr      → only email when BMR/Income Limit unit appears
+#   TRACKING_MODE = changes  → email whenever anything on the page changes
+TRACKING_MODE = os.environ.get("TRACKING_MODE", "bmr").strip().lower()
+
+
+# ---------------------------------------------------------------------------
+# Scraping
+# ---------------------------------------------------------------------------
 
 def scrape_page():
     with sync_playwright() as p:
@@ -26,29 +35,37 @@ def scrape_page():
             pass
 
         page.wait_for_timeout(4000)
-        content = page.inner_text("body")
+
+        # Prefer just the pricing section to reduce noise from unrelated page areas
+        try:
+            content = page.locator("#pricingAndFloorPlanBox").inner_text(timeout=5000)
+        except Exception:
+            content = page.inner_text("body")
+
         browser.close()
         return content
 
 
-def find_bmr_plans(text):
-    """
-    Split page text into per-plan blocks.
-    The Spruce site only lists available units, so any block containing
-    'BMR' or 'Income Limit' means that unit is available right now.
-    """
-    sections = re.split(r'(?=\bPlan )', text)
+def normalize(text):
+    """Strip per-line whitespace and blank lines for stable comparison."""
+    lines = [line.strip() for line in text.splitlines()]
+    return "\n".join(line for line in lines if line)
 
+
+# ---------------------------------------------------------------------------
+# BMR detection
+# ---------------------------------------------------------------------------
+
+def find_bmr_plans(text):
+    sections = re.split(r'(?=\bPlan )', text)
     found = []
     for section in sections:
         has_bmr = "BMR" in section
         has_income = "Income Limit" in section
-
         if not has_bmr and not has_income:
             continue
-
         first_line = next(
-            (line.strip() for line in section.splitlines() if line.strip()),
+            (l.strip() for l in section.splitlines() if l.strip()),
             section[:80]
         )
         found.append({
@@ -57,7 +74,6 @@ def find_bmr_plans(text):
             "has_bmr":    has_bmr,
             "has_income": has_income,
         })
-
     return found
 
 
@@ -69,76 +85,131 @@ def classify(plan):
     return "Income Limit"
 
 
+# ---------------------------------------------------------------------------
+# Snapshot (change detection)
+# ---------------------------------------------------------------------------
+
+def load_snapshot():
+    if os.path.exists(SNAPSHOT_PATH):
+        with open(SNAPSHOT_PATH) as f:
+            return f.read()
+    return None
+
+
+def save_snapshot(text):
+    with open(SNAPSHOT_PATH, "w") as f:
+        f.write(text)
+
+
+def compute_diff(old_text, new_text):
+    old_lines = old_text.splitlines() if old_text else []
+    new_lines = new_text.splitlines()
+    old_set = set(old_lines)
+    new_set = set(new_lines)
+    added   = [l for l in new_lines if l not in old_set]
+    removed = [l for l in old_lines if l not in new_set]
+    return added, removed
+
+
+# ---------------------------------------------------------------------------
+# Email
+# ---------------------------------------------------------------------------
+
 def send_email(subject, body):
     app_password = os.environ.get("GMAIL_APP_PASSWORD", "")
     if not app_password:
         print("ERROR: GMAIL_APP_PASSWORD secret is not set.")
         return
-
     msg = MIMEMultipart()
     msg["From"] = GMAIL_USER
     msg["To"] = GMAIL_USER
     msg["Subject"] = subject
     msg.attach(MIMEText(body, "plain"))
-
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
         server.login(GMAIL_USER, app_password)
         server.send_message(msg)
+    print(f"  Email sent: {subject}")
 
 
-def send_alert(plans):
+def send_bmr_alert(plans):
     count = len(plans)
     unit_word = "unit" if count == 1 else "units"
-
     plan_lines = "\n\n".join(
         f"  [{classify(p)}] {p['name']}\n  {p['details'][:300]}"
         for p in plans
     )
-
-    subject = f"BMR Alert — {count} {unit_word} available at Spruce Apartments Sunnyvale!"
-    body = (
-        f"{count} BMR / Income Limit {unit_word} just appeared at Spruce!\n\n"
-        f"{plan_lines}\n\n"
-        f"Apply now:\n{TARGET_URL}\n"
+    send_email(
+        subject=f"BMR Alert — {count} {unit_word} available at Spruce Sunnyvale!",
+        body=(
+            f"{count} BMR / Income Limit {unit_word} just appeared at Spruce!\n\n"
+            f"{plan_lines}\n\n"
+            f"Apply now:\n{TARGET_URL}\n"
+        ),
     )
-    send_email(subject, body)
 
 
-def send_heartbeat(plans):
-    if plans:
-        status = f"{len(plans)} BMR / Income Limit unit(s) AVAILABLE RIGHT NOW — check your other emails for the alert!"
-        plan_lines = "\n".join(f"  [{classify(p)}] {p['name']}" for p in plans)
-        status += f"\n\n{plan_lines}"
-    else:
-        status = "No BMR or Income Limit units are currently listed. Still watching."
+def send_change_alert(added, removed, is_first_run):
+    if is_first_run:
+        send_email(
+            subject="Spruce Tracker — Baseline snapshot saved (change detection ON)",
+            body=(
+                "First run in 'changes' mode complete.\n\n"
+                "The current page content has been saved as the baseline. "
+                "You'll get an email whenever anything changes on the listing page, "
+                "showing exactly what was added or removed.\n\n"
+                "To verify: compare the email diff against what you see on the site.\n"
+                "Once satisfied, set TRACKING_MODE back to 'bmr'.\n\n"
+                f"Listing page:\n{TARGET_URL}\n"
+            ),
+        )
+        return
 
-    subject = "Spruce BMR Tracker — Daily Status"
-    body = (
-        f"Daily check-in: the scraper is alive and running.\n\n"
-        f"Status: {status}\n\n"
-        f"Listing page:\n{TARGET_URL}\n"
+    added_section   = "\n".join(f"  + {l}" for l in added[:80])   or "  (nothing added)"
+    removed_section = "\n".join(f"  - {l}" for l in removed[:80]) or "  (nothing removed)"
+    send_email(
+        subject=f"Spruce — Page changed (+{len(added)} / -{len(removed)} lines)",
+        body=(
+            f"Something changed on the Spruce listing page.\n\n"
+            f"ADDED ({len(added)} lines):\n{added_section}\n\n"
+            f"REMOVED ({len(removed)} lines):\n{removed_section}\n\n"
+            f"Cross-check against the site:\n{TARGET_URL}\n"
+        ),
     )
-    send_email(subject, body)
 
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
 
 def main():
-    heartbeat_mode = os.environ.get("SEND_HEARTBEAT", "false").lower() == "true"
-
+    print(f"Mode: {TRACKING_MODE}")
     print(f"Checking {TARGET_URL} ...")
-    text = scrape_page()
-    plans = find_bmr_plans(text)
+    raw = scrape_page()
+    text = normalize(raw)
 
-    if plans:
-        for p in plans:
-            print(f"  FOUND [{classify(p)}]: {p['name']}")
-        send_alert(plans)
-        print("Alert email sent to saifeemustafaq@gmail.com")
-    else:
-        print("No BMR or Income Limit listings found.")
+    if TRACKING_MODE == "changes":
+        old = load_snapshot()
+        save_snapshot(text)
 
-    if heartbeat_mode:
-        send_heartbeat(plans)
-        print("Heartbeat email sent to saifeemustafaq@gmail.com")
+        if old is None:
+            print("No previous snapshot found — saving baseline and emailing confirmation.")
+            send_change_alert([], [], is_first_run=True)
+        else:
+            added, removed = compute_diff(old, text)
+            if added or removed:
+                print(f"Page changed: +{len(added)} lines / -{len(removed)} lines — sending email.")
+                send_change_alert(added, removed, is_first_run=False)
+            else:
+                print("No changes detected since last run.")
+
+    else:  # bmr mode
+        plans = find_bmr_plans(text)
+        if plans:
+            for p in plans:
+                print(f"  FOUND [{classify(p)}]: {p['name']}")
+            send_bmr_alert(plans)
+        else:
+            print("No BMR or Income Limit listings found. No alert sent.")
 
 
 if __name__ == "__main__":

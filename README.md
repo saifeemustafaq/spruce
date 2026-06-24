@@ -111,34 +111,45 @@ https://prometheusapartments.com/ca/sunnyvale-apartments/spruce
 
 ---
 
+## Tracking modes
+
+The scraper has two modes you can toggle without touching any code.
+
+### `bmr` mode (default)
+Silent unless a BMR / Income Limit unit appears. You only hear from it when something is actually available.
+
+### `changes` mode
+Emails you whenever **anything** on the listing page changes — new content, removed content, price updates, anything. The email shows exactly what was added (`+`) and removed (`-`) so you can cross-check it against the real website. Use this to verify the scraper is reading the page correctly.
+
+**Example change detection email:**
+```
+Subject: Spruce — Page changed (+3 / -1 lines)
+
+ADDED (3 lines):
+  + Plan 1D-BMR (Income Limit)
+  + $2,618
+  + 1 Bed
+
+REMOVED (1 line):
+  - Loading...
+```
+
+### How to toggle
+
+1. Go to `github.com/saifeemustafaq/spruce` → **Settings** → **Variables** → **Actions**
+2. Create (or edit) a variable named `TRACKING_MODE`
+3. Set value to `bmr` or `changes`
+4. The next hourly run picks it up automatically
+
+**Recommended workflow:**
+1. Set `TRACKING_MODE = changes` and run manually
+2. The first run emails you: *"Baseline saved"* — confirming it loaded the page
+3. Wait for a page change (or manually verify against the site)
+4. Once satisfied the detection works, set `TRACKING_MODE = bmr`
+
 ## Schedule
 
-Two schedules run automatically:
-
-| Schedule | What it does |
-|----------|-------------|
-| Every hour | Silent check — only emails you if a BMR unit is found |
-| Every day at 9am PT | Always emails you a status update so you know it's still working |
-
-The daily 9am email looks like:
-```
-Subject: Spruce BMR Tracker — Daily Status
-
-Daily check-in: the scraper is alive and running.
-
-Status: No BMR or Income Limit units are currently listed. Still watching.
-```
-
-If you stop receiving the daily email, something is broken and needs attention.
-
-### Manual test with heartbeat
-
-To trigger a test run that always sends an email:
-1. Go to **Actions** → **Check BMR Listings** → **Run workflow**
-2. Set **"Send heartbeat email?"** to `true`
-3. Click **Run workflow**
-
-You'll receive the status email within ~2 minutes confirming everything works.
+Runs at the top of every hour. GitHub Actions may delay it by a few minutes under heavy load.
 
 ---
 
