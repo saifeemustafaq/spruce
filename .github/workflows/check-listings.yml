@@ -2,14 +2,8 @@ name: Check BMR Listings
 
 on:
   schedule:
-    - cron: '0 * * * *'    # every hour — silent unless BMR found
-    - cron: '0 17 * * *'   # daily at 9am PT (17:00 UTC) — always emails status
-  workflow_dispatch:
-    inputs:
-      heartbeat:
-        description: 'Send heartbeat email regardless of results?'
-        required: false
-        default: 'false'
+    - cron: '0 * * * *'   # every hour
+  workflow_dispatch:        # manual trigger for testing
 
 jobs:
   check:
@@ -18,6 +12,15 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+
+      - name: Restore page snapshot (used in changes mode)
+        uses: actions/cache/restore@v4
+        with:
+          path: scraper/snapshot.txt
+          # Unique save key per run; restore-keys picks up the latest saved snapshot
+          key: page-snapshot-${{ github.run_id }}
+          restore-keys: |
+            page-snapshot-
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,9 +36,13 @@ jobs:
       - name: Run listing check
         env:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          SEND_HEARTBEAT: >-
-            ${{
-              github.event_name == 'workflow_dispatch' && inputs.heartbeat == 'true' ||
-              github.event.schedule == '0 17 * * *'
-            }}
+          # Set this in: Settings → Variables → Actions → TRACKING_MODE
+          # Values: "bmr" (default) or "changes"
+          TRACKING_MODE: ${{ vars.TRACKING_MODE || 'bmr' }}
         run: python scraper/check.py
+
+      - name: Save updated snapshot
+        uses: actions/cache/save@v4
+        with:
+          path: scraper/snapshot.txt
+          key: page-snapshot-${{ github.run_id }}
