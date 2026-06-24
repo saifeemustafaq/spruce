@@ -113,15 +113,32 @@ https://prometheusapartments.com/ca/sunnyvale-apartments/spruce
 
 ## Schedule
 
-The job runs at the top of every hour (`0 * * * *`). GitHub Actions may delay it by a few minutes under heavy load, but it will run.
+Two schedules run automatically:
 
-To change the frequency, edit `.github/workflows/check-listings.yml` and update the cron expression:
+| Schedule | What it does |
+|----------|-------------|
+| Every hour | Silent check — only emails you if a BMR unit is found |
+| Every day at 9am PT | Always emails you a status update so you know it's still working |
 
-| Cron | Frequency |
-|------|-----------|
-| `0 * * * *` | Every hour (default) |
-| `0 */2 * * *` | Every 2 hours |
-| `0 9,17 * * *` | 9am and 5pm only |
+The daily 9am email looks like:
+```
+Subject: Spruce BMR Tracker — Daily Status
+
+Daily check-in: the scraper is alive and running.
+
+Status: No BMR or Income Limit units are currently listed. Still watching.
+```
+
+If you stop receiving the daily email, something is broken and needs attention.
+
+### Manual test with heartbeat
+
+To trigger a test run that always sends an email:
+1. Go to **Actions** → **Check BMR Listings** → **Run workflow**
+2. Set **"Send heartbeat email?"** to `true`
+3. Click **Run workflow**
+
+You'll receive the status email within ~2 minutes confirming everything works.
 
 ---
 

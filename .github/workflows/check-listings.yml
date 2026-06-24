@@ -2,8 +2,14 @@ name: Check BMR Listings
 
 on:
   schedule:
-    - cron: '0 * * * *'   # every hour
-  workflow_dispatch:        # manual trigger for testing
+    - cron: '0 * * * *'    # every hour — silent unless BMR found
+    - cron: '0 17 * * *'   # daily at 9am PT (17:00 UTC) — always emails status
+  workflow_dispatch:
+    inputs:
+      heartbeat:
+        description: 'Send heartbeat email regardless of results?'
+        required: false
+        default: 'false'
 
 jobs:
   check:
@@ -27,4 +33,9 @@ jobs:
       - name: Run listing check
         env:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          SEND_HEARTBEAT: >-
+            ${{
+              github.event_name == 'workflow_dispatch' && inputs.heartbeat == 'true' ||
+              github.event.schedule == '0 17 * * *'
+            }}
         run: python scraper/check.py

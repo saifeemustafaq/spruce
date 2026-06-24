@@ -1,6 +1,7 @@
 import os
 import re
 import smtplib
+import sys
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from playwright.sync_api import sync_playwright
@@ -32,18 +33,9 @@ def scrape_page():
 
 def find_bmr_plans(text):
     """
-    Split page text into per-plan blocks and tag each one.
-
-    The Spruce website only lists AVAILABLE units, so if a plan block
-    contains 'BMR' or 'Income Limit', that unit is available right now.
-
-    Returns a list of dicts:
-        {
-            "name":         "Plan 1D-BMR (Income Limit)",
-            "details":      <raw block text>,
-            "has_bmr":      True/False,
-            "has_income":   True/False,
-        }
+    Split page text into per-plan blocks.
+    The Spruce site only lists available units, so any block containing
+    'BMR' or 'Income Limit' means that unit is available right now.
     """
     sections = re.split(r'(?=\bPlan )', text)
 
@@ -77,12 +69,24 @@ def classify(plan):
     return "Income Limit"
 
 
-def send_alert(plans):
+def send_email(subject, body):
     app_password = os.environ.get("GMAIL_APP_PASSWORD", "")
     if not app_password:
         print("ERROR: GMAIL_APP_PASSWORD secret is not set.")
         return
 
+    msg = MIMEMultipart()
+    msg["From"] = GMAIL_USER
+    msg["To"] = GMAIL_USER
+    msg["Subject"] = subject
+    msg.attach(MIMEText(body, "plain"))
+
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+        server.login(GMAIL_USER, app_password)
+        server.send_message(msg)
+
+
+def send_alert(plans):
     count = len(plans)
     unit_word = "unit" if count == 1 else "units"
 
@@ -91,38 +95,50 @@ def send_alert(plans):
         for p in plans
     )
 
-    msg = MIMEMultipart()
-    msg["From"] = GMAIL_USER
-    msg["To"] = GMAIL_USER
-    msg["Subject"] = (
-        f"BMR Alert — {count} {unit_word} available at Spruce Apartments Sunnyvale!"
-    )
-
+    subject = f"BMR Alert — {count} {unit_word} available at Spruce Apartments Sunnyvale!"
     body = (
         f"{count} BMR / Income Limit {unit_word} just appeared at Spruce!\n\n"
         f"{plan_lines}\n\n"
         f"Apply now:\n{TARGET_URL}\n"
     )
-    msg.attach(MIMEText(body, "plain"))
+    send_email(subject, body)
 
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-        server.login(GMAIL_USER, app_password)
-        server.send_message(msg)
+
+def send_heartbeat(plans):
+    if plans:
+        status = f"{len(plans)} BMR / Income Limit unit(s) AVAILABLE RIGHT NOW — check your other emails for the alert!"
+        plan_lines = "\n".join(f"  [{classify(p)}] {p['name']}" for p in plans)
+        status += f"\n\n{plan_lines}"
+    else:
+        status = "No BMR or Income Limit units are currently listed. Still watching."
+
+    subject = "Spruce BMR Tracker — Daily Status"
+    body = (
+        f"Daily check-in: the scraper is alive and running.\n\n"
+        f"Status: {status}\n\n"
+        f"Listing page:\n{TARGET_URL}\n"
+    )
+    send_email(subject, body)
 
 
 def main():
+    heartbeat_mode = os.environ.get("SEND_HEARTBEAT", "false").lower() == "true"
+
     print(f"Checking {TARGET_URL} ...")
     text = scrape_page()
-
     plans = find_bmr_plans(text)
 
     if plans:
         for p in plans:
             print(f"  FOUND [{classify(p)}]: {p['name']}")
         send_alert(plans)
-        print("Email alert sent to saifeemustafaq@gmail.com")
+        print("Alert email sent to saifeemustafaq@gmail.com")
     else:
-        print("No BMR or Income Limit listings found. No alert sent.")
+        print("No BMR or Income Limit listings found.")
+
+    if heartbeat_mode:
+        send_heartbeat(plans)
+        print("Heartbeat email sent to saifeemustafaq@gmail.com")
 
 
 if __name__ == "__main__":
