@@ -8,3 +8,4 @@
 | 2026-06-26 02:13 | G-302 | Plan 1A | 546 sq. ft. | Floor 3 | Unknown Date | 🔴 Removed | Was $3,581/12mo |
 | 2026-06-26 02:13 | J-303 | Plan 1A | 546 sq. ft. | Floor 3 | Unknown Date | 🔴 Removed | Was $3,461/13mo |
 | 2026-06-26 02:13 | B-215 | Plan 1A | 546 sq. ft. | Floor 2 | Unknown Date | 🔴 Removed | Was $3,296/13mo |
+| 2026-06-26 02:47 | C-114 | Plan 3A | 1274 sq. ft. | Floor 1 | Aug 15 | 🟢 Added | Price: $5,507/13mo |
