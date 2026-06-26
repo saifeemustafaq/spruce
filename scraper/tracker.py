@@ -37,31 +37,40 @@ def update_history(state_file, history_file, current_units):
     # Initialize Markdown file if it doesn't exist
     if not os.path.exists(history_file):
         # Create directory if needed
-        os.makedirs(os.path.dirname(history_file), exist_ok=True)
+        dir_name = os.path.dirname(history_file)
+        if dir_name:
+            os.makedirs(dir_name, exist_ok=True)
         with open(history_file, "w") as f:
             f.write("# Apartment Listings History\n\n")
-            f.write("| Date | Unit | Plan | Event | Details |\n")
-            f.write("|---|---|---|---|---|\n")
+            f.write("| Date | Unit | Plan | Sq.Ft. | Floor | Available | Event | Details |\n")
+            f.write("|---|---|---|---|---|---|---|---|\n")
 
     today = datetime.now().strftime('%Y-%m-%d %H:%M')
     changes_detected = []
 
-    # Check for New Units or Price Changes
+    # Check for New Units or Price/Date Changes
     for unit_id, data in current_units.items():
         if unit_id not in old_state:
             changes_detected.append(
-                f"| {today} | {unit_id} | {data['plan']} | 🟢 Added | Price: {data['price']} |"
+                f"| {today} | {unit_id} | {data['plan']} | {data['sqft']} | {data['floor']} | {data['available']} | 🟢 Added | Price: {data['price']} |"
             )
-        elif old_state[unit_id]["price"] != data["price"]:
+        elif old_state[unit_id].get("price") != data["price"]:
             changes_detected.append(
-                f"| {today} | {unit_id} | {data['plan']} | 🟡 Price Changed | {old_state[unit_id]['price']} ➔ {data['price']} |"
+                f"| {today} | {unit_id} | {data['plan']} | {data['sqft']} | {data['floor']} | {data['available']} | 🟡 Price Changed | {old_state[unit_id].get('price')} ➔ {data['price']} |"
+            )
+        elif old_state[unit_id].get("available") != data["available"]:
+            changes_detected.append(
+                f"| {today} | {unit_id} | {data['plan']} | {data['sqft']} | {data['floor']} | {data['available']} | 🔵 Date Changed | {old_state[unit_id].get('available')} ➔ {data['available']} |"
             )
 
     # Check for Removed Units
     for unit_id, data in old_state.items():
         if unit_id not in current_units:
+            sqft = data.get("sqft", "Unknown")
+            floor = data.get("floor", "Unknown")
+            avail = data.get("available", "Unknown")
             changes_detected.append(
-                f"| {today} | {unit_id} | {data['plan']} | 🔴 Removed | Was {data['price']} |"
+                f"| {today} | {unit_id} | {data['plan']} | {sqft} | {floor} | {avail} | 🔴 Removed | Was {data.get('price')} |"
             )
 
     # Append changes to Markdown

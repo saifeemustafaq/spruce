@@ -42,6 +42,7 @@ def parse_listings(text):
     """
     units = {}
     current_plan = "Unknown Plan"
+    current_sqft = "Unknown Sq.Ft."
     
     lines = [line.strip() for line in text.splitlines() if line.strip()]
     
@@ -49,24 +50,37 @@ def parse_listings(text):
         # Track which floor plan section we are in
         if line.startswith("Plan "):
             current_plan = line
+            current_sqft = "Unknown Sq.Ft."
+            
+        elif "sq. ft." in line.lower() or "sqft" in line.lower():
+            current_sqft = line
             
         # Look for the apartment unit header
         elif line.startswith("Apartment "):
-            # Extract "G-302" from "Apartment G-302 | Floor 3"
+            # Extract "G-302" and "Floor 3" from "Apartment G-302 | Floor 3"
             parts = line.split("|")
             unit_id = parts[0].replace("Apartment", "").strip()
+            floor = parts[1].strip() if len(parts) > 1 else "Unknown Floor"
             
-            # Look ahead a few lines to find the price (usually contains a '$' or 'mo')
+            # Look ahead a few lines to find available date and price
             price = "Unknown Price"
-            # In some views, price could be 1-5 lines below the Apartment title
+            available = "Unknown Date"
+            
             for j in range(1, 10):
                 if i + j < len(lines):
-                    if "$" in lines[i+j] or "mo" in lines[i+j]:
-                        price = lines[i+j]
+                    check_line = lines[i+j]
+                    
+                    if "Available " in check_line:
+                        available = check_line.replace("Available", "").strip()
+                    elif "$" in check_line or "mo" in check_line:
+                        price = check_line.strip()
                         break
             
             units[unit_id] = {
                 "plan": current_plan,
+                "sqft": current_sqft,
+                "floor": floor,
+                "available": available,
                 "price": price
             }
             
