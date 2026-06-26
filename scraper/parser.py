@@ -70,11 +70,14 @@ def parse_listings(text):
                 if i + j < len(lines):
                     check_line = lines[i+j]
                     
-                    if "Available " in check_line:
+                    # Ensure we don't bleed into the next apartment
+                    if check_line.startswith("Apartment ") or check_line.startswith("Plan "):
+                        break
+                    
+                    if check_line.startswith("Available "):
                         available = check_line.replace("Available", "").strip()
                     elif "$" in check_line or "mo" in check_line:
                         price = check_line.strip()
-                        break
             
             units[unit_id] = {
                 "plan": current_plan,
