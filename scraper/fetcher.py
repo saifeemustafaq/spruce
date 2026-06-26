@@ -12,7 +12,7 @@ def scrape_page(target_url):
             "AppleWebKit/537.36 (KHTML, like Gecko) "
             "Chrome/120.0.0.0 Safari/537.36"
         ))
-        page.goto(target_url, wait_until="networkidle", timeout=60000)
+        page.goto(target_url, wait_until="domcontentloaded", timeout=60000)
 
         try:
             page.wait_for_selector("#pricingAndFloorPlanBox", timeout=15000)
