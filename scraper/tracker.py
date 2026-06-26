@@ -1,6 +1,13 @@
 import os
 import json
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
+
+try:
+    from zoneinfo import ZoneInfo
+    _PT = ZoneInfo("America/Los_Angeles")  # Handles PST/PDT automatically
+except ImportError:
+    # Fallback for Python < 3.9: hardcode PDT (UTC-7). Won't auto-switch for DST.
+    _PT = timezone(timedelta(hours=-7))
 
 def load_snapshot(snapshot_path):
     if os.path.exists(snapshot_path):
@@ -26,26 +33,40 @@ def update_history(state_file, history_file, current_units):
     Compares current units against saved state, records changes to Markdown, 
     and saves the new state. Returns a list of detected changes.
     """
-    old_state = {}
-    if os.path.exists(state_file):
-        with open(state_file, "r") as f:
-            try:
-                old_state = json.load(f)
-            except json.JSONDecodeError:
-                pass
-            
-    # Initialize Markdown file if it doesn't exist
-    if not os.path.exists(history_file):
-        # Create directory if needed
+    HISTORY_HEADER = (
+        "# Apartment Listings History\n\n"
+        "| Date | Unit | Plan | Sq.Ft. | Floor | Available | Event | Details |\n"
+        "|---|---|---|---|---|---|---|---|\n"
+    )
+
+    # Determine whether the history file exists and has real data rows (not just the header)
+    history_is_blank = True
+    if os.path.exists(history_file):
+        with open(history_file, "r") as f:
+            content = f.read()
+        # Strip the standard header; if anything is left it has real rows
+        if content.strip().replace(HISTORY_HEADER.strip(), "").strip():
+            history_is_blank = False
+
+    # If the history file is missing or was manually wiped, recreate it and reset
+    # old_state so every current unit is re-logged as "Added".
+    if history_is_blank:
         dir_name = os.path.dirname(history_file)
         if dir_name:
             os.makedirs(dir_name, exist_ok=True)
         with open(history_file, "w") as f:
-            f.write("# Apartment Listings History\n\n")
-            f.write("| Date | Unit | Plan | Sq.Ft. | Floor | Available | Event | Details |\n")
-            f.write("|---|---|---|---|---|---|---|---|\n")
+            f.write(HISTORY_HEADER)
+        old_state = {}  # Treat everything as new
+    else:
+        old_state = {}
+        if os.path.exists(state_file):
+            with open(state_file, "r") as f:
+                try:
+                    old_state = json.load(f)
+                except json.JSONDecodeError:
+                    pass
 
-    today = datetime.now().strftime('%Y-%m-%d %H:%M')
+    today = datetime.now(tz=_PT).strftime('%Y-%m-%d %H:%M PT')
     changes_detected = []
 
     # Check for New Units or Price/Date Changes
