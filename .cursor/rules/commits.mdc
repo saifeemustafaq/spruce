@@ -1,2 +1,15 @@
-# Git Commits
-When writing git commit messages, NEVER include `Co-Authored-By`, AI signatures, or other AI-related attribution tags in the commit message. The commit should appear as if it was written entirely by the user.
+---
+description: Core workflow rules for the project
+alwaysApply: true
+---
+
+# Git Commits and Pushes
+
+NEVER run `git commit` or `git push` (or any variants like `--force`, `--amend`, etc.).  
+The user will handle all commits and pushes manually.
+
+Only make file edits and explain what to commit/push — do not do it yourself.
+
+# AI Attribution
+
+NEVER include `Co-Authored-By`, AI signatures, or any AI-related attribution tags in commit messages.
