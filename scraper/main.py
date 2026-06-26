@@ -14,6 +14,13 @@ def main():
 
     # Always parse units to update our local markdown history
     current_units = parse_listings(text)
+
+    # Log what was found so GitHub Actions output is inspectable
+    print(f"Parsed {len(current_units)} units across plans: "
+          f"{sorted(set(u['plan'] for u in current_units.values()))}")
+    for uid, data in sorted(current_units.items()):
+        print(f"  {uid}: {data['plan']} | {data['floor']} | {data['available']} | {data['price']}")
+
     history_changes = update_history(STATE_FILE, HISTORY_FILE, current_units)
 
     if TRACKING_MODE == "changes":

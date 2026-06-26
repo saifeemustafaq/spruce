@@ -1,9 +1,14 @@
 from playwright.sync_api import sync_playwright
 
+
 def scrape_page(target_url):
     """
     Fetches the page content using Playwright.
-    Targets the pricing section specifically if found, otherwise grabs the body text.
+    Because the Prometheus site uses mutually exclusive accordions (opening one
+    closes another), clicking them one-by-one never exposes all plans at once.
+    Instead, we directly manipulate the DOM via JavaScript to remove the CSS
+    height restriction on every collapsed accordion container, making all plan
+    content readable in a single innerText pass — no clicking required.
     """
     with sync_playwright() as p:
         browser = p.chromium.launch(args=["--no-sandbox", "--disable-dev-shm-usage"])
@@ -21,46 +26,37 @@ def scrape_page(target_url):
 
         page.wait_for_timeout(4000)
 
-        # The floor plans are hidden inside accordions. Let's find all the
-        # buttons in the pricing section that expand the accordions and click them.
+        # The accordions are mutually exclusive — clicking one closes another.
+        # Instead, we inject JS to forcibly reveal every collapsed container by
+        # overriding the inline height style that the React component uses to hide them.
         try:
-            # We explicitly execute Javascript in the browser to forcefully open
-            # every single accordion, bypassing Playwright's visibility checks.
-            # This ensures we never miss a plan due to a weird CSS trick or slow animation.
-            page.evaluate('''() => {
-                // Click any button in the pricing box that is currently closed
+            revealed = page.evaluate('''() => {
                 const box = document.querySelector("#pricingAndFloorPlanBox");
-                if (box) {
-                    const buttons = box.querySelectorAll('button[aria-expanded="false"]');
-                    buttons.forEach(btn => btn.click());
-                    
-                    // Also try the specific class if it wasn't caught by aria-expanded
-                    const classButtons = box.querySelectorAll('.accordionItemButton');
-                    classButtons.forEach(btn => {
-                        if (btn.getAttribute('aria-expanded') !== 'true') {
-                            btn.click();
-                        }
-                    });
-                }
+                if (!box) return 0;
+
+                // Every collapsed accordion content div has style="height: 0px"
+                // Overriding to "auto" makes all content visible simultaneously.
+                const containers = box.querySelectorAll(".accordionContentContainer");
+                containers.forEach(el => {
+                    el.style.height = "auto";
+                    el.style.overflow = "visible";
+                });
+                return containers.length;
             }''')
-            page.wait_for_timeout(1000) # Give it a full second to render all changes
+            print(f"Revealed {revealed} accordion containers")
         except Exception as e:
-            print(f"Warning: Failed to expand accordions via JS: {e}")
+            print(f"Warning: Failed to reveal accordion containers: {e}")
 
-        page.wait_for_timeout(1000)
+        # Small wait to let any deferred rendering settle
+        page.wait_for_timeout(500)
 
-        # Prefer just the pricing section to reduce noise from unrelated page areas
+        # Read the full text of the pricing section now that all plans are visible
         try:
-            # We explicitly tell Playwright to extract the innerText, but we also 
-            # execute a small Javascript script in the browser to ensure the DOM 
-            # returns text for elements even if they are technically hidden/collapsed 
-            # by CSS (in case our click logic above failed on a weird element).
             content = page.evaluate('''() => {
                 const box = document.querySelector("#pricingAndFloorPlanBox");
                 return box ? box.innerText : document.body.innerText;
             }''')
-            
-            # Fallback if Javascript returned None
+
             if not content:
                 content = page.locator("#pricingAndFloorPlanBox").inner_text(timeout=5000)
         except Exception:
