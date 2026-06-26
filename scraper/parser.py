@@ -56,10 +56,10 @@ def parse_listings(text):
             current_sqft = line
             
         # Look for the apartment unit header
-        elif line.startswith("Apartment "):
+        elif line.startswith("Apartment ") or line.startswith("Apt. "):
             # Extract "G-302" and "Floor 3" from "Apartment G-302 | Floor 3"
             parts = line.split("|")
-            unit_id = parts[0].replace("Apartment", "").strip()
+            unit_id = parts[0].replace("Apartment", "").replace("Apt.", "").strip()
             floor = parts[1].strip() if len(parts) > 1 else "Unknown Floor"
             
             # Look ahead a few lines to find available date and price
@@ -71,13 +71,20 @@ def parse_listings(text):
                     check_line = lines[i+j]
                     
                     # Ensure we don't bleed into the next apartment
-                    if check_line.startswith("Apartment ") or check_line.startswith("Plan "):
+                    if check_line.startswith("Apartment ") or check_line.startswith("Apt. ") or check_line.startswith("Plan "):
                         break
                     
-                    if check_line.startswith("Available "):
+                    # Some mobile views put the date on the line below "Available"
+                    if check_line == "Available" and i + j + 1 < len(lines):
+                        available = lines[i+j+1].strip()
+                    elif check_line.startswith("Available "):
                         available = check_line.replace("Available", "").strip()
+                        
                     elif "$" in check_line or "mo" in check_line:
                         price = check_line.strip()
+                        # Some mobile views chop the $ sign like ',507/13mo'
+                        if price.startswith(","):
+                            price = "$" + price[1:]
             
             units[unit_id] = {
                 "plan": current_plan,
