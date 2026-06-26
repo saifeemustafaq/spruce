@@ -39,6 +39,16 @@ def main():
 
     history_changes = update_history(STATE_FILE, HISTORY_FILE, current_units)
 
+    # BMR alert fires first so it lands at the top of your inbox
+    if TRACKING_MODE == "bmr":
+        bmr_plans = find_bmr_plans(units)
+        if bmr_plans:
+            for p in bmr_plans:
+                print(f"  FOUND [{classify(p)}]: {p['name']}")
+            send_bmr_alert(bmr_plans)
+        else:
+            print("No BMR or Income Limit listings found. No alert sent.")
+
     if history_changes:
         print(f"{len(history_changes)} history change(s) recorded — sending update email.")
         send_history_update_alert(history_changes)
@@ -59,16 +69,6 @@ def main():
                 send_change_alert(added, removed, is_first_run=False, changes_log=history_changes)
             else:
                 print("No changes detected since last run.")
-
-    else:  # bmr mode
-        bmr_plans = find_bmr_plans(units)
-        if bmr_plans:
-            for p in bmr_plans:
-                print(f"  FOUND [{classify(p)}]: {p['name']}")
-            send_bmr_alert(bmr_plans)
-        else:
-            print("No BMR or Income Limit listings found. No alert sent.")
-
 
 if __name__ == "__main__":
     main()

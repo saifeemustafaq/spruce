@@ -89,11 +89,20 @@ def send_bmr_alert(plans):
         for p in plans
     )
     send_email(
-        subject=f"BMR Alert — {count} {unit_word} available at Spruce Sunnyvale!",
+        subject=f"🚨 ACT NOW — {count} BMR {unit_word} AVAILABLE at Spruce Sunnyvale!",
         body=(
-            f"{count} BMR / Income Limit {unit_word} just appeared at Spruce!\n\n"
+            "=" * 60 + "\n"
+            "🚨🚨🚨  BMR UNIT AVAILABLE — APPLY IMMEDIATELY  🚨🚨🚨\n"
+            "=" * 60 + "\n\n"
+            f"{count} BMR / Income Limit {unit_word} just appeared at Spruce Sunnyvale.\n"
+            "These go FAST. Stop what you are doing and apply NOW.\n\n"
+            "--- UNIT DETAILS ---\n\n"
             f"{plan_lines}\n\n"
-            f"Apply now:\n{TARGET_URL}\n"
+            "--- APPLY HERE ---\n"
+            f"{TARGET_URL}\n\n"
+            "=" * 60 + "\n"
+            "This is an automated alert from your Spruce tracker.\n"
+            "=" * 60 + "\n"
         ),
     )
 
