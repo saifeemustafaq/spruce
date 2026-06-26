@@ -15,6 +15,7 @@
 | 1 | C-102 | 570 sq. ft. | Floor 1 | Jul 07, 2026 | 🟢 Added | Price: $3517/12mo | 2026-06-25 22:30 PT |
 | 2 | L-102 | 570 sq. ft. | Floor 1 | Aug 01, 2026 | 🟢 Added | Price: $3502/13mo | 2026-06-25 22:30 PT |
 | 3 | N-202 | 570 sq. ft. | Floor 2 | Jul 31, 2026 | 🟢 Added | Price: $3592/13mo | 2026-06-25 22:30 PT |
+| 4 | L-102 | 570 sq. ft. | Floor 1 | Jul 11, 2026 | 🟡 Price Changed | $3502/13mo ➔ $3502/12mo | 2026-06-26 13:16 PT |
 
 ## Plan 1D
 
