@@ -41,6 +41,19 @@ jobs:
           TRACKING_MODE: ${{ vars.TRACKING_MODE || 'bmr' }}
         run: python scraper/check.py
 
+      - name: Commit and Push History
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Add the generated tracking files
+          git add scraper/listings_state.json scraper/listings_history.md || true
+          
+          # Commit and push if there are changes
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update apartment history log" && git push)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Save updated snapshot
         uses: actions/cache/save@v4
         with:

@@ -1,0 +1,2 @@
+# Git Commits
+When writing git commit messages, NEVER include `Co-Authored-By`, AI signatures, or other AI-related attribution tags in the commit message. The commit should appear as if it was written entirely by the user.
