@@ -108,18 +108,7 @@ def send_bmr_alert(plans):
 
 def send_change_alert(added, removed, is_first_run, changes_log=None):
     if is_first_run:
-        send_email(
-            subject="Spruce Tracker — Baseline snapshot saved (change detection ON)",
-            body=(
-                "First run in 'changes' mode complete.\n\n"
-                "The current page content has been saved as the baseline. "
-                "You'll get an email whenever anything changes on the listing page, "
-                "showing exactly what was added or removed.\n\n"
-                "To verify: compare the email diff against what you see on the site.\n"
-                "Once satisfied, set TRACKING_MODE back to 'bmr'.\n\n"
-                f"Listing page:\n{TARGET_URL}\n"
-            ),
-        )
+        # Silently return on first run without sending a baseline email
         return
 
     added_section   = "\n".join(f"  + {l}" for l in added[:80])   or "  (nothing added)"
