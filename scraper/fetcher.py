@@ -28,12 +28,20 @@ def scrape_page(target_url):
             # every single accordion, bypassing Playwright's visibility checks.
             # This ensures we never miss a plan due to a weird CSS trick or slow animation.
             page.evaluate('''() => {
-                const buttons = document.querySelectorAll('.accordionItemButton');
-                buttons.forEach(btn => {
-                    if (btn.getAttribute('aria-expanded') === 'false') {
-                        btn.click();
-                    }
-                });
+                // Click any button in the pricing box that is currently closed
+                const box = document.querySelector("#pricingAndFloorPlanBox");
+                if (box) {
+                    const buttons = box.querySelectorAll('button[aria-expanded="false"]');
+                    buttons.forEach(btn => btn.click());
+                    
+                    // Also try the specific class if it wasn't caught by aria-expanded
+                    const classButtons = box.querySelectorAll('.accordionItemButton');
+                    classButtons.forEach(btn => {
+                        if (btn.getAttribute('aria-expanded') !== 'true') {
+                            btn.click();
+                        }
+                    });
+                }
             }''')
             page.wait_for_timeout(1000) # Give it a full second to render all changes
         except Exception as e:
