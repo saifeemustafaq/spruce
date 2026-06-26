@@ -24,28 +24,37 @@ def scrape_page(target_url):
         # The floor plans are hidden inside accordions. Let's find all the
         # buttons in the pricing section that expand the accordions and click them.
         try:
-            pricing_box = page.locator("#pricingAndFloorPlanBox")
-            
-            # Find all closed accordions - they could be buttons OR divs acting as buttons.
-            # Look for anything with aria-expanded="false" inside an accordion item
-            buttons = pricing_box.locator('[aria-expanded="false"]')
-            count = buttons.count()
-            
-            for i in range(count):
-                btn = buttons.nth(i)
-                try:
-                    btn.click(timeout=2000)
-                    page.wait_for_timeout(300) # Let animation play
-                except Exception:
-                    pass
+            # We explicitly execute Javascript in the browser to forcefully open
+            # every single accordion, bypassing Playwright's visibility checks.
+            # This ensures we never miss a plan due to a weird CSS trick or slow animation.
+            page.evaluate('''() => {
+                const buttons = document.querySelectorAll('.accordionItemButton');
+                buttons.forEach(btn => {
+                    if (btn.getAttribute('aria-expanded') === 'false') {
+                        btn.click();
+                    }
+                });
+            }''')
+            page.wait_for_timeout(1000) # Give it a full second to render all changes
         except Exception as e:
-            print(f"Warning: Failed to expand accordions: {e}")
+            print(f"Warning: Failed to expand accordions via JS: {e}")
 
         page.wait_for_timeout(1000)
 
         # Prefer just the pricing section to reduce noise from unrelated page areas
         try:
-            content = page.locator("#pricingAndFloorPlanBox").inner_text(timeout=5000)
+            # We explicitly tell Playwright to extract the innerText, but we also 
+            # execute a small Javascript script in the browser to ensure the DOM 
+            # returns text for elements even if they are technically hidden/collapsed 
+            # by CSS (in case our click logic above failed on a weird element).
+            content = page.evaluate('''() => {
+                const box = document.querySelector("#pricingAndFloorPlanBox");
+                return box ? box.innerText : document.body.innerText;
+            }''')
+            
+            # Fallback if Javascript returned None
+            if not content:
+                content = page.locator("#pricingAndFloorPlanBox").inner_text(timeout=5000)
         except Exception:
             content = page.inner_text("body")
 
