@@ -2,7 +2,8 @@ name: Check BMR Listings
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # every 30 minutes
+    - cron: '0 * * * *'    # top of every hour
+    - cron: '30 * * * *'   # half past every hour
   workflow_dispatch:        # manual trigger for testing
 
 jobs:
