@@ -15,25 +15,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Restore page snapshot (used in changes mode)
-        uses: actions/cache/restore@v4
-        with:
-          path: scraper/snapshot.txt
-          # Unique save key per run; restore-keys picks up the latest saved snapshot
-          key: page-snapshot-${{ github.run_id }}
-          restore-keys: |
-            page-snapshot-
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Install dependencies
-        run: |
-          pip install -r scraper/requirements.txt
-          playwright install chromium
-          playwright install-deps chromium
 
       - name: Run listing check
         env:
@@ -47,17 +32,11 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
+
           # Add the generated tracking files
           git add scraper/listings_state.json scraper/listings_history.md || true
-          
-          # Commit and push if there are changes
+
+          # Commit and push only if there are staged changes
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update apartment history log" && git pull --rebase origin main && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Save updated snapshot
-        uses: actions/cache/save@v4
-        with:
-          path: scraper/snapshot.txt
-          key: page-snapshot-${{ github.run_id }}

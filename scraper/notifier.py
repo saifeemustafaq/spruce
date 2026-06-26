@@ -2,7 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-from .config import GMAIL_USER, GMAIL_APP_PASSWORD, TARGET_URL
+from .config import GMAIL_USER, GMAIL_APP_PASSWORD, SPRUCE_PAGE_URL as TARGET_URL
 from .parser import classify
 
 def send_email(subject, body):

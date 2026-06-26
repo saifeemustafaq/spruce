@@ -1,97 +1,46 @@
-import re
-
-def normalize(text):
-    """Strip per-line whitespace and blank lines for stable comparison."""
-    lines = [line.strip() for line in text.splitlines()]
-    return "\n".join(line for line in lines if line)
-
-def find_bmr_plans(text):
+def parse_listings(units: list) -> dict:
     """
-    Looks for the keywords BMR and Income Limit in the text.
+    Converts the raw API unit list into a keyed dict for the tracker.
+    Key format: "G-302" (buildingNumber-unitNumber).
     """
-    sections = re.split(r'(?=\bPlan )', text)
+    result = {}
+    for u in units:
+        key = f"{u['buildingNumber']}-{u['unitNumber']}"
+        result[key] = {
+            "plan":      u["floorPlanName"],
+            "sqft":      f"{u['area']} sq. ft.",
+            "floor":     f"Floor {u['floor']}",
+            "available": u["madeReadyDate"],
+            "price":     f"${u['bestRent']}/{u['bestTerm']}mo",
+            "bedrooms":  u["bedrooms"],
+            "bathrooms": u["bathrooms"],
+        }
+    return result
+
+
+def find_bmr_plans(units: list) -> list:
+    """
+    Scans the API unit list for BMR or Income Limit floor plans.
+    Returns a list of matching unit dicts in the format expected by notifier.py.
+    """
     found = []
-    for section in sections:
-        has_bmr = "BMR" in section
-        has_income = "Income Limit" in section
-        if not has_bmr and not has_income:
-            continue
-        first_line = next(
-            (l.strip() for l in section.splitlines() if l.strip()),
-            section[:80]
-        )
-        found.append({
-            "name":       first_line,
-            "details":    section.strip(),
-            "has_bmr":    has_bmr,
-            "has_income": has_income,
-        })
+    for u in units:
+        name = u.get("floorPlanName", "")
+        has_bmr = "BMR" in name
+        has_income = "Income Limit" in name
+        if has_bmr or has_income:
+            found.append({
+                "name":       name,
+                "details":    str(u),
+                "has_bmr":    has_bmr,
+                "has_income": has_income,
+            })
     return found
 
-def classify(plan):
+
+def classify(plan: dict) -> str:
     if plan["has_bmr"] and plan["has_income"]:
         return "BMR + Income Limit"
     if plan["has_bmr"]:
         return "BMR"
     return "Income Limit"
-
-def parse_listings(text):
-    """
-    Parses the raw text to extract unit details based on Prometheus's text format.
-    Returns a dictionary of units: { "G-302": {"plan": "Plan 1A", "price": "$3,581/12mo"} }
-    """
-    units = {}
-    current_plan = "Unknown Plan"
-    current_sqft = "Unknown Sq.Ft."
-    
-    lines = [line.strip() for line in text.splitlines() if line.strip()]
-    
-    for i, line in enumerate(lines):
-        # Track which floor plan section we are in
-        if line.startswith("Plan "):
-            current_plan = line
-            current_sqft = "Unknown Sq.Ft."
-            
-        elif "sq. ft." in line.lower() or "sqft" in line.lower():
-            current_sqft = line
-            
-        # Look for the apartment unit header
-        elif line.startswith("Apartment ") or line.startswith("Apt. "):
-            # Extract "G-302" and "Floor 3" from "Apartment G-302 | Floor 3"
-            parts = line.split("|")
-            unit_id = parts[0].replace("Apartment", "").replace("Apt.", "").strip()
-            floor = parts[1].strip() if len(parts) > 1 else "Unknown Floor"
-            
-            # Look ahead a few lines to find available date and price
-            price = "Unknown Price"
-            available = "Unknown Date"
-            
-            for j in range(1, 10):
-                if i + j < len(lines):
-                    check_line = lines[i+j]
-                    
-                    # Ensure we don't bleed into the next apartment
-                    if check_line.startswith("Apartment ") or check_line.startswith("Apt. ") or check_line.startswith("Plan "):
-                        break
-                    
-                    # Some mobile views put the date on the line below "Available"
-                    if check_line == "Available" and i + j + 1 < len(lines):
-                        available = lines[i+j+1].strip()
-                    elif check_line.startswith("Available "):
-                        available = check_line.replace("Available", "").strip()
-                        
-                    elif "$" in check_line or "mo" in check_line:
-                        price = check_line.strip()
-                        # Some mobile views chop the $ sign like ',507/13mo'
-                        if price.startswith(","):
-                            price = "$" + price[1:]
-            
-            units[unit_id] = {
-                "plan": current_plan,
-                "sqft": current_sqft,
-                "floor": floor,
-                "available": available,
-                "price": price
-            }
-            
-    return units
