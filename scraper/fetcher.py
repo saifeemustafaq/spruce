@@ -26,18 +26,16 @@ def scrape_page(target_url):
         try:
             pricing_box = page.locator("#pricingAndFloorPlanBox")
             
-            # Find all closed accordions (either aria-expanded="false" or class="accordionItemButton")
-            buttons = pricing_box.locator('.accordionItemButton')
+            # Find all closed accordions - they could be buttons OR divs acting as buttons.
+            # Look for anything with aria-expanded="false" inside an accordion item
+            buttons = pricing_box.locator('[aria-expanded="false"]')
             count = buttons.count()
             
             for i in range(count):
                 btn = buttons.nth(i)
                 try:
-                    # Check if it's currently expanded
-                    is_expanded = btn.get_attribute('aria-expanded')
-                    if is_expanded == "false":
-                        btn.click(timeout=2000)
-                        page.wait_for_timeout(300) # Let animation play
+                    btn.click(timeout=2000)
+                    page.wait_for_timeout(300) # Let animation play
                 except Exception:
                     pass
         except Exception as e:
