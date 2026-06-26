@@ -6,11 +6,18 @@
     "available": "Now",
     "price": "$3,581/12mo"
   },
-  "G-310": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
+  "J-303": {
+    "plan": "Plan 1A",
+    "sqft": "546 sq. ft.",
     "floor": "Floor 3",
-    "available": "Jul 19",
-    "price": "$3,603/13mo"
+    "available": "Jul 23",
+    "price": "$3,461/13mo"
+  },
+  "B-215": {
+    "plan": "Plan 1A",
+    "sqft": "546 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Aug 1",
+    "price": "$3,296/13mo"
   }
 }
