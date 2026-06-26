@@ -55,6 +55,32 @@ def send_api_empty_alert(api_url: str) -> None:
     )
 
 
+def send_history_update_alert(changes: list) -> None:
+    added   = [c for c in changes if "Added"         in c]
+    removed = [c for c in changes if "Removed"       in c]
+    priced  = [c for c in changes if "Price Changed" in c]
+    dated   = [c for c in changes if "Date Changed"  in c]
+
+    def section(label, items):
+        return (f"{label} ({len(items)}):\n" + "\n".join(f"  {c}" for c in items) + "\n") if items else ""
+
+    body = (
+        f"{len(changes)} change(s) were recorded in listings_history.md this run.\n\n"
+        + section("🟢 Added",         added)
+        + section("🔴 Removed",       removed)
+        + section("🟡 Price Changed", priced)
+        + section("🔵 Date Changed",  dated)
+        + f"\nFull history: listings_history.md in your repo.\n"
+        + f"Listing page: {TARGET_URL}\n"
+    )
+
+    unit_word = "change" if len(changes) == 1 else "changes"
+    send_email(
+        subject=f"Spruce Tracker — {len(changes)} listing {unit_word} recorded",
+        body=body,
+    )
+
+
 def send_bmr_alert(plans):
     count = len(plans)
     unit_word = "unit" if count == 1 else "units"

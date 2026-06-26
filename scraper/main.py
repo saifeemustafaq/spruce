@@ -8,7 +8,7 @@ from .config import (
 from .fetcher import fetch_units, APIError
 from .parser import parse_listings, find_bmr_plans, classify
 from .tracker import load_snapshot, save_snapshot, compute_diff, update_history
-from .notifier import send_bmr_alert, send_change_alert, send_api_error_alert, send_api_empty_alert
+from .notifier import send_bmr_alert, send_change_alert, send_api_error_alert, send_api_empty_alert, send_history_update_alert
 
 
 def main():
@@ -38,6 +38,10 @@ def main():
         print(f"  {uid}: {data['plan']} | {data['floor']} | {data['available']} | {data['price']}")
 
     history_changes = update_history(STATE_FILE, HISTORY_FILE, current_units)
+
+    if history_changes:
+        print(f"{len(history_changes)} history change(s) recorded — sending update email.")
+        send_history_update_alert(history_changes)
 
     if TRACKING_MODE == "changes":
         # Snapshot is now the raw JSON from the API, not scraped page text
