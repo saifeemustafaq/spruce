@@ -21,6 +21,34 @@ def scrape_page(target_url):
 
         page.wait_for_timeout(4000)
 
+        # The floor plans are hidden inside accordions. Let's find all the
+        # buttons in the pricing section that expand the accordions and click them.
+        try:
+            # We look for svgs that look like the dropdown arrow or buttons 
+            # within the pricing box. The accordion container often has role="button" or similar.
+            # A common class in Prometheus's template is accordionItemButton or similar
+            pricing_box = page.locator("#pricingAndFloorPlanBox")
+            
+            # Prometheus sites often use a button or div with role="button" to expand plans
+            buttons = pricing_box.locator('div[role="button"], button')
+            count = buttons.count()
+            
+            for i in range(count):
+                btn = buttons.nth(i)
+                # Only click if it's visible and looks like an accordion toggle 
+                # (e.g., contains an SVG arrow, or doesn't have text like "GET QUOTE")
+                text = btn.inner_text().strip().lower()
+                if "get quote" not in text and "schedule" not in text:
+                    try:
+                        btn.click(timeout=1000)
+                        page.wait_for_timeout(300) # Let animation play
+                    except Exception:
+                        pass
+        except Exception as e:
+            print(f"Warning: Failed to expand accordions: {e}")
+
+        page.wait_for_timeout(1000)
+
         # Prefer just the pricing section to reduce noise from unrelated page areas
         try:
             content = page.locator("#pricingAndFloorPlanBox").inner_text(timeout=5000)
