@@ -1,21 +1,33 @@
 import json
 import os
+import sys
 
 from .config import (
-    TRACKING_MODE, SPRUCE_PAGE_URL, SNAPSHOT_PATH, STATE_FILE, HISTORY_FILE
+    TRACKING_MODE, SPRUCE_PAGE_URL, SNAPSHOT_PATH, STATE_FILE, HISTORY_FILE, API_URL
 )
-from .fetcher import fetch_units
+from .fetcher import fetch_units, APIError
 from .parser import parse_listings, find_bmr_plans, classify
 from .tracker import load_snapshot, save_snapshot, compute_diff, update_history
-from .notifier import send_bmr_alert, send_change_alert
+from .notifier import send_bmr_alert, send_change_alert, send_api_error_alert, send_api_empty_alert
 
 
 def main():
     print(f"Mode: {TRACKING_MODE}")
     print(f"Fetching units from Prometheus API ...")
 
-    units = fetch_units()
+    try:
+        units = fetch_units()
+    except APIError as exc:
+        print(f"ERROR: API failure — {exc}")
+        send_api_error_alert(exc)
+        sys.exit(1)
+
     print(f"API returned {len(units)} units")
+
+    if len(units) == 0:
+        print("WARNING: API returned 0 units — sending alert email.")
+        send_api_empty_alert(API_URL)
+        sys.exit(0)
 
     current_units = parse_listings(units)
 

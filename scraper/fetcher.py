@@ -6,6 +6,10 @@ from datetime import date
 
 from .config import API_URL
 
+
+class APIError(Exception):
+    """Raised when the Prometheus API is unreachable, returns an error, or gives unexpected data."""
+
 _HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -33,17 +37,48 @@ def fetch_units() -> list:
     req = urllib.request.Request(url, headers=_HEADERS)
 
     try:
-        ctx = ssl.create_default_context()
-        with urllib.request.urlopen(req, timeout=30, context=ctx) as resp:
-            return json.loads(resp.read())
-    except urllib.error.URLError as exc:
-        # urllib wraps ssl errors in URLError; unwrap to check the real cause.
-        if not isinstance(exc.reason, ssl.SSLError):
-            raise
-        # Prometheus's cert chain has a non-critical Basic Constraints extension
-        # that Python's strict SSL validation rejects on some platforms (e.g. macOS
-        # Homebrew Python 3.14). GitHub Actions Ubuntu/Python 3.11 is unaffected.
-        print(f"Warning: SSL verification failed ({exc.reason}); retrying without cert check.")
-        unverified = ssl._create_unverified_context()
-        with urllib.request.urlopen(req, timeout=30, context=unverified) as resp:
-            return json.loads(resp.read())
+        try:
+            ctx = ssl.create_default_context()
+            with urllib.request.urlopen(req, timeout=30, context=ctx) as resp:
+                raw = resp.read()
+        except urllib.error.URLError as exc:
+            # urllib wraps ssl errors in URLError; unwrap to check the real cause.
+            if not isinstance(exc.reason, ssl.SSLError):
+                raise APIError(
+                    f"Network error contacting Prometheus API.\n"
+                    f"URL: {url}\n"
+                    f"Error: {exc}"
+                ) from exc
+            # Prometheus's cert chain has a non-critical Basic Constraints extension
+            # that Python's strict SSL validation rejects on some platforms (e.g. macOS
+            # Homebrew Python 3.14). GitHub Actions Ubuntu/Python 3.11 is unaffected.
+            print(f"Warning: SSL verification failed ({exc.reason}); retrying without cert check.")
+            unverified = ssl._create_unverified_context()
+            with urllib.request.urlopen(req, timeout=30, context=unverified) as resp:
+                raw = resp.read()
+
+        try:
+            data = json.loads(raw)
+        except json.JSONDecodeError as exc:
+            raise APIError(
+                f"Prometheus API returned non-JSON content (possible endpoint change).\n"
+                f"URL: {url}\n"
+                f"Response preview: {raw[:500]!r}"
+            ) from exc
+
+        if not isinstance(data, list):
+            raise APIError(
+                f"Prometheus API response is not a list (schema may have changed).\n"
+                f"URL: {url}\n"
+                f"Type received: {type(data).__name__}\n"
+                f"Response preview: {str(data)[:500]}"
+            )
+
+        return data
+
+    except urllib.error.HTTPError as exc:
+        raise APIError(
+            f"Prometheus API returned HTTP {exc.code} {exc.reason}.\n"
+            f"URL: {url}\n"
+            f"This may mean the endpoint has moved or authentication is now required."
+        ) from exc

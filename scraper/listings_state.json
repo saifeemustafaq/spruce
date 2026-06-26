@@ -3,7 +3,7 @@
     "plan": "Plan 1A",
     "sqft": "546 sq. ft.",
     "floor": "Floor 3",
-    "available": "5/20/2026",
+    "available": "May 20, 2026",
     "price": "$3581/12mo",
     "bedrooms": "1",
     "bathrooms": "1"
@@ -12,7 +12,7 @@
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
     "floor": "Floor 1",
-    "available": "7/7/2026",
+    "available": "Jul 07, 2026",
     "price": "$3517/12mo",
     "bedrooms": "1",
     "bathrooms": "1"
@@ -21,7 +21,7 @@
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
     "floor": "Floor 3",
-    "available": "7/19/2026",
+    "available": "Jul 19, 2026",
     "price": "$3603/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
@@ -30,7 +30,7 @@
     "plan": "Plan 1A",
     "sqft": "546 sq. ft.",
     "floor": "Floor 3",
-    "available": "7/23/2026",
+    "available": "Jul 23, 2026",
     "price": "$3461/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
@@ -39,7 +39,7 @@
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
     "floor": "Floor 2",
-    "available": "7/31/2026",
+    "available": "Jul 31, 2026",
     "price": "$3592/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
@@ -48,7 +48,7 @@
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
     "floor": "Floor 1",
-    "available": "8/1/2026",
+    "available": "Aug 01, 2026",
     "price": "$3502/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
@@ -57,7 +57,7 @@
     "plan": "Plan 1A",
     "sqft": "546 sq. ft.",
     "floor": "Floor 2",
-    "available": "8/1/2026",
+    "available": "Aug 01, 2026",
     "price": "$3296/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
@@ -66,7 +66,7 @@
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
     "floor": "Floor 1",
-    "available": "8/4/2026",
+    "available": "Aug 04, 2026",
     "price": "$3443/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
@@ -75,7 +75,7 @@
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
     "floor": "Floor 2",
-    "available": "8/13/2026",
+    "available": "Aug 13, 2026",
     "price": "$3408/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
@@ -84,7 +84,7 @@
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
     "floor": "Floor 3",
-    "available": "8/14/2026",
+    "available": "Aug 14, 2026",
     "price": "$3508/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
@@ -93,7 +93,7 @@
     "plan": "Plan 3A",
     "sqft": "1274 sq. ft.",
     "floor": "Floor 1",
-    "available": "8/15/2026",
+    "available": "Aug 15, 2026",
     "price": "$5507/13mo",
     "bedrooms": "3",
     "bathrooms": "2"

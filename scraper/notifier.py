@@ -19,6 +19,42 @@ def send_email(subject, body):
         server.send_message(msg)
     print(f"  Email sent: {subject}")
 
+def send_api_error_alert(error: Exception) -> None:
+    send_email(
+        subject="⚠️ Spruce Tracker — API failure, check required",
+        body=(
+            "The Prometheus listing API could not be reached or returned unexpected data.\n\n"
+            f"Error type : {type(error).__name__}\n"
+            f"Details    :\n{error}\n\n"
+            "Possible causes:\n"
+            "  • The API endpoint URL changed\n"
+            "  • The server returned an HTTP error (4xx / 5xx)\n"
+            "  • The response format changed (no longer a JSON array)\n"
+            "  • A network/firewall issue in GitHub Actions\n\n"
+            f"Verify manually:\n{TARGET_URL}\n\n"
+            "No listings_history.md changes were made during this run."
+        ),
+    )
+
+
+def send_api_empty_alert(api_url: str) -> None:
+    send_email(
+        subject="⚠️ Spruce Tracker — API returned 0 units",
+        body=(
+            "The Prometheus listing API returned an empty list this run.\n\n"
+            "This could mean:\n"
+            "  • All units are currently leased (no availability)\n"
+            "  • The API date parameter or endpoint changed\n"
+            "  • A temporary server-side issue\n\n"
+            f"API URL used : {api_url}\n"
+            f"Listing page : {TARGET_URL}\n\n"
+            "No listings_history.md changes were made during this run.\n"
+            "If units are visible on the website but this alert keeps firing, "
+            "the API URL may need to be updated in config.py."
+        ),
+    )
+
+
 def send_bmr_alert(plans):
     count = len(plans)
     unit_word = "unit" if count == 1 else "units"
