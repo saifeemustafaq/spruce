@@ -8,6 +8,8 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repo
@@ -50,7 +52,7 @@ jobs:
           git add scraper/listings_state.json scraper/listings_history.md || true
           
           # Commit and push if there are changes
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update apartment history log" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update apartment history log" && git pull --rebase origin main && git push)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
