@@ -28,6 +28,7 @@
 | 5 | M-103 | 676 sq. ft. | Floor 1 | Aug 19, 2026 | 🟢 Added | Price: $3443/13mo | 2026-06-26 19:47 PT |
 | 6 | D-303 | 676 sq. ft. | Floor 3 | Jul 21, 2026 | 🔵 Date Changed | Aug 14, 2026 ➔ Jul 21, 2026 | 2026-06-27 21:08 PT |
 | 7 | P-205 | 676 sq. ft. | Floor 2 | Aug 07, 2026 | 🟢 Added | Price: $2618/13mo | 2026-06-27 21:08 PT |
+| 8 | P-205 | 676 sq. ft. | Floor 2 | Aug 07, 2026 | 🔴 Removed | Was $2618/13mo | 2026-06-28 01:12 PT |
 
 ## Plan 2B
 
