@@ -2,8 +2,8 @@ name: Check BMR Listings
 
 on:
   schedule:
-    - cron: '0 * * * *'    # top of every hour
-    - cron: '30 * * * *'   # half past every hour
+    - cron: '17 * * * *'   # 17 minutes past the hour (off-peak)
+    - cron: '47 * * * *'   # 47 minutes past the hour (off-peak)
   workflow_dispatch:        # manual trigger for testing
 
 jobs:
