@@ -287,7 +287,7 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
             sections[plan].append(entry["row_tpl"].format(n=serial))
             summaries.append(entry["summary"])
 
-    if plan_changes:
+    if sections:
         _write_sections(history_file, sections, order, current_units)
 
     with open(state_file, "w") as f:
