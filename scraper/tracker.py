@@ -50,31 +50,50 @@ def _norm_price(price: str) -> str:
     return price.replace(",", "") if price else price
 
 
+def _count_whole_rows(rows: list) -> int:
+    """Counts rows whose serial number is a plain integer (not X.Y)."""
+    count = 0
+    for row in rows:
+        cols = [c.strip() for c in row.split("|")]
+        if len(cols) >= 2 and cols[1].isdigit():
+            count += 1
+    return count
+
+
 # ---------------------------------------------------------------------------
 # per-plan section helpers
 # ---------------------------------------------------------------------------
 
-def _read_sections(history_file: str) -> tuple[dict, list]:
+def _read_sections(history_file: str) -> tuple:
     """
     Parses the history file into per-plan sections.
 
     Returns:
-        sections: {plan_name: [data_row_strings]}
-        order:    plan names in the order they first appeared
+        sections:          {plan_name: [data_row_strings]}
+        order:             plan names in the order they first appeared
+        unit_base_serials: {unit_id: str} — the whole-number serial from the
+                           most recent 🟢 Added row for that unit
+        unit_sub_counts:   {unit_id: int} — how many sub-entries (.1, .2 …)
+                           already exist under the unit's current base serial
     """
-    sections: dict[str, list[str]] = {}
-    order: list[str] = []
+    sections: dict = {}
+    order: list = []
+    unit_base_serials: dict = {}
+    unit_sub_counts: dict = {}
     current_plan = None
     in_table = False
 
     if not os.path.exists(history_file):
-        return sections, order
+        return sections, order, unit_base_serials, unit_sub_counts
 
     with open(history_file, "r") as f:
         for raw in f:
             line = raw.rstrip("\n")
             if line.startswith("## "):
                 current_plan = line[3:].strip()
+                # Strip "(N units available)" suffix written by _write_sections
+                if " (" in current_plan and current_plan.endswith(")"):
+                    current_plan = current_plan[: current_plan.index(" (")].strip()
                 if current_plan not in sections:
                     sections[current_plan] = []
                     order.append(current_plan)
@@ -83,12 +102,43 @@ def _read_sections(history_file: str) -> tuple[dict, list]:
                 in_table = True
             elif in_table and current_plan and line.startswith("|"):
                 sections[current_plan].append(line)
+                # Parse serial and unit_id to rebuild serial tracking state
+                cols = [c.strip() for c in line.split("|")]
+                if len(cols) >= 3:
+                    serial_str = cols[1]
+                    unit_id    = cols[2]
+                    if "." in serial_str:
+                        # Sub-entry (e.g. "2.1") — track highest sub index
+                        try:
+                            sub = int(serial_str.split(".")[1])
+                            unit_sub_counts[unit_id] = max(
+                                unit_sub_counts.get(unit_id, 0), sub
+                            )
+                        except (ValueError, IndexError):
+                            pass
+                    elif serial_str.isdigit():
+                        # Whole-number entry — this becomes the new base serial
+                        # for this unit, resetting the sub-count
+                        unit_base_serials[unit_id] = serial_str
+                        unit_sub_counts[unit_id] = 0
 
-    return sections, order
+    return sections, order, unit_base_serials, unit_sub_counts
 
 
-def _write_sections(history_file: str, sections: dict, order: list) -> None:
-    """Writes the full history file with one table per plan."""
+def _write_sections(
+    history_file: str, sections: dict, order: list, current_units: dict
+) -> None:
+    """Writes the full history file with one table per plan.
+
+    Each plan heading includes a live count of currently available units,
+    e.g. ``## Plan 1D (4 units available)``.
+    """
+    # Build per-plan count from the live API snapshot
+    plan_counts: dict = {}
+    for data in current_units.values():
+        plan = data["plan"]
+        plan_counts[plan] = plan_counts.get(plan, 0) + 1
+
     dir_name = os.path.dirname(history_file)
     if dir_name:
         os.makedirs(dir_name, exist_ok=True)
@@ -96,7 +146,9 @@ def _write_sections(history_file: str, sections: dict, order: list) -> None:
     with open(history_file, "w") as f:
         f.write("# Apartment Listings History\n\n")
         for plan in order:
-            f.write(f"## {plan}\n\n")
+            count = plan_counts.get(plan, 0)
+            unit_word = "unit" if count == 1 else "units"
+            f.write(f"## {plan} ({count} {unit_word} available)\n\n")
             f.write(_TABLE_HEADER)
             for row in sections[plan]:
                 f.write(row + "\n")
@@ -107,7 +159,7 @@ def _is_blank(history_file: str) -> bool:
     """True when the history file is missing or contains no data rows."""
     if not os.path.exists(history_file):
         return True
-    _, order = _read_sections(history_file)
+    _, order, _, _ = _read_sections(history_file)
     return len(order) == 0
 
 
@@ -120,19 +172,30 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
     Compares current units against saved state, records changes into per-plan
     tables in the Markdown history, and saves the new state.
 
-    Each plan section has its own sequential serial numbers starting at 1.
-    Within a single run, new entries are sorted by unit ID within each plan.
+    Serial numbering rules:
+      • A unit's first 🟢 Added event gets the next available whole number
+        within its plan section (1, 2, 3 …).
+      • All subsequent events for that unit (price change, date change, removed)
+        receive nested serials under that same base: 2.1, 2.2, 2.3 …
+      • If a unit is removed and later re-listed it is treated as a brand-new
+        listing and receives a fresh whole number; any new sub-events nest
+        under that new base.
+
+    Each plan heading is annotated with the live count of currently available
+    units, e.g. ``## Plan 1B (3 units available)``.
 
     Returns a list of human-readable change summary strings.
     """
     blank = _is_blank(history_file)
 
     if blank:
-        sections: dict[str, list[str]] = {}
-        order: list[str] = []
+        sections: dict = {}
+        order: list = []
         old_state: dict = {}
+        unit_base_serials: dict = {}
+        unit_sub_counts: dict = {}
     else:
-        sections, order = _read_sections(history_file)
+        sections, order, unit_base_serials, unit_sub_counts = _read_sections(history_file)
         old_state = {}
         if os.path.exists(state_file):
             with open(state_file, "r") as f:
@@ -144,27 +207,30 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
     today = datetime.now(tz=_PT).strftime("%Y-%m-%d %H:%M PT")
 
     # Collect changes grouped by plan
-    plan_changes: dict[str, list[dict]] = {}
+    plan_changes: dict = {}
 
     for unit_id, data in current_units.items():
         plan = data["plan"]
         if unit_id not in old_state:
             entry = {
-                "unit_id": unit_id,
-                "row_tpl": f"| {{n}} | {unit_id} | {data['sqft']} | {data['floor']} | {data['available']} | 🟢 Added | Price: {data['price']} | {today} |",
-                "summary": f"🟢 Added {unit_id} ({plan})",
+                "unit_id":    unit_id,
+                "event_type": "added",
+                "row_tpl":    f"| {{n}} | {unit_id} | {data['sqft']} | {data['floor']} | {data['available']} | 🟢 Added | Price: {data['price']} | {today} |",
+                "summary":    f"🟢 Added {unit_id} ({plan})",
             }
         elif _norm_price(old_state[unit_id].get("price", "")) != _norm_price(data["price"]):
             entry = {
-                "unit_id": unit_id,
-                "row_tpl": f"| {{n}} | {unit_id} | {data['sqft']} | {data['floor']} | {data['available']} | 🟡 Price Changed | {old_state[unit_id].get('price')} ➔ {data['price']} | {today} |",
-                "summary": f"🟡 Price Changed {unit_id} ({plan})",
+                "unit_id":    unit_id,
+                "event_type": "price_changed",
+                "row_tpl":    f"| {{n}} | {unit_id} | {data['sqft']} | {data['floor']} | {data['available']} | 🟡 Price Changed | {old_state[unit_id].get('price')} ➔ {data['price']} | {today} |",
+                "summary":    f"🟡 Price Changed {unit_id} ({plan})",
             }
         elif old_state[unit_id].get("available") != data["available"]:
             entry = {
-                "unit_id": unit_id,
-                "row_tpl": f"| {{n}} | {unit_id} | {data['sqft']} | {data['floor']} | {data['available']} | 🔵 Date Changed | {old_state[unit_id].get('available')} ➔ {data['available']} | {today} |",
-                "summary": f"🔵 Date Changed {unit_id} ({plan})",
+                "unit_id":    unit_id,
+                "event_type": "date_changed",
+                "row_tpl":    f"| {{n}} | {unit_id} | {data['sqft']} | {data['floor']} | {data['available']} | 🔵 Date Changed | {old_state[unit_id].get('available')} ➔ {data['available']} | {today} |",
+                "summary":    f"🔵 Date Changed {unit_id} ({plan})",
             }
         else:
             continue
@@ -175,33 +241,54 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
         if unit_id not in current_units:
             plan = data["plan"]
             entry = {
-                "unit_id": unit_id,
-                "row_tpl": f"| {{n}} | {unit_id} | {data.get('sqft','?')} | {data.get('floor','?')} | {data.get('available','?')} | 🔴 Removed | Was {data.get('price')} | {today} |",
-                "summary": f"🔴 Removed {unit_id} ({plan})",
+                "unit_id":    unit_id,
+                "event_type": "removed",
+                "row_tpl":    f"| {{n}} | {unit_id} | {data.get('sqft','?')} | {data.get('floor','?')} | {data.get('available','?')} | 🔴 Removed | Was {data.get('price')} | {today} |",
+                "summary":    f"🔴 Removed {unit_id} ({plan})",
             }
             plan_changes.setdefault(plan, []).append(entry)
 
-    summaries: list[str] = []
+    summaries: list = []
 
     for plan in sorted(plan_changes.keys()):
         entries = sorted(plan_changes[plan], key=lambda e: e["unit_id"])
 
-        # Ensure the plan section exists in the ordered structure
         if plan not in sections:
             sections[plan] = []
             order.append(plan)
-        order_sorted = sorted(order)  # keep plans alphabetically ordered in file
-        order[:] = order_sorted
+        order[:] = sorted(order)
 
-        # Serial numbers continue from existing rows in this plan's table
-        next_n = len(sections[plan]) + 1
+        # Next whole number = existing whole-number rows in this plan + 1
+        next_whole = _count_whole_rows(sections[plan]) + 1
 
-        for i, entry in enumerate(entries):
-            sections[plan].append(entry["row_tpl"].format(n=next_n + i))
+        for entry in entries:
+            unit_id    = entry["unit_id"]
+            event_type = entry["event_type"]
+
+            if event_type == "added":
+                # Fresh listing → new whole number; reset sub-tracking for this unit
+                serial = str(next_whole)
+                unit_base_serials[unit_id] = serial
+                unit_sub_counts[unit_id]   = 0
+                next_whole += 1
+            else:
+                if unit_id in unit_base_serials:
+                    # Nest under the unit's existing base serial
+                    sub = unit_sub_counts.get(unit_id, 0) + 1
+                    unit_sub_counts[unit_id] = sub
+                    serial = f"{unit_base_serials[unit_id]}.{sub}"
+                else:
+                    # No prior Added entry found — fall back to whole number
+                    serial = str(next_whole)
+                    unit_base_serials[unit_id] = serial
+                    unit_sub_counts[unit_id]   = 0
+                    next_whole += 1
+
+            sections[plan].append(entry["row_tpl"].format(n=serial))
             summaries.append(entry["summary"])
 
     if plan_changes:
-        _write_sections(history_file, sections, order)
+        _write_sections(history_file, sections, order, current_units)
 
     with open(state_file, "w") as f:
         json.dump(current_units, f, indent=2)
