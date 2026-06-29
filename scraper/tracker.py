@@ -283,7 +283,7 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
                 "unit_id":    unit_id,
                 "event_type": "added",
                 "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {sqft} | {floor} | {avail} | 🟢 Added | {_hi('Price: ' + price, deal)} | {today_log} |",
-                "summary":    f"🟢 Added {unit_id} ({plan})",
+                "summary":    f"🟢 Added {unit_id} ({plan}) — {price}",
                 "statement":  f"{unit_id} ({plan}) **`listed`** at {price}",
             }
         elif _norm_price(old_state[unit_id].get("price", "")) != _norm_price(data["price"]):
@@ -298,7 +298,7 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
                 "unit_id":    unit_id,
                 "event_type": "price_changed",
                 "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {sqft} | {floor} | {avail} | 🟡 Price Changed | {_hi(str(old_price) + ' ➔ ' + price, deal)} | {today_log} |",
-                "summary":    f"🟡 Price Changed {unit_id} ({plan})",
+                "summary":    f"🟡 Price Changed {unit_id} ({plan}) — {old_price} ➔ {price}",
                 "statement":  f"{unit_id} ({plan}) **`price changed`** from {old_price} to {price}",
             }
         elif old_state[unit_id].get("available") != data["available"]:
@@ -328,7 +328,7 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
                 "unit_id":    unit_id,
                 "event_type": "removed",
                 "row_tpl":    f"| {{n}} | {unit_id} | {data.get('sqft','?')} | {data.get('floor','?')} | {data.get('available','?')} | 🔴 Removed | Was {data.get('price')} | {today_log} |",
-                "summary":    f"🔴 Removed {unit_id} ({plan})",
+                "summary":    f"🔴 Removed {unit_id} ({plan}) — was {data.get('price')}",
                 "statement":  f"{unit_id} ({plan}) **`removed`** (was {data.get('price')})",
             }
             plan_changes.setdefault(plan, []).append(entry)
