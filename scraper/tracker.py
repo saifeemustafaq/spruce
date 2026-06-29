@@ -372,12 +372,22 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
             summaries.append(entry["summary"])
             run_statements.append(entry["statement"])
 
-    # Prepend a new date-grouped block to Latest Updates if anything changed this run
+    # Add new bullets to Latest Updates if anything changed this run
     if run_statements:
-        # Insert in reverse order so index 0 ends up as the date header
-        for stmt in reversed(run_statements):
-            latest_updates.insert(0, f"- {stmt}")
-        latest_updates.insert(0, f"**{today_nice}**")
+        today_header = f"**{today_nice}**"
+        if latest_updates and latest_updates[0] == today_header:
+            # Same day as the last run — append bullets under the existing header
+            # Find where today's bullets end (before the next date header or end of list)
+            insert_at = 1
+            while insert_at < len(latest_updates) and latest_updates[insert_at].startswith("- "):
+                insert_at += 1
+            for stmt in reversed(run_statements):
+                latest_updates.insert(insert_at, f"- {stmt}")
+        else:
+            # New date — prepend a fresh header + bullets
+            for stmt in reversed(run_statements):
+                latest_updates.insert(0, f"- {stmt}")
+            latest_updates.insert(0, today_header)
 
     if sections:
         _write_sections(history_file, sections, order, current_units, latest_updates)

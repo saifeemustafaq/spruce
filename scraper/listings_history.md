@@ -60,18 +60,12 @@
 
 **June 29, 2026**
 
-- E-306 (Plan 2B) **`date changed`** from Aug 22, 2026 to Aug 15, 2026
-- C-114 (Plan 3A) **`listed`** at $5553/13mo
-
-**June 29, 2026**
-
+- D-303 (Plan 1D) **`removed`** (was $3508/13mo)
 - G-310 (Plan 1D) **`date changed`** from Jul 19, 2026 to Jul 25, 2026
 - L-303 (Plan 1D) **`listed`** at $3608/13mo
 - P-112 (Plan 2B) **`listed`** at $4488/13mo
-
-**June 29, 2026**
-
-- D-303 (Plan 1D) **`removed`** (was $3508/13mo)
+- E-306 (Plan 2B) **`date changed`** from Aug 22, 2026 to Aug 15, 2026
+- C-114 (Plan 3A) **`listed`** at $5553/13mo
 
 **June 28, 2026**
 
@@ -104,4 +98,3 @@
 - L-102 (Plan 1B) **`listed`** at $3502/13mo
 - N-202 (Plan 1B) **`listed`** at $3592/13mo
 - O-107 (Plan 1D) **`listed`** at $3443/13mo
-
