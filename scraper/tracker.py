@@ -1,4 +1,5 @@
 import os
+import re
 import json
 from datetime import datetime, timezone, timedelta
 
@@ -50,6 +51,25 @@ def compute_diff(old_text, new_text):
 def _norm_price(price: str) -> str:
     """Strips formatting differences (commas) so $3,581/12mo == $3581/12mo."""
     return price.replace(",", "") if price else price
+
+
+def _is_deal(data: dict) -> bool:
+    """True when the unit is BMR, Income Limit, or priced under $3,000."""
+    plan = data.get("plan", "")
+    if "BMR" in plan or "Income Limit" in plan:
+        return True
+    m = re.search(r"\$(\d[\d,]*)", data.get("price", ""))
+    if m:
+        try:
+            return int(m.group(1).replace(",", "")) < 3000
+        except ValueError:
+            pass
+    return False
+
+
+def _hi(text: str, deal: bool) -> str:
+    """Wraps text in bold monospace if this is a deal row."""
+    return f"**`{text}`**" if deal else text
 
 
 def _count_whole_rows(rows: list) -> int:
@@ -250,30 +270,36 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
     for unit_id, data in current_units.items():
         plan = data["plan"]
         if unit_id not in old_state:
+            deal = _is_deal(data)
+            n_cell = "**`{n}`**" if deal else "{n}"
             entry = {
                 "unit_id":    unit_id,
                 "event_type": "added",
-                "row_tpl":    f"| {{n}} | {unit_id} | {data['sqft']} | {data['floor']} | {data['available']} | 🟢 Added | Price: {data['price']} | {today_log} |",
+                "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {data['sqft']} | {data['floor']} | {data['available']} | 🟢 Added | {_hi(f'Price: {data[\"price\"]}', deal)} | {today_log} |",
                 "summary":    f"🟢 Added {unit_id} ({plan})",
-                "statement":  f"{unit_id} ({plan}) listed at {data['price']}",
+                "statement":  f"{unit_id} ({plan}) **`listed`** at {data['price']}",
             }
         elif _norm_price(old_state[unit_id].get("price", "")) != _norm_price(data["price"]):
             old_price = old_state[unit_id].get("price")
+            deal = _is_deal(data)
+            n_cell = "**`{n}`**" if deal else "{n}"
             entry = {
                 "unit_id":    unit_id,
                 "event_type": "price_changed",
-                "row_tpl":    f"| {{n}} | {unit_id} | {data['sqft']} | {data['floor']} | {data['available']} | 🟡 Price Changed | {old_price} ➔ {data['price']} | {today_log} |",
+                "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {data['sqft']} | {data['floor']} | {data['available']} | 🟡 Price Changed | {_hi(f'{old_price} ➔ {data[\"price\"]}', deal)} | {today_log} |",
                 "summary":    f"🟡 Price Changed {unit_id} ({plan})",
-                "statement":  f"{unit_id} ({plan}) price changed from {old_price} to {data['price']}",
+                "statement":  f"{unit_id} ({plan}) **`price changed`** from {old_price} to {data['price']}",
             }
         elif old_state[unit_id].get("available") != data["available"]:
             old_date = old_state[unit_id].get("available")
+            deal = _is_deal(data)
+            n_cell = "**`{n}`**" if deal else "{n}"
             entry = {
                 "unit_id":    unit_id,
                 "event_type": "date_changed",
-                "row_tpl":    f"| {{n}} | {unit_id} | {data['sqft']} | {data['floor']} | {data['available']} | 🔵 Date Changed | {old_date} ➔ {data['available']} | {today_log} |",
+                "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {data['sqft']} | {data['floor']} | {data['available']} | 🔵 Date Changed | {_hi(f'{old_date} ➔ {data[\"available\"]}', deal)} | {today_log} |",
                 "summary":    f"🔵 Date Changed {unit_id} ({plan})",
-                "statement":  f"{unit_id} ({plan}) availability date changed from {old_date} to {data['available']}",
+                "statement":  f"{unit_id} ({plan}) **`date changed`** from {old_date} to {data['available']}",
             }
         else:
             continue
@@ -288,7 +314,7 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
                 "event_type": "removed",
                 "row_tpl":    f"| {{n}} | {unit_id} | {data.get('sqft','?')} | {data.get('floor','?')} | {data.get('available','?')} | 🔴 Removed | Was {data.get('price')} | {today_log} |",
                 "summary":    f"🔴 Removed {unit_id} ({plan})",
-                "statement":  f"{unit_id} ({plan}) listing removed (was {data.get('price')})",
+                "statement":  f"{unit_id} ({plan}) **`removed`** (was {data.get('price')})",
             }
             plan_changes.setdefault(plan, []).append(entry)
 

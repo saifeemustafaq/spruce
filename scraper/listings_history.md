@@ -27,7 +27,7 @@
 | 4 | O-107 | 676 sq. ft. | Floor 1 | Aug 04, 2026 | 🟢 Added | Price: $3443/13mo | Jun 25, 2026 22:30 PT |
 | 5 | M-103 | 676 sq. ft. | Floor 1 | Aug 19, 2026 | 🟢 Added | Price: $3443/13mo | Jun 26, 2026 19:47 PT |
 | 2.1 | D-303 | 676 sq. ft. | Floor 3 | Jul 21, 2026 | 🔵 Date Changed | Aug 14, 2026 ➔ Jul 21, 2026 | Jun 27, 2026 21:08 PT |
-| 6 | P-205 | 676 sq. ft. | Floor 2 | Aug 07, 2026 | 🟢 Added | Price: $2618/13mo | Jun 27, 2026 21:08 PT |
+| 6 | **`P-205`** | 676 sq. ft. | Floor 2 | Aug 07, 2026 | 🟢 Added | **`Price: $2618/13mo`** | Jun 27, 2026 21:08 PT |
 | 6.1 | P-205 | 676 sq. ft. | Floor 2 | Aug 07, 2026 | 🔴 Removed | Was $2618/13mo | Jun 28, 2026 01:12 PT |
 
 ## Plan 2B (1 unit available)
@@ -53,30 +53,30 @@
 ## Latest Updates
 
 **June 28, 2026**
-- P-205 (Plan 1D) listing removed (was $2618/13mo)
+- P-205 (Plan 1D) **`removed`** (was $2618/13mo)
 
 **June 27, 2026**
-- C-114 (Plan 3A) listing removed (was $5553/13mo)
-- D-303 (Plan 1D) availability date changed from Aug 14, 2026 to Jul 21, 2026
-- E-306 (Plan 2B) listed at $4508/13mo
-- P-205 (Plan 1D) listed at $2618/13mo
+- C-114 (Plan 3A) **`removed`** (was $5553/13mo)
+- D-303 (Plan 1D) **`date changed`** from Aug 14, 2026 to Jul 21, 2026
+- E-306 (Plan 2B) **`listed`** at $4508/13mo
+- P-205 (Plan 1D) **`listed`** at $2618/13mo
 
 **June 26, 2026**
-- C-308 (Plan 2C with Den) listed at $4873/13mo
-- C-114 (Plan 3A) price changed from $5507/13mo to $5553/13mo
-- L-102 (Plan 1B) price changed from $3502/13mo to $3502/12mo
-- M-103 (Plan 1D) listed at $3443/13mo
+- C-308 (Plan 2C with Den) **`listed`** at $4873/13mo
+- C-114 (Plan 3A) **`price changed`** from $5507/13mo to $5553/13mo
+- L-102 (Plan 1B) **`price changed`** from $3502/13mo to $3502/12mo
+- M-103 (Plan 1D) **`listed`** at $3443/13mo
 
 **June 25, 2026**
-- B-213 (Plan 1D) listed at $3408/13mo
-- B-215 (Plan 1A) listed at $3296/13mo
-- C-102 (Plan 1B) listed at $3517/12mo
-- C-114 (Plan 3A) listed at $5507/13mo
-- D-303 (Plan 1D) listed at $3508/13mo
-- G-302 (Plan 1A) listed at $3581/12mo
-- G-310 (Plan 1D) listed at $3603/13mo
-- J-303 (Plan 1A) listed at $3461/13mo
-- L-102 (Plan 1B) listed at $3502/13mo
-- N-202 (Plan 1B) listed at $3592/13mo
-- O-107 (Plan 1D) listed at $3443/13mo
+- B-213 (Plan 1D) **`listed`** at $3408/13mo
+- B-215 (Plan 1A) **`listed`** at $3296/13mo
+- C-102 (Plan 1B) **`listed`** at $3517/12mo
+- C-114 (Plan 3A) **`listed`** at $5507/13mo
+- D-303 (Plan 1D) **`listed`** at $3508/13mo
+- G-302 (Plan 1A) **`listed`** at $3581/12mo
+- G-310 (Plan 1D) **`listed`** at $3603/13mo
+- J-303 (Plan 1A) **`listed`** at $3461/13mo
+- L-102 (Plan 1B) **`listed`** at $3502/13mo
+- N-202 (Plan 1B) **`listed`** at $3592/13mo
+- O-107 (Plan 1D) **`listed`** at $3443/13mo
 
