@@ -241,7 +241,7 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
                 except json.JSONDecodeError:
                     pass
 
-    today_log  = datetime.now(tz=_PT).strftime("%Y-%m-%d %H:%M PT")
+    today_log  = datetime.now(tz=_PT).strftime("%b %d, %Y %H:%M PT")
     today_nice = datetime.now(tz=_PT).strftime("%B %d, %Y")  # e.g. "June 28, 2026"
 
     # Collect changes grouped by plan
