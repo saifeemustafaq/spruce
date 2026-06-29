@@ -56,21 +56,25 @@
 **June 29, 2026**
 
 - D-303 (Plan 1D) **`removed`** (was $3508/13mo)
+
 **June 28, 2026**
 
 - P-205 (Plan 1D) **`removed`** (was $2618/13mo)
+
 **June 27, 2026**
 
 - C-114 (Plan 3A) **`removed`** (was $5553/13mo)
 - D-303 (Plan 1D) **`date changed`** from Aug 14, 2026 to Jul 21, 2026
 - E-306 (Plan 2B) **`listed`** at $4508/13mo
 - P-205 (Plan 1D) **`listed`** at $2618/13mo
+
 **June 26, 2026**
 
 - C-308 (Plan 2C with Den) **`listed`** at $4873/13mo
 - C-114 (Plan 3A) **`price changed`** from $5507/13mo to $5553/13mo
 - L-102 (Plan 1B) **`price changed`** from $3502/13mo to $3502/12mo
 - M-103 (Plan 1D) **`listed`** at $3443/13mo
+
 **June 25, 2026**
 
 - B-213 (Plan 1D) **`listed`** at $3408/13mo
@@ -84,4 +88,3 @@
 - L-102 (Plan 1B) **`listed`** at $3502/13mo
 - N-202 (Plan 1B) **`listed`** at $3592/13mo
 - O-107 (Plan 1D) **`listed`** at $3443/13mo
-

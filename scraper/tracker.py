@@ -198,9 +198,12 @@ def _write_sections(
 
         if latest_updates:
             f.write(f"## {_LATEST_UPDATES_HEADING}\n\n")
-            for line in latest_updates:
+            for i, line in enumerate(latest_updates):
+                # Blank line before every date header except the very first
+                if line.startswith("**") and i > 0:
+                    f.write("\n")
                 f.write(line + "\n")
-                # Blank line after each date header for readability
+                # Blank line after date header so bullets sit beneath it
                 if line.startswith("**"):
                     f.write("\n")
             f.write("\n")

@@ -70,7 +70,7 @@ def send_history_update_alert(changes: list) -> None:
         + section("🔴 Removed",       removed)
         + section("🟡 Price Changed", priced)
         + section("🔵 Date Changed",  dated)
-        + f"\nFull history: listings_history.md in your repo.\n"
+        + f"\nFull history: https://github.com/saifeemustafaq/spruce/blob/main/scraper/listings_history.md\n"
         + f"Listing page: {TARGET_URL}\n"
     )
 
