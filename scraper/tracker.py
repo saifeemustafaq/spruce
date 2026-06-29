@@ -270,36 +270,48 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
     for unit_id, data in current_units.items():
         plan = data["plan"]
         if unit_id not in old_state:
-            deal = _is_deal(data)
+            deal  = _is_deal(data)
             n_cell = "**`{n}`**" if deal else "{n}"
+            price  = data["price"]
+            sqft   = data["sqft"]
+            floor  = data["floor"]
+            avail  = data["available"]
             entry = {
                 "unit_id":    unit_id,
                 "event_type": "added",
-                "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {data['sqft']} | {data['floor']} | {data['available']} | 🟢 Added | {_hi(f'Price: {data[\"price\"]}', deal)} | {today_log} |",
+                "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {sqft} | {floor} | {avail} | 🟢 Added | {_hi('Price: ' + price, deal)} | {today_log} |",
                 "summary":    f"🟢 Added {unit_id} ({plan})",
-                "statement":  f"{unit_id} ({plan}) **`listed`** at {data['price']}",
+                "statement":  f"{unit_id} ({plan}) **`listed`** at {price}",
             }
         elif _norm_price(old_state[unit_id].get("price", "")) != _norm_price(data["price"]):
             old_price = old_state[unit_id].get("price")
-            deal = _is_deal(data)
+            deal  = _is_deal(data)
             n_cell = "**`{n}`**" if deal else "{n}"
+            price  = data["price"]
+            sqft   = data["sqft"]
+            floor  = data["floor"]
+            avail  = data["available"]
             entry = {
                 "unit_id":    unit_id,
                 "event_type": "price_changed",
-                "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {data['sqft']} | {data['floor']} | {data['available']} | 🟡 Price Changed | {_hi(f'{old_price} ➔ {data[\"price\"]}', deal)} | {today_log} |",
+                "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {sqft} | {floor} | {avail} | 🟡 Price Changed | {_hi(str(old_price) + ' ➔ ' + price, deal)} | {today_log} |",
                 "summary":    f"🟡 Price Changed {unit_id} ({plan})",
-                "statement":  f"{unit_id} ({plan}) **`price changed`** from {old_price} to {data['price']}",
+                "statement":  f"{unit_id} ({plan}) **`price changed`** from {old_price} to {price}",
             }
         elif old_state[unit_id].get("available") != data["available"]:
             old_date = old_state[unit_id].get("available")
-            deal = _is_deal(data)
+            deal  = _is_deal(data)
             n_cell = "**`{n}`**" if deal else "{n}"
+            price  = data["price"]
+            sqft   = data["sqft"]
+            floor  = data["floor"]
+            avail  = data["available"]
             entry = {
                 "unit_id":    unit_id,
                 "event_type": "date_changed",
-                "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {data['sqft']} | {data['floor']} | {data['available']} | 🔵 Date Changed | {_hi(f'{old_date} ➔ {data[\"available\"]}', deal)} | {today_log} |",
+                "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {sqft} | {floor} | {avail} | 🔵 Date Changed | {_hi(str(old_date) + ' ➔ ' + avail, deal)} | {today_log} |",
                 "summary":    f"🔵 Date Changed {unit_id} ({plan})",
-                "statement":  f"{unit_id} ({plan}) **`date changed`** from {old_date} to {data['available']}",
+                "statement":  f"{unit_id} ({plan}) **`date changed`** from {old_date} to {avail}",
             }
         else:
             continue
