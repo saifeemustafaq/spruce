@@ -124,5 +124,14 @@
     "price": "$3434/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
+  },
+  "H-111": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Aug 12, 2026",
+    "price": "$3520/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1"
   }
 }
