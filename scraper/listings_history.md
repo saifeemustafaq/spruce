@@ -41,6 +41,7 @@
 | 1 | E-306 | 936 sq. ft. | Floor 3 | Aug 22, 2026 | 🟢 Added | Price: $4508/13mo | Jun 27, 2026 21:08 PT |
 | 2 | P-112 | 936 sq. ft. | Floor 1 | Aug 20, 2026 | 🟢 Added | Price: $4488/13mo | Jun 29, 2026 13:16 PT |
 | 1.1 | E-306 | 936 sq. ft. | Floor 3 | Aug 15, 2026 | 🔵 Date Changed | Aug 22, 2026 ➔ Aug 15, 2026 | Jun 29, 2026 16:16 PT |
+| 1.2 | E-306 | 936 sq. ft. | Floor 3 | Aug 23, 2026 | 🔵 Date Changed | Aug 15, 2026 ➔ Aug 23, 2026 | Jun 30, 2026 10:30 PT |
 
 ## Plan 2C with Den (1 unit available)
 
@@ -59,6 +60,10 @@
 | 2.1 | C-114 | 1274 sq. ft. | Floor 1 | Aug 15, 2026 | 🔴 Removed | Was $5553/13mo | Jun 29, 2026 18:28 PT |
 
 ## Latest Updates
+
+**June 30, 2026**
+
+- E-306 (Plan 2B) **`date changed`** from Aug 15, 2026 to Aug 23, 2026
 
 **June 29, 2026**
 
