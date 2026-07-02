@@ -26,6 +26,15 @@
     "bedrooms": "1",
     "bathrooms": "1"
   },
+  "D-104": {
+    "plan": "Plan 2B",
+    "sqft": "936 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Jul 18, 2026",
+    "price": "$4478/14mo",
+    "bedrooms": "2",
+    "bathrooms": "2"
+  },
   "H-111": {
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
