@@ -12,8 +12,8 @@
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
     "floor": "Floor 1",
-    "available": "Jul 01, 2026",
-    "price": "$3517/13mo",
+    "available": "Jul 07, 2026",
+    "price": "$3517/12mo",
     "bedrooms": "1",
     "bathrooms": "1"
   },
@@ -23,15 +23,6 @@
     "floor": "Floor 1",
     "available": "Jul 11, 2026",
     "price": "$3502/12mo",
-    "bedrooms": "1",
-    "bathrooms": "1"
-  },
-  "H-111": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
-    "floor": "Floor 1",
-    "available": "Jul 18, 2026",
-    "price": "$3493/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
   },
@@ -89,30 +80,21 @@
     "bedrooms": "1",
     "bathrooms": "1"
   },
+  "H-111": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Aug 12, 2026",
+    "price": "$3493/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1"
+  },
   "K-106": {
     "plan": "Plan 1C",
     "sqft": "572 sq. ft.",
     "floor": "Floor 1",
     "available": "Aug 12, 2026",
     "price": "$3327/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1"
-  },
-  "M-211": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
-    "floor": "Floor 2",
-    "available": "Aug 13, 2026",
-    "price": "$3433/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1"
-  },
-  "B-213": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
-    "floor": "Floor 2",
-    "available": "Aug 13, 2026",
-    "price": "$3408/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
   },
@@ -149,6 +131,24 @@
     "floor": "Floor 3",
     "available": "Aug 14, 2026",
     "price": "$3636/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1"
+  },
+  "M-211": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Aug 13, 2026",
+    "price": "$3459/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1"
+  },
+  "B-213": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Aug 13, 2026",
+    "price": "$3434/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
   }
