@@ -1,13 +1,4 @@
 {
-  "G-302": {
-    "plan": "Plan 1A",
-    "sqft": "546 sq. ft.",
-    "floor": "Floor 3",
-    "available": "May 20, 2026",
-    "price": "$3591/12mo",
-    "bedrooms": "1",
-    "bathrooms": "1"
-  },
   "C-102": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
@@ -50,15 +41,6 @@
     "floor": "Floor 3",
     "available": "Jul 23, 2026",
     "price": "$3461/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1"
-  },
-  "G-310": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
-    "floor": "Floor 3",
-    "available": "Jul 25, 2026",
-    "price": "$3603/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
   },
