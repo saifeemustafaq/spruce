@@ -134,15 +134,6 @@
     "bedrooms": "1",
     "bathrooms": "1"
   },
-  "M-103": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
-    "floor": "Floor 1",
-    "available": "Aug 19, 2026",
-    "price": "$3443/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1"
-  },
   "P-112": {
     "plan": "Plan 2B",
     "sqft": "936 sq. ft.",
@@ -167,6 +158,15 @@
     "floor": "Floor 2",
     "available": "Sep 01, 2026",
     "price": "$3437/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1"
+  },
+  "M-103": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Aug 19, 2026",
+    "price": "$3469/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
   }

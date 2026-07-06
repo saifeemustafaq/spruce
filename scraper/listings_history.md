@@ -74,6 +74,7 @@
 | 11 | H-315 | 676 sq. ft. | Floor 3 | Jul 17, 2026 | 🟢 Added | Price: $3508/13mo | Jul 05, 2026 12:47 PT |
 | 11.1 | H-315 | 676 sq. ft. | Floor 3 | Jul 17, 2026 | 🔴 Removed | Was $3508/13mo | Jul 05, 2026 13:00 PT |
 | 12 | H-315 | 676 sq. ft. | Floor 3 | Jul 17, 2026 | 🟢 Added | Price: $3508/13mo | Jul 05, 2026 14:28 PT |
+| 5.1 | M-103 | 676 sq. ft. | Floor 1 | Aug 19, 2026 | 🟡 Price Changed | $3443/13mo ➔ $3469/13mo | Jul 05, 2026 21:40 PT |
 
 ## Plan 2B (4 units available)
 
@@ -115,6 +116,7 @@
 - H-315 (Plan 1D) **`listed`** at $3508/13mo
 - H-315 (Plan 1D) **`removed`** (was $3508/13mo)
 - H-315 (Plan 1D) **`listed`** at $3508/13mo
+- M-103 (Plan 1D) **`price changed`** from $3443/13mo to $3469/13mo
 
 **July 04, 2026**
 
