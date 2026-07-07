@@ -44,15 +44,6 @@
     "bedrooms": "1",
     "bathrooms": "1"
   },
-  "N-202": {
-    "plan": "Plan 1B",
-    "sqft": "570 sq. ft.",
-    "floor": "Floor 2",
-    "available": "Jul 31, 2026",
-    "price": "$3592/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1"
-  },
   "B-215": {
     "plan": "Plan 1A",
     "sqft": "546 sq. ft.",
@@ -133,6 +124,15 @@
     "price": "$4508/13mo",
     "bedrooms": "2",
     "bathrooms": "2"
+  },
+  "N-202": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Aug 29, 2026",
+    "price": "$3592/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1"
   },
   "E-217": {
     "plan": "Plan 1B",
