@@ -34,8 +34,8 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Add the generated tracking files
-          git add scraper/listings_state.json scraper/listings_history.md || true
+          # Add the generated per-property tracking files
+          git add scraper/data/ || true
 
           # Commit and push only if there are staged changes
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update apartment history log" && git pull --rebase origin main && git push)
