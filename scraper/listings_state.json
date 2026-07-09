@@ -134,6 +134,15 @@
     "bedrooms": "2",
     "bathrooms": "2"
   },
+  "I-117": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Aug 25, 2026",
+    "price": "$3477/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1"
+  },
   "N-202": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
@@ -149,6 +158,15 @@
     "floor": "Floor 2",
     "available": "Sep 01, 2026",
     "price": "$3437/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1"
+  },
+  "I-217": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Aug 21, 2026",
+    "price": "$3534/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
   }
