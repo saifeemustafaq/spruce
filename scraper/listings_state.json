@@ -116,6 +116,15 @@
     "bedrooms": "1",
     "bathrooms": "1"
   },
+  "P-112": {
+    "plan": "Plan 2B",
+    "sqft": "936 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Aug 20, 2026",
+    "price": "$4488/13mo",
+    "bedrooms": "2",
+    "bathrooms": "2"
+  },
   "E-306": {
     "plan": "Plan 2B",
     "sqft": "936 sq. ft.",
@@ -142,14 +151,5 @@
     "price": "$3437/13mo",
     "bedrooms": "1",
     "bathrooms": "1"
-  },
-  "P-112": {
-    "plan": "Plan 2B",
-    "sqft": "936 sq. ft.",
-    "floor": "Floor 1",
-    "available": "Aug 20, 2026",
-    "price": "$4522/13mo",
-    "bedrooms": "2",
-    "bathrooms": "2"
   }
 }
