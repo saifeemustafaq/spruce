@@ -27,6 +27,7 @@
 | 2.2 | L-102 | 570 sq. ft. | Floor 1 | Jul 08, 2026 | 🔵 Date Changed | Jul 11, 2026 ➔ Jul 08, 2026 | Jul 08, 2026 16:49 PT |
 | 5 | I-117 | 570 sq. ft. | Floor 1 | Aug 25, 2026 | 🟢 Added | Price: $3477/13mo | Jul 09, 2026 14:46 PT |
 | 6 | I-217 | 570 sq. ft. | Floor 2 | Aug 21, 2026 | 🟢 Added | Price: $3534/13mo | Jul 09, 2026 14:46 PT |
+| 6.1 | I-217 | 570 sq. ft. | Floor 2 | Aug 21, 2026 | 🟡 Price Changed | $3534/13mo ➔ $3507/13mo | Jul 09, 2026 18:17 PT |
 
 ## Plan 1C (1 unit available)
 
@@ -101,6 +102,7 @@
 | 2.1 | P-112 | 936 sq. ft. | Floor 1 | Aug 20, 2026 | 🟡 Price Changed | $4488/13mo ➔ $4522/13mo | Jul 06, 2026 22:08 PT |
 | 7.1 | D-206 | 936 sq. ft. | Floor 2 | Aug 14, 2026 | 🔴 Removed | Was $4533/13mo | Jul 07, 2026 18:13 PT |
 | 2.2 | P-112 | 936 sq. ft. | Floor 1 | Aug 20, 2026 | 🟡 Price Changed | $4522/13mo ➔ $4488/13mo | Jul 08, 2026 21:38 PT |
+| 1.3 | E-306 | 936 sq. ft. | Floor 3 | Aug 23, 2026 | 🟡 Price Changed | $4508/13mo ➔ $4543/13mo | Jul 09, 2026 18:17 PT |
 
 ## Plan 2C with Den (1 unit available)
 
@@ -118,12 +120,21 @@
 | 2 | C-114 | 1274 sq. ft. | Floor 1 | Aug 15, 2026 | 🟢 Added | Price: $5553/13mo | Jun 29, 2026 16:16 PT |
 | 2.1 | C-114 | 1274 sq. ft. | Floor 1 | Aug 15, 2026 | 🔴 Removed | Was $5553/13mo | Jun 29, 2026 18:28 PT |
 
+## Studio A (1 unit available)
+
+| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
+|---|---|---|---|---|---|---|---|
+| **`1`** | **`P-208`** | 416 sq. ft. | Floor 2 | Aug 14, 2026 | 🟢 Added | **`Price: $2459/13mo`** | Jul 09, 2026 18:17 PT |
+
 ## Latest Updates
 
 **July 09, 2026**
 
 - I-117 (Plan 1B) **`listed`** at $3477/13mo
 - I-217 (Plan 1B) **`listed`** at $3534/13mo
+- I-217 (Plan 1B) **`price changed`** from $3534/13mo to $3507/13mo
+- E-306 (Plan 2B) **`price changed`** from $4508/13mo to $4543/13mo
+- P-208 (Studio A) **`listed`** at $2459/13mo
 
 **July 08, 2026**
 
