@@ -143,6 +143,15 @@
     "bedrooms": "1",
     "bathrooms": "1"
   },
+  "A-215": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Sep 02, 2026",
+    "price": "$3515/12mo",
+    "bedrooms": "1",
+    "bathrooms": "1"
+  },
   "E-306": {
     "plan": "Plan 2B",
     "sqft": "936 sq. ft.",
