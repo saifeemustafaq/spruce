@@ -3,14 +3,25 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 from .config import GMAIL_USER, GMAIL_APP_PASSWORD
-from .parser import classify
 
 _REPO = "https://github.com/saifeemustafaq/spruce"
 
 
-def history_url(key: str) -> str:
+def history_url(group_key: str, key: str) -> str:
     """GitHub blob link to a property's history file."""
-    return f"{_REPO}/blob/main/scraper/data/{key}/listings_history.md"
+    return f"{_REPO}/blob/main/scraper/data/{group_key}/{key}/listings_history.md"
+
+
+def _deal_labels(data: dict) -> str:
+    """Human labels for why a normalized unit counts as a deal."""
+    labels = []
+    if data.get("is_bmr"):
+        labels.append("BMR")
+    if data.get("is_income_limited"):
+        labels.append("Income Limit")
+    if data.get("is_deal") and not (data.get("is_bmr") or data.get("is_income_limited")):
+        labels.append("Under $3k")
+    return " + ".join(labels) if labels else "Deal"
 
 
 def send_email(subject, body):
@@ -32,7 +43,7 @@ def send_api_error_alert(error: Exception, property_name: str, page_url: str) ->
     send_email(
         subject=f"⚠️ {property_name} Tracker — API failure, check required",
         body=(
-            "The Prometheus listing API could not be reached or returned unexpected data.\n\n"
+            "The listing source could not be reached or returned unexpected data.\n\n"
             f"Property   : {property_name}\n"
             f"Error type : {type(error).__name__}\n"
             f"Details    :\n{error}\n\n"
@@ -51,7 +62,7 @@ def send_api_empty_alert(api_url: str, property_name: str, page_url: str) -> Non
     send_email(
         subject=f"⚠️ {property_name} Tracker — API returned 0 units",
         body=(
-            "The Prometheus listing API returned an empty list this run.\n\n"
+            "The listing source returned an empty list this run.\n\n"
             f"Property : {property_name}\n\n"
             "This could mean:\n"
             "  • All units are currently leased (no availability)\n"
@@ -92,12 +103,16 @@ def send_history_update_alert(changes: list, property_name: str, page_url: str, 
     )
 
 
-def send_bmr_alert(plans, property_name: str, page_url: str):
-    count = len(plans)
+def send_bmr_alert(deals, property_name: str, page_url: str):
+    """Alert for deal units. ``deals`` is a list of ``(unit_id, normalized_data)``
+    tuples where each unit already carries is_bmr / is_income_limited / is_deal."""
+    count = len(deals)
     unit_word = "unit" if count == 1 else "units"
     plan_lines = "\n\n".join(
-        f"  [{classify(p)}] {p['name']}\n  {p['details'][:300]}"
-        for p in plans
+        f"  [{_deal_labels(data)}] {unit_id} — {data.get('plan', '')}\n"
+        f"  {data.get('price', '')} · {data.get('available', '')} · "
+        f"{data.get('bedrooms', '')}BR/{data.get('bathrooms', '')}BA"
+        for unit_id, data in deals
     )
     send_email(
         subject=f"🚨 ACT NOW — {count} BMR or Deal {unit_word} AVAILABLE at {property_name}!",
@@ -141,5 +156,26 @@ def send_change_alert(added, removed, is_first_run, property_name: str, page_url
             f"REMOVED ({len(removed)} lines):\n{removed_section}\n\n"
             f"Cross-check against the site:\n{page_url}\n"
             f"Or view history log in your repo: listings_history.md"
+        ),
+    )
+
+
+def send_store_error_alert(error: str, group_name: str, property_name: str) -> None:
+    """Non-fatal notice that the MongoDB mirror failed for a property.
+
+    The JSON/Markdown files remain the source of truth, so the run itself still
+    succeeded — this just flags that Mongo is behind and may need a re-seed.
+    """
+    send_email(
+        subject=f"⚠️ MongoDB mirror failed — {group_name} / {property_name}",
+        body=(
+            "The scraper wrote the authoritative JSON/Markdown files "
+            "successfully, but the best-effort MongoDB mirror failed.\n\n"
+            f"Group    : {group_name}\n"
+            f"Property : {property_name}\n"
+            f"Error    : {error}\n\n"
+            "The dashboard may be stale until the next successful run. If this "
+            "persists, check MONGODB_URI / Atlas network access, then rebuild "
+            "from files with `npm run seed` in the bmr project."
         ),
     )
