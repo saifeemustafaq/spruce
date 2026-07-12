@@ -107,14 +107,14 @@
     "bedrooms": "1",
     "bathrooms": "1"
   },
-  "I-117": {
-    "plan": "Plan 1B",
-    "sqft": "570 sq. ft.",
-    "floor": "Floor 1",
-    "available": "Aug 25, 2026",
-    "price": "$3492/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1"
+  "E-306": {
+    "plan": "Plan 2B",
+    "sqft": "936 sq. ft.",
+    "floor": "Floor 3",
+    "available": "Aug 23, 2026",
+    "price": "$4579/13mo",
+    "bedrooms": "2",
+    "bathrooms": "2"
   },
   "N-202": {
     "plan": "Plan 1B",
@@ -143,13 +143,13 @@
     "bedrooms": "1",
     "bathrooms": "1"
   },
-  "E-306": {
-    "plan": "Plan 2B",
-    "sqft": "936 sq. ft.",
-    "floor": "Floor 3",
-    "available": "Aug 23, 2026",
-    "price": "$4614/13mo",
-    "bedrooms": "2",
-    "bathrooms": "2"
+  "I-117": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Aug 25, 2026",
+    "price": "$3519/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1"
   }
 }
