@@ -21,12 +21,20 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: pip install -r scraper/requirements.txt
+
       - name: Run listing check
         env:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           # Set this in: Settings → Variables → Actions → TRACKING_MODE
           # Values: "bmr" (default) or "changes"
           TRACKING_MODE: ${{ vars.TRACKING_MODE || 'bmr' }}
+          # Best-effort MongoDB mirror. Add MONGODB_URI as an Actions secret and
+          # allow the runner's IP range in Atlas network access. If unset, the
+          # scraper writes files only.
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          MONGODB_DB: ${{ vars.MONGODB_DB || 'bmr' }}
         run: python scraper/check.py
 
       - name: Commit and Push History
@@ -34,8 +42,8 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Add the generated tracking files
-          git add scraper/listings_state.json scraper/listings_history.md || true
+          # Add the generated per-property tracking files
+          git add scraper/data/ || true
 
           # Commit and push only if there are staged changes
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update apartment history log" && git pull --rebase origin main && git push)

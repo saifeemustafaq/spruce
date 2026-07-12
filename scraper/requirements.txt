@@ -1,2 +1,7 @@
-# No third-party dependencies required.
-# All functionality uses Python stdlib (urllib, json, smtplib, zoneinfo).
+# Core scraping/notifying uses only the Python stdlib
+# (urllib, json, smtplib, zoneinfo).
+#
+# pymongo powers the optional, best-effort MongoDB mirror in store_mongo.py.
+# If it (or MONGODB_URI) is absent, the scraper still writes the JSON/Markdown
+# files and simply skips the mirror.
+pymongo>=4.6,<5

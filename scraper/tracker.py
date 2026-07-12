@@ -221,7 +221,7 @@ def _is_blank(history_file: str) -> bool:
 # main entry point
 # ---------------------------------------------------------------------------
 
-def update_history(state_file: str, history_file: str, current_units: dict) -> list:
+def update_history(state_file: str, history_file: str, current_units: dict) -> tuple:
     """
     Compares current units against saved state, records changes into per-plan
     tables in the Markdown history, and saves the new state.
@@ -241,7 +241,12 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
     The bottom of the file contains a ## Latest Updates section with one
     bullet per run (newest first), summarising all changes in plain English.
 
-    Returns a list of human-readable change summary strings.
+    Returns a tuple ``(summaries, events)`` where ``summaries`` is a list of
+    human-readable change strings (used for email bodies) and ``events`` is a
+    list of structured change records for the MongoDB mirror. Each event has
+    ``unit_id``, ``event_type``, ``plan``, ``changes`` (raw from/to labels),
+    ``snapshot`` (the unit's normalized data), ``summary`` and ``detected_at``.
+    The Markdown/state files remain the authoritative diff basis.
     """
     blank = _is_blank(history_file)
 
@@ -285,6 +290,9 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
                 "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {sqft} | {floor} | {avail} | 🟢 Added | {_hi('Price: ' + price, deal)} | {today_log} |",
                 "summary":    f"🟢 Added {unit_id} ({plan}) — {price}",
                 "statement":  f"{unit_id} ({plan}) **`listed`** at {price}",
+                "plan":       plan,
+                "changes":    {},
+                "snapshot":   data,
             }
         elif _norm_price(old_state[unit_id].get("price", "")) != _norm_price(data["price"]):
             old_price = old_state[unit_id].get("price")
@@ -300,6 +308,9 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
                 "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {sqft} | {floor} | {avail} | 🟡 Price Changed | {_hi(str(old_price) + ' ➔ ' + price, deal)} | {today_log} |",
                 "summary":    f"🟡 Price Changed {unit_id} ({plan}) — {old_price} ➔ {price}",
                 "statement":  f"{unit_id} ({plan}) **`price changed`** from {old_price} to {price}",
+                "plan":       plan,
+                "changes":    {"price": {"from": old_price, "to": price}},
+                "snapshot":   data,
             }
         elif old_state[unit_id].get("available") != data["available"]:
             old_date = old_state[unit_id].get("available")
@@ -315,6 +326,9 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
                 "row_tpl":    f"| {n_cell} | {_hi(unit_id, deal)} | {sqft} | {floor} | {avail} | 🔵 Date Changed | {_hi(str(old_date) + ' ➔ ' + avail, deal)} | {today_log} |",
                 "summary":    f"🔵 Date Changed {unit_id} ({plan})",
                 "statement":  f"{unit_id} ({plan}) **`date changed`** from {old_date} to {avail}",
+                "plan":       plan,
+                "changes":    {"available": {"from": old_date, "to": avail}},
+                "snapshot":   data,
             }
         else:
             continue
@@ -330,11 +344,15 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
                 "row_tpl":    f"| {{n}} | {unit_id} | {data.get('sqft','?')} | {data.get('floor','?')} | {data.get('available','?')} | 🔴 Removed | Was {data.get('price')} | {today_log} |",
                 "summary":    f"🔴 Removed {unit_id} ({plan}) — was {data.get('price')}",
                 "statement":  f"{unit_id} ({plan}) **`removed`** (was {data.get('price')})",
+                "plan":       plan,
+                "changes":    {},
+                "snapshot":   data,
             }
             plan_changes.setdefault(plan, []).append(entry)
 
     summaries: list = []
     run_statements: list = []
+    events: list = []
 
     for plan in sorted(plan_changes.keys()):
         entries = sorted(plan_changes[plan], key=lambda e: e["unit_id"])
@@ -371,6 +389,15 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
             sections[plan].append(entry["row_tpl"].format(n=serial))
             summaries.append(entry["summary"])
             run_statements.append(entry["statement"])
+            events.append({
+                "unit_id":    entry["unit_id"],
+                "event_type": entry["event_type"],
+                "plan":       entry["plan"],
+                "changes":    entry["changes"],
+                "snapshot":   entry["snapshot"],
+                "summary":    entry["summary"],
+                "detected_at": today_log,
+            })
 
     # Add new bullets to Latest Updates if anything changed this run
     if run_statements:
@@ -392,7 +419,10 @@ def update_history(state_file: str, history_file: str, current_units: dict) -> l
     if sections:
         _write_sections(history_file, sections, order, current_units, latest_updates)
 
+    dir_name = os.path.dirname(state_file)
+    if dir_name:
+        os.makedirs(dir_name, exist_ok=True)
     with open(state_file, "w") as f:
         json.dump(current_units, f, indent=2)
 
-    return summaries
+    return summaries, events

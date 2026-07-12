@@ -5,8 +5,6 @@ import urllib.error
 import urllib.request
 from datetime import date
 
-from .config import API_URL
-
 
 class APIError(Exception):
     """Raised when the Prometheus API is unreachable, returns an error, or gives unexpected data."""
@@ -23,7 +21,7 @@ _HEADERS = {
 }
 
 
-def fetch_units(retries=3, backoff_factor=2) -> list:
+def fetch_units(api_url, retries=3, backoff_factor=2) -> list:
     """
     Calls the Prometheus internal JSON API and returns the list of available units.
     The date parameter tells the API to return units available from today onwards.
@@ -34,7 +32,7 @@ def fetch_units(retries=3, backoff_factor=2) -> list:
     that some Python builds reject; the fallback unverified context handles that.
     """
     today = date.today().strftime("%Y-%m-%d")
-    url = f"{API_URL}?date={today}"
+    url = f"{api_url}?date={today}"
     req = urllib.request.Request(url, headers=_HEADERS)
 
     last_exc = None

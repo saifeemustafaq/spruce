@@ -1,26 +1,41 @@
-# Spruce Apartments — BMR Listing Tracker
+# Prometheus Apartments — BMR Listing Tracker
 
-Automatically checks the [Spruce Apartments Sunnyvale](https://prometheusapartments.com/ca/sunnyvale-apartments/spruce) listing page every hour and sends an email alert the moment a BMR (Below Market Rate) or Income Limit unit becomes available.
+Automatically checks Prometheus apartment listings every hour and sends an email alert the moment a BMR (Below Market Rate), Income Limit, or under-$3k unit becomes available.
+
+Currently tracked properties:
+- [Spruce Apartments Sunnyvale](https://prometheusapartments.com/ca/sunnyvale-apartments/spruce)
+- [Kensington Place Sunnyvale](https://prometheusapartments.com/ca/sunnyvale-apartments/kensington-place)
+
+Each property is tracked independently, with its own state and history files under `scraper/data/<property>/`.
 
 ---
 
 ## How it works
 
 1. **GitHub Actions** triggers the script on a schedule — every hour, 24/7, for free
-2. A headless Chrome browser (Playwright) opens the listing page and waits for the JavaScript to fully render the floor plans
-3. The script scans the rendered text for any plan containing **`BMR`** or **`Income Limit`**
-4. Because Spruce only shows units that are currently available, any match means a unit just opened up
+2. For each tracked property, the script calls Prometheus's internal JSON API (`.../<property_id>/available-units`) directly — no browser needed
+3. It parses the returned units and looks for any plan containing **`BMR`** / **`Income Limit`**, or any unit priced under $3,000
+4. Because the API only returns units that are currently available, any match means a unit just opened up
 5. If a match is found → you get an email with the plan name, price, and details
-6. If nothing is found → the job exits silently, no email sent
+6. Every run also records added/removed/price/date changes into that property's `listings_history.md`
 
 ```
 Every hour
     └── GitHub Actions runner starts
-        └── Playwright opens Spruce listing page
-            └── Waits for floor plans to load (JS-rendered)
-                ├── No BMR / Income Limit found → exit silently
+        └── For each property in config.PROPERTIES:
+            └── Call available-units JSON API
+                ├── Record any changes into scraper/data/<property>/listings_history.md
+                ├── No BMR / deal found → no BMR alert
                 └── Found → send Gmail alert to saifeemustafaq@gmail.com
 ```
+
+---
+
+## Adding a new property
+
+1. Open the property's listing page in Chrome, open DevTools → Network, filter for `available-units`, and reload. The number in that request URL is the property ID.
+2. Add an entry to `PROPERTIES` in [scraper/config.py](scraper/config.py) with its `key`, `name`, `property_id`, and `page_url`.
+3. That's it — the scraper will create `scraper/data/<key>/` files automatically on the next run.
 
 ---
 
@@ -31,8 +46,18 @@ Every hour
   workflows/
     check-listings.yml   # Scheduled GitHub Actions workflow (runs every hour)
 scraper/
-  check.py               # Python script: scrape + detect + email
-  requirements.txt       # Python dependencies (just playwright)
+  config.py              # Property registry (PROPERTIES) + settings
+  fetcher.py             # Calls the Prometheus JSON API
+  parser.py              # Normalizes API units + detects BMR/deals
+  tracker.py             # Diffs against saved state, writes history
+  notifier.py            # Sends property-aware Gmail alerts
+  main.py                # Loops over all properties
+  check.py               # Entry point (python scraper/check.py)
+  data/
+    <property>/
+      listings_state.json    # Last-seen units for this property
+      listings_history.md    # Human-readable change log
+      snapshot.json          # Raw API snapshot (changes mode only)
 ```
 
 ---
