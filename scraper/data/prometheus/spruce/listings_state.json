@@ -179,6 +179,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "D-210": {
+    "plan": "Studio A",
+    "sqft": "416 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Sep 05, 2026",
+    "price": "$3194/12mo",
+    "bedrooms": "0",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "I-117": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
