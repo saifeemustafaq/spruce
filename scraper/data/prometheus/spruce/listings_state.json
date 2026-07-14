@@ -59,6 +59,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "P-115": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Aug 07, 2026",
+    "price": "$3583/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "B-213": {
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
@@ -77,18 +89,6 @@
     "floor": "Floor 3",
     "available": "Aug 14, 2026",
     "price": "$3673/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
-  "M-211": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
-    "floor": "Floor 2",
-    "available": "Aug 14, 2026",
-    "price": "$3498/13mo",
     "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
@@ -143,12 +143,36 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "I-117": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Aug 25, 2026",
+    "price": "$3492/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "N-202": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
     "floor": "Floor 2",
     "available": "Aug 29, 2026",
     "price": "$3607/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
+  "A-304": {
+    "plan": "Plan 1C",
+    "sqft": "572 sq. ft.",
+    "floor": "Floor 3",
+    "available": "Aug 29, 2026",
+    "price": "$3562/13mo",
     "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
@@ -186,18 +210,6 @@
     "available": "Sep 05, 2026",
     "price": "$3194/12mo",
     "bedrooms": "0",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
-  "I-117": {
-    "plan": "Plan 1B",
-    "sqft": "570 sq. ft.",
-    "floor": "Floor 1",
-    "available": "Aug 25, 2026",
-    "price": "$3519/13mo",
-    "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
     "is_income_limited": false,
