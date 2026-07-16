@@ -155,6 +155,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "L-316": {
+    "plan": "Plan 2A",
+    "sqft": "858 sq. ft.",
+    "floor": "Floor 3",
+    "available": "Aug 31, 2026",
+    "price": "$4265/13mo",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "E-217": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
