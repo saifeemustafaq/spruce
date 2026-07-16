@@ -9,14 +9,16 @@
 | 3 | None-4115 | 687 sq. ft. | Floor 1 | Aug 27, 2026 | 🟢 Added | Price: $3587/13mo | Jul 08, 2026 14:27 PT |
 | 4 | None-4216 | 687 sq. ft. | Floor 2 | Aug 15, 2026 | 🟢 Added | Price: $3652/13mo | Jul 08, 2026 14:27 PT |
 | 2.1 | None-2107 | 687 sq. ft. | Floor 1 | Jun 26, 2026 | 🔴 Removed | Was $3570/13mo | Jul 10, 2026 22:41 PT |
-| 3.1 | None-4115 | 687 sq. ft. | Floor 1 | Aug 27, 2026 | 🟡 Price Changed | $3587/13mo ➔ $3614/13mo | Jul 14, 2026 22:43 PT |
-| 3.2 | None-4115 | 687 sq. ft. | Floor 1 | Aug 27, 2026 | 🟡 Price Changed | $3614/13mo ➔ $3587/13mo | Jul 16, 2026 13:20 PT |
+| 3.1 | None-4115 | 687 sq. ft. | Floor 1 | Aug 27, 2026 | 🟡 Price Changed | $3587/13mo ➔ $3614/13mo | Jul 13, 2026 20:35 PT |
+| 3.2 | None-4115 | 687 sq. ft. | Floor 1 | Aug 27, 2026 | 🟡 Price Changed | $3614/13mo ➔ $3587/13mo | Jul 15, 2026 17:12 PT |
+| 3.3 | None-4115 | 687 sq. ft. | Floor 1 | Aug 27, 2026 | 🟡 Price Changed | $3587/13mo ➔ $3614/13mo | Jul 15, 2026 18:09 PT |
+| 3.4 | None-4115 | 687 sq. ft. | Floor 1 | Aug 27, 2026 | 🟡 Price Changed | $3614/13mo ➔ $3587/13mo | Jul 15, 2026 20:39 PT |
 
 ## Plan 1B (1 unit available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
-| 1 | None-4105 | 750 sq. ft. | Floor 1 | Aug 19, 2026 | 🟢 Added | Price: $3732/13mo | Jul 14, 2026 22:43 PT |
+| 1 | None-4105 | 750 sq. ft. | Floor 1 | Aug 19, 2026 | 🟢 Added | Price: $3732/13mo | Jul 14, 2026 12:44 PT |
 
 ## Plan 2A (1 unit available)
 
@@ -26,14 +28,19 @@
 
 ## Latest Updates
 
-**July 16, 2026**
+**July 15, 2026**
 
+- None-4115 (Plan 1A) **`price changed`** from $3614/13mo to $3587/13mo
+- None-4115 (Plan 1A) **`price changed`** from $3587/13mo to $3614/13mo
 - None-4115 (Plan 1A) **`price changed`** from $3614/13mo to $3587/13mo
 
 **July 14, 2026**
 
-- None-4115 (Plan 1A) **`price changed`** from $3587/13mo to $3614/13mo
 - None-4105 (Plan 1B) **`listed`** at $3732/13mo
+
+**July 13, 2026**
+
+- None-4115 (Plan 1A) **`price changed`** from $3587/13mo to $3614/13mo
 
 **July 10, 2026**
 
