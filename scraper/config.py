@@ -1,3 +1,4 @@
+import json
 import os
 
 # Prometheus internal JSON API base. Each property has its own numeric ID;
@@ -71,9 +72,10 @@ def snapshot_path(group_key: str, key: str) -> str:
 
 GMAIL_USER = "saifeemustafaq@gmail.com"
 
-# Set as a GitHub repo variable (Settings → Variables → Actions):
-#   TRACKING_MODE = bmr      → only email when BMR/Income Limit/deal unit appears
-#   TRACKING_MODE = changes  → email whenever anything on the page changes
+# NOTE: TRACKING_MODE is deprecated and no longer changes behavior. The scraper
+# now always sends the BMR/deal alert and the added/removed/price/date "history"
+# alert (both still subject to the per-property email toggle in
+# notifications.json). The old noisy "Page changed" raw-diff email was removed.
 TRACKING_MODE = os.environ.get("TRACKING_MODE", "bmr").strip().lower()
 
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
@@ -81,3 +83,43 @@ GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
 # MongoDB mirror (best-effort). If unset, the scraper writes files only.
 MONGODB_URI = os.environ.get("MONGODB_URI", "")
 MONGODB_DB = os.environ.get("MONGODB_DB", "bmr")
+
+# ---------------------------------------------------------------------------
+# Per-property monitoring + email controls (scraper/notifications.json)
+# ---------------------------------------------------------------------------
+
+NOTIFICATIONS_FILE = "scraper/notifications.json"
+
+
+def load_notification_config() -> dict:
+    """Read scraper/notifications.json.
+
+    Fails open: on a missing/invalid file this returns ``{}`` so every property
+    defaults to monitored + email-enabled. This guarantees a bad or absent
+    config never silently stops tracking or breaks the run.
+    """
+    try:
+        with open(NOTIFICATIONS_FILE) as f:
+            data = json.load(f)
+        return data if isinstance(data, dict) else {}
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return {}
+
+
+def property_controls(config: dict, group_key: str, prop_key: str) -> dict:
+    """Resolve the ``{monitor, email}`` flags for one property.
+
+    Any missing group/property/flag defaults to ``True`` (monitored + emailing).
+      - monitor=False → skip the property entirely (no fetch, no file/Mongo
+        writes, no emails).
+      - email=False   → keep scraping (files, MongoDB and the website stay
+        current) but send no emails for that property.
+    """
+    group = config.get(group_key) if isinstance(config, dict) else None
+    prop = group.get(prop_key) if isinstance(group, dict) else None
+    if not isinstance(prop, dict):
+        prop = {}
+    return {
+        "monitor": bool(prop.get("monitor", True)),
+        "email": bool(prop.get("email", True)),
+    }

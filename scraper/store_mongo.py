@@ -13,6 +13,7 @@ import re
 from datetime import datetime, timezone
 
 from .config import MONGODB_URI, MONGODB_DB
+from .sources.base import classify_unit, resolve_bedrooms
 
 _MONTHS = {
     "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
@@ -78,19 +79,6 @@ def _parse_detected_at(label):
     return base + timedelta(hours=7)
 
 
-def _plan_bedrooms(plan: str) -> int:
-    m = re.search(r"Plan\s+(\d)", plan or "", re.IGNORECASE)
-    return int(m.group(1)) if m else 0
-
-
-def _classify(plan: str, rent: int):
-    plan = plan or ""
-    is_bmr = "BMR" in plan
-    is_income = "Income Limit" in plan
-    is_deal = is_bmr or is_income or (rent > 0 and rent < 3000)
-    return is_bmr, is_income, is_deal
-
-
 def _split_unit(unit_id: str, data: dict):
     """Return (buildingNumber, unitNumber).
 
@@ -105,11 +93,24 @@ def _split_unit(unit_id: str, data: dict):
     return "", unit_id
 
 
+def _flags(data: dict, plan: str, rent):
+    """Prefer the flags already computed by annotate_flags; recompute with the
+    shared canonical logic only when they are absent (e.g. an older snapshot)."""
+    if "is_deal" in data:
+        return (
+            bool(data.get("is_bmr")),
+            bool(data.get("is_income_limited")),
+            bool(data.get("is_deal")),
+        )
+    return classify_unit(plan, rent, data.get("bedrooms"))
+
+
 def _build_unit_doc(group: dict, prop: dict, unit_id: str, data: dict, now):
+    plan = data.get("plan", "")
     rent, term = _parse_price(data.get("price"))
-    is_bmr, is_income, is_deal = _classify(data.get("plan", ""), rent)
+    is_bmr, is_income, is_deal = _flags(data, plan, rent)
     building, unit_number = _split_unit(unit_id, data)
-    bedrooms = _int10(data.get("bedrooms"), _plan_bedrooms(data.get("plan", "")))
+    bedrooms = resolve_bedrooms(data.get("bedrooms"), plan) or 0
     bathrooms = _int10(data.get("bathrooms"), bedrooms or 1)
     return {
         "group": group["name"],
@@ -140,8 +141,8 @@ def _build_event_doc(group: dict, prop: dict, event: dict, now):
     snap = event.get("snapshot", {}) or {}
     plan = event.get("plan", "") or snap.get("plan", "")
     rent, term = _parse_price(snap.get("price"))
-    is_bmr, _is_income, is_deal = _classify(plan, rent)
-    bedrooms = _int10(snap.get("bedrooms"), _plan_bedrooms(plan))
+    is_bmr, _is_income, is_deal = _flags(snap, plan, rent)
+    bedrooms = resolve_bedrooms(snap.get("bedrooms"), plan) or 0
     bathrooms = _int10(snap.get("bathrooms"), bedrooms or 1)
     return {
         "group": group["name"],
