@@ -203,6 +203,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "B-102": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Sep 15, 2026",
+    "price": "$3427/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "N-202": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
