@@ -1,23 +1,27 @@
-import json
 import sys
 
 from .config import (
-    TRACKING_MODE, GROUPS,
-    state_file, history_file, snapshot_path,
+    GROUPS,
+    state_file, history_file,
+    load_notification_config, property_controls,
 )
 from .fetcher import APIError
 from .sources.registry import get_source
-from .tracker import load_snapshot, save_snapshot, compute_diff, update_history
+from .tracker import update_history
 from . import store_mongo
 from .notifier import (
-    send_bmr_alert, send_change_alert, send_api_error_alert,
+    send_bmr_alert, send_api_error_alert,
     send_api_empty_alert, send_history_update_alert, send_store_error_alert,
     history_url,
 )
 
 
-def run_property(group: dict, prop: dict) -> bool:
+def run_property(group: dict, prop: dict, controls: dict) -> bool:
     """Runs the full check pipeline for a single property within a group.
+
+    ``controls`` carries the per-property {monitor, email} flags. Files and the
+    MongoDB mirror are always written (so the website stays current); the
+    ``email`` flag only gates outbound email for this property.
 
     Returns True on success, False if the property's run failed (so the overall
     process can exit non-zero while still processing other properties).
@@ -26,31 +30,36 @@ def run_property(group: dict, prop: dict) -> bool:
     key        = prop["key"]
     page_url   = prop.get("page_url", "")
     group_key  = group["key"]
+    email_on   = controls["email"]
     source     = get_source(group["adapter"])
 
     prop_state_file = state_file(group_key, key)
     prop_history    = history_file(group_key, key)
-    prop_snapshot   = snapshot_path(group_key, key)
 
     print(f"\n=== {group['name']} / {name} ===")
+    if not email_on:
+        print("  (email notifications disabled for this property)")
     print("Fetching units ...")
 
     try:
         raw = source.fetch(prop)
     except APIError as exc:
         print(f"ERROR: fetch failure — {exc}")
-        send_api_error_alert(exc, name, page_url)
+        if email_on:
+            send_api_error_alert(exc, name, page_url)
         return False
     except Exception as exc:  # noqa: BLE001 - surface any adapter error as an alert
         print(f"ERROR: unexpected fetch failure — {exc}")
-        send_api_error_alert(exc, name, page_url)
+        if email_on:
+            send_api_error_alert(exc, name, page_url)
         return False
 
     print(f"Source returned {len(raw)} raw record(s)")
 
     if len(raw) == 0:
-        print("WARNING: source returned 0 records — sending alert email.")
-        send_api_empty_alert(page_url, name, page_url)
+        print("WARNING: source returned 0 records.")
+        if email_on:
+            send_api_empty_alert(page_url, name, page_url)
         return True
 
     current_units = source.parse(raw)
@@ -63,39 +72,22 @@ def run_property(group: dict, prop: dict) -> bool:
 
     summaries, events = update_history(prop_state_file, prop_history, current_units)
 
-    # BMR/deal alert fires first so it lands at the top of the inbox
-    if TRACKING_MODE == "bmr":
-        deals = [(uid, d) for uid, d in current_units.items() if d.get("is_deal")]
-        if deals:
-            for uid, d in deals:
-                print(f"  DEAL: {uid} — {d.get('plan','')} — {d.get('price','')}")
+    # BMR/deal alert fires first so it lands at the top of the inbox.
+    deals = [(uid, d) for uid, d in current_units.items() if d.get("is_deal")]
+    if deals:
+        for uid, d in deals:
+            print(f"  DEAL: {uid} — {d.get('plan','')} — {d.get('price','')}")
+        if email_on:
             send_bmr_alert(deals, name, page_url)
-        else:
-            print("No BMR / Income Limit / deal units found. No alert sent.")
+    else:
+        print("No BMR / Income Limit / deal units found.")
 
+    # Tracker alert: units added / removed / price changed / date changed.
     if summaries:
-        print(f"{len(summaries)} history change(s) recorded — sending update email.")
-        send_history_update_alert(summaries, name, page_url,
-                                  history_url(group_key, key))
-
-    if TRACKING_MODE == "changes":
-        raw_json = json.dumps(raw, sort_keys=True, default=str)
-        old_snapshot = load_snapshot(prop_snapshot)
-        save_snapshot(prop_snapshot, raw_json)
-
-        if old_snapshot is None:
-            print("No previous snapshot — saving baseline.")
-            send_change_alert([], [], is_first_run=True,
-                              property_name=name, page_url=page_url)
-        else:
-            added, removed = compute_diff(old_snapshot, raw_json)
-            if added or removed or summaries:
-                print(f"Changes detected (+{len(added)} / -{len(removed)} lines).")
-                send_change_alert(added, removed, is_first_run=False,
-                                  property_name=name, page_url=page_url,
-                                  changes_log=summaries)
-            else:
-                print("No changes detected since last run.")
+        print(f"{len(summaries)} history change(s) recorded.")
+        if email_on:
+            send_history_update_alert(summaries, name, page_url,
+                                      history_url(group_key, key))
 
     # MongoDB mirror — best-effort, never blocks the (already-written) files.
     result = store_mongo.sync_property(group, prop, current_units, events)
@@ -105,22 +97,30 @@ def run_property(group: dict, prop: dict) -> bool:
         print(f"  Mongo mirror: {result}")
     else:
         print(f"  Mongo mirror FAILED: {result}")
-        send_store_error_alert(result, group["name"], name)
+        if email_on:
+            send_store_error_alert(result, group["name"], name)
 
     return True
 
 
 def main():
     total = sum(len(g["properties"]) for g in GROUPS)
-    print(f"Mode: {TRACKING_MODE}")
     print(f"Tracking {len(GROUPS)} group(s), {total} propert"
           f"{'y' if total == 1 else 'ies'}")
+
+    notif = load_notification_config()
 
     all_ok = True
     for group in GROUPS:
         for prop in group["properties"]:
+            controls = property_controls(notif, group["key"], prop["key"])
+            if not controls["monitor"]:
+                print(f"\n=== {group['name']} / {prop['name']} ===")
+                print("  Monitoring disabled — skipping "
+                      "(no scraping, file/MongoDB writes, or emails).")
+                continue
             try:
-                ok = run_property(group, prop)
+                ok = run_property(group, prop, controls)
             except Exception as exc:  # noqa: BLE001
                 print(f"ERROR: unexpected failure processing "
                       f"{group['key']}/{prop['key']} — {exc}")

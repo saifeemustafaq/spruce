@@ -121,7 +121,7 @@ def send_bmr_alert(deals, property_name: str, page_url: str):
             "🚨🚨🚨  BMR / DEAL UNIT AVAILABLE — APPLY IMMEDIATELY  🚨🚨🚨\n"
             "=" * 60 + "\n\n"
             f"{count} BMR, Income Limit, or price-deal {unit_word} "
-            "(1BR under $3k / 2-3BR $2,950-$4,000) "
+            "(studio/1BR under $3k · 2BR+ incl. 2B-with-Den & 3BR under $4k) "
             f"just appeared at {property_name}.\n"
             "These go FAST. Stop what you are doing and apply NOW.\n\n"
             "--- UNIT DETAILS ---\n\n"

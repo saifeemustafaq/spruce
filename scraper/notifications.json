@@ -1,0 +1,10 @@
+{
+  "_comment": "Per-property controls. 'monitor'=false skips the property entirely (no scraping, no file/MongoDB writes, no emails). 'email'=false keeps scraping so the website + files + MongoDB stay current, but sends NO emails for that property. Missing groups/properties/flags default to true (monitored + emailing), so this file can never silently break tracking. Keys must match spruce/scraper/config.py GROUPS (group key -> property key).",
+  "prometheus": {
+    "spruce": { "monitor": true, "email": true },
+    "kensington-place": { "monitor": true, "email": true }
+  },
+  "irvine": {
+    "north-park": { "monitor": true, "email": false }
+  }
+}
