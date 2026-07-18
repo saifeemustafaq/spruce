@@ -59,18 +59,6 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "B-213": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
-    "floor": "Floor 2",
-    "available": "Aug 13, 2026",
-    "price": "$3473/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
   "L-303": {
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
