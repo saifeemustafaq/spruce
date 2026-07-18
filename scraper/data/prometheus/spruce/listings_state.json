@@ -95,6 +95,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "E-306": {
+    "plan": "Plan 2B",
+    "sqft": "936 sq. ft.",
+    "floor": "Floor 3",
+    "available": "Aug 23, 2026",
+    "price": "$4579/13mo",
+    "bedrooms": "2",
+    "bathrooms": "2",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "I-117": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
