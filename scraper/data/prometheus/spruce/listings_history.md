@@ -66,6 +66,7 @@
 | 5.6 | I-117 | 570 sq. ft. | Floor 1 | Aug 25, 2026 | 🟡 Price Changed | $3519/13mo ➔ $3492/13mo | Jul 13, 2026 18:04 PT |
 | 3.6 | N-202 | 570 sq. ft. | Floor 2 | Aug 29, 2026 | 🟡 Price Changed | $3607/13mo ➔ $3635/13mo | Jul 15, 2026 17:12 PT |
 | 7 | B-102 | 570 sq. ft. | Floor 1 | Sep 15, 2026 | 🟢 Added | Price: $3427/13mo | Jul 16, 2026 17:13 PT |
+| 3.7 | N-202 | 570 sq. ft. | Floor 2 | Aug 29, 2026 | 🟡 Price Changed | $3635/13mo ➔ $3607/13mo | Jul 17, 2026 17:10 PT |
 
 ## Plan 1C (1 unit available)
 
@@ -82,8 +83,9 @@
 | 4.1 | K-106 | 572 sq. ft. | Floor 1 | Aug 12, 2026 | 🔴 Removed | Was $3344/13mo | Jul 10, 2026 15:42 PT |
 | 5 | A-304 | 572 sq. ft. | Floor 3 | Aug 29, 2026 | 🟢 Added | Price: $3562/13mo | Jul 13, 2026 18:04 PT |
 | 5.1 | A-304 | 572 sq. ft. | Floor 3 | Aug 29, 2026 | 🟡 Price Changed | $3562/13mo ➔ $3589/13mo | Jul 15, 2026 17:12 PT |
+| 5.2 | A-304 | 572 sq. ft. | Floor 3 | Aug 29, 2026 | 🟡 Price Changed | $3589/13mo ➔ $3562/13mo | Jul 17, 2026 17:10 PT |
 
-## Plan 1D (6 units available)
+## Plan 1D (7 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -162,6 +164,7 @@
 | 14 | P-115 | 676 sq. ft. | Floor 1 | Aug 07, 2026 | 🟢 Added | Price: $3583/13mo | Jul 13, 2026 18:04 PT |
 | 8.11 | H-111 | 676 sq. ft. | Floor 1 | Jul 13, 2026 | 🔵 Date Changed | Jul 18, 2026 ➔ Jul 13, 2026 | Jul 13, 2026 20:35 PT |
 | 8.12 | H-111 | 676 sq. ft. | Floor 1 | Jul 13, 2026 | 🔴 Removed | Was $3508/13mo | Jul 17, 2026 16:36 PT |
+| 15 | B-107 | 676 sq. ft. | Floor 1 | Sep 16, 2026 | 🟢 Added | Price: $3548/13mo | Jul 17, 2026 17:10 PT |
 
 ## Plan 2A (0 units available)
 
@@ -247,6 +250,9 @@
 - H-111 (Plan 1D) **`removed`** (was $3508/13mo)
 - L-316 (Plan 2A) **`removed`** (was $4265/13mo)
 - P-112 (Plan 2B) **`removed`** (was $4509/13mo)
+- N-202 (Plan 1B) **`price changed`** from $3635/13mo to $3607/13mo
+- A-304 (Plan 1C) **`price changed`** from $3589/13mo to $3562/13mo
+- B-107 (Plan 1D) **`listed`** at $3548/13mo
 
 **July 16, 2026**
 
