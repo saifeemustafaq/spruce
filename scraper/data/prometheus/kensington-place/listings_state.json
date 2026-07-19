@@ -1,16 +1,4 @@
 {
-  "None-1114": {
-    "plan": "Plan 1A",
-    "sqft": "687 sq. ft.",
-    "floor": "Floor 1",
-    "available": "Jun 01, 2026",
-    "price": "$3605/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
   "None-3303": {
     "plan": "Plan 2A",
     "sqft": "1087 sq. ft.",
