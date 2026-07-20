@@ -114,12 +114,13 @@ def send_bmr_alert(deals, property_name: str, page_url: str):
         f"{data.get('bedrooms', '')}BR/{data.get('bathrooms', '')}BA"
         for unit_id, data in deals
     )
+    bar = "=" * 60
     send_email(
         subject=f"🚨 ACT NOW — {count} BMR or Deal {unit_word} AVAILABLE at {property_name}!",
         body=(
-            "=" * 60 + "\n"
+            f"{bar}\n"
             "🚨🚨🚨  BMR / DEAL UNIT AVAILABLE — APPLY IMMEDIATELY  🚨🚨🚨\n"
-            "=" * 60 + "\n\n"
+            f"{bar}\n\n"
             f"{count} BMR, Income Limit, or price-deal {unit_word} "
             "(studio/1BR under $3k · 2BR+ incl. 2B-with-Den & 3BR under $4k) "
             f"just appeared at {property_name}.\n"
@@ -128,9 +129,9 @@ def send_bmr_alert(deals, property_name: str, page_url: str):
             f"{plan_lines}\n\n"
             "--- APPLY HERE ---\n"
             f"{page_url}\n\n"
-            "=" * 60 + "\n"
+            f"{bar}\n"
             f"This is an automated alert from your {property_name} tracker.\n"
-            "=" * 60 + "\n"
+            f"{bar}\n"
         ),
     )
 
