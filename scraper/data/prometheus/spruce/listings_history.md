@@ -69,7 +69,7 @@
 | 3.7 | N-202 | 570 sq. ft. | Floor 2 | Aug 29, 2026 | 🟡 Price Changed | $3635/13mo ➔ $3607/13mo | Jul 17, 2026 17:10 PT |
 | 4.5 | E-217 | 570 sq. ft. | Floor 2 | Sep 01, 2026 | 🟡 Price Changed | $3502/13mo ➔ $3531/12mo | Jul 18, 2026 17:10 PT |
 
-## Plan 1C (1 unit available)
+## Plan 1C (2 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -85,6 +85,7 @@
 | 5 | A-304 | 572 sq. ft. | Floor 3 | Aug 29, 2026 | 🟢 Added | Price: $3562/13mo | Jul 13, 2026 18:04 PT |
 | 5.1 | A-304 | 572 sq. ft. | Floor 3 | Aug 29, 2026 | 🟡 Price Changed | $3562/13mo ➔ $3589/13mo | Jul 15, 2026 17:12 PT |
 | 5.2 | A-304 | 572 sq. ft. | Floor 3 | Aug 29, 2026 | 🟡 Price Changed | $3589/13mo ➔ $3562/13mo | Jul 17, 2026 17:10 PT |
+| **`6`** | **`B-214`** | 572 sq. ft. | Floor 2 | Sep 01, 2026 | 🟢 Added | **`Price: $2618/13mo`** | Jul 20, 2026 11:20 PT |
 
 ## Plan 1D (6 units available)
 
@@ -248,6 +249,10 @@
 | 2 | D-210 | 416 sq. ft. | Floor 2 | Sep 05, 2026 | 🟢 Added | Price: $3194/12mo | Jul 13, 2026 14:13 PT |
 
 ## Latest Updates
+
+**July 20, 2026**
+
+- B-214 (Plan 1C) **`listed`** at $2618/13mo
 
 **July 19, 2026**
 
