@@ -78,8 +78,9 @@
 | 3.8 | N-202 | 570 sq. ft. | Floor 2 | Aug 29, 2026 | 🟡 Price Changed | $3607/13mo ➔ $3624/13mo | Jul 20, 2026 13:41 PT |
 | 4.7 | E-217 | 570 sq. ft. | Floor 2 | Sep 01, 2026 | 🟡 Price Changed | $3548/12mo ➔ $3519/13mo | Jul 20, 2026 17:14 PT |
 | 4.8 | E-217 | 570 sq. ft. | Floor 2 | Sep 01, 2026 | 🟡 Price Changed | $3519/13mo ➔ $3548/12mo | Jul 20, 2026 18:10 PT |
+| 4.9 | E-217 | 570 sq. ft. | Floor 2 | Sep 01, 2026 | 🟡 Price Changed | $3548/12mo ➔ $3519/13mo | Jul 20, 2026 20:50 PT |
 
-## Plan 1C (2 units available)
+## Plan 1C (1 unit available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -97,6 +98,7 @@
 | 5.2 | A-304 | 572 sq. ft. | Floor 3 | Aug 29, 2026 | 🟡 Price Changed | $3589/13mo ➔ $3562/13mo | Jul 17, 2026 17:10 PT |
 | **`6`** | **`B-214`** | 572 sq. ft. | Floor 2 | Sep 01, 2026 | 🟢 Added | **`Price: $2618/13mo`** | Jul 20, 2026 11:20 PT |
 | 5.3 | A-304 | 572 sq. ft. | Floor 3 | Aug 29, 2026 | 🟡 Price Changed | $3562/13mo ➔ $3579/13mo | Jul 20, 2026 13:41 PT |
+| 6 | B-214 | 572 sq. ft. | Floor 2 | Sep 01, 2026 | 🔴 Removed | Was $2618/13mo | Jul 20, 2026 20:50 PT |
 
 ## Plan 1D (6 units available)
 
@@ -190,6 +192,7 @@
 | 14.1 | P-115 | 676 sq. ft. | Floor 1 | Aug 07, 2026 | 🟡 Price Changed | $3583/13mo ➔ $3600/13mo | Jul 20, 2026 13:41 PT |
 | 13.8 | A-215 | 676 sq. ft. | Floor 2 | Sep 03, 2026 | 🟡 Price Changed | $3530/12mo ➔ $3559/12mo | Jul 20, 2026 17:14 PT |
 | 13.9 | A-215 | 676 sq. ft. | Floor 2 | Sep 03, 2026 | 🟡 Price Changed | $3559/12mo ➔ $3530/12mo | Jul 20, 2026 18:10 PT |
+| 13.10 | A-215 | 676 sq. ft. | Floor 2 | Sep 03, 2026 | 🟡 Price Changed | $3530/12mo ➔ $3559/12mo | Jul 20, 2026 20:50 PT |
 
 ## Plan 2A (1 unit available)
 
@@ -295,6 +298,9 @@
 - A-215 (Plan 1D) **`price changed`** from $3530/12mo to $3559/12mo
 - E-217 (Plan 1B) **`price changed`** from $3519/13mo to $3548/12mo
 - A-215 (Plan 1D) **`price changed`** from $3559/12mo to $3530/12mo
+- E-217 (Plan 1B) **`price changed`** from $3548/12mo to $3519/13mo
+- B-214 (Plan 1C) **`removed`** (was $2618/13mo)
+- A-215 (Plan 1D) **`price changed`** from $3530/12mo to $3559/12mo
 
 **July 19, 2026**
 
