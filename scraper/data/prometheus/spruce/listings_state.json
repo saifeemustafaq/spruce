@@ -119,17 +119,29 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "A-215": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
+  "E-217": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
     "floor": "Floor 2",
-    "available": "Sep 03, 2026",
-    "price": "$3530/12mo",
+    "available": "Sep 01, 2026",
+    "price": "$3519/13mo",
     "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
+  },
+  "B-214": {
+    "plan": "Plan 1C",
+    "sqft": "572 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Sep 01, 2026",
+    "price": "$2618/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": true
   },
   "D-210": {
     "plan": "Studio A",
@@ -179,6 +191,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "A-215": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Sep 03, 2026",
+    "price": "$3559/12mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "J-311": {
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
@@ -190,29 +214,5 @@
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
-  },
-  "E-217": {
-    "plan": "Plan 1B",
-    "sqft": "570 sq. ft.",
-    "floor": "Floor 2",
-    "available": "Sep 01, 2026",
-    "price": "$3548/12mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
-  "B-214": {
-    "plan": "Plan 1C",
-    "sqft": "572 sq. ft.",
-    "floor": "Floor 2",
-    "available": "Sep 01, 2026",
-    "price": "$2618/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": true
   }
 }
