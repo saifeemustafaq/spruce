@@ -61,17 +61,7 @@
 | **`2.1`** | **`1078198_8_75`** | 664 sq. ft. | Floor 1 | Jul 21, 2026 | 🔵 Date Changed | **`Jul 20, 2026 ➔ Jul 21, 2026`** | Jul 21, 2026 09:43 PT |
 | **`7.1`** | **`1078248_34_118`** | 835 sq. ft. | Floor 1 | Jul 21, 2026 | 🔵 Date Changed | **`Jul 20, 2026 ➔ Jul 21, 2026`** | Jul 21, 2026 09:43 PT |
 | **`2`** | **`1078248_41_142`** | 1108 sq. ft. | Floor 1 | Jul 21, 2026 | 🔵 Date Changed | **`Jul 20, 2026 ➔ Jul 21, 2026`** | Jul 21, 2026 09:43 PT |
-
-## BMR (Moderate) (3 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | 1 | 1078248_33_205 | 835 sq. ft. | Floor 2 | Aug 24, 2026 | 🔴 Removed | Was $2650/12mo | Jul 22, 2026 11:48 PT |
-
-## BMR (VeryLow) (8 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078197_54_277`** | 723 sq. ft. | Floor 2 | Jul 22, 2026 | 🔵 Date Changed | **`Jul 21, 2026 ➔ Jul 22, 2026`** | Jul 22, 2026 11:48 PT |
 | **`2.1`** | **`1078198_8_75`** | 664 sq. ft. | Floor 1 | Jul 22, 2026 | 🔵 Date Changed | **`Jul 21, 2026 ➔ Jul 22, 2026`** | Jul 22, 2026 11:48 PT |
 | **`7.1`** | **`1078248_34_118`** | 835 sq. ft. | Floor 1 | Jul 22, 2026 | 🔵 Date Changed | **`Jul 21, 2026 ➔ Jul 22, 2026`** | Jul 22, 2026 11:48 PT |
@@ -92,11 +82,6 @@
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Jul 19, 2026 | 🔵 Date Changed | **`Jul 18, 2026 ➔ Jul 19, 2026`** | Jul 19, 2026 08:16 PT |
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Jul 20, 2026 | 🔵 Date Changed | **`Jul 19, 2026 ➔ Jul 20, 2026`** | Jul 20, 2026 08:33 PT |
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Jul 21, 2026 | 🔵 Date Changed | **`Jul 20, 2026 ➔ Jul 21, 2026`** | Jul 21, 2026 09:43 PT |
-
-## Studio BMR (VeryLow) (1 unit available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Jul 22, 2026 | 🔵 Date Changed | **`Jul 21, 2026 ➔ Jul 22, 2026`** | Jul 22, 2026 11:48 PT |
 
 ## Latest Updates
