@@ -131,13 +131,13 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "D-210": {
-    "plan": "Studio A",
-    "sqft": "416 sq. ft.",
+  "A-215": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
     "floor": "Floor 2",
-    "available": "Sep 05, 2026",
-    "price": "$3211/12mo",
-    "bedrooms": "0",
+    "available": "Sep 03, 2026",
+    "price": "$3530/12mo",
+    "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
     "is_income_limited": false,
@@ -167,13 +167,13 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "A-215": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
+  "D-210": {
+    "plan": "Studio A",
+    "sqft": "416 sq. ft.",
     "floor": "Floor 2",
-    "available": "Sep 03, 2026",
-    "price": "$3559/12mo",
-    "bedrooms": "1",
+    "available": "Sep 05, 2026",
+    "price": "$3238/12mo",
+    "bedrooms": "0",
     "bathrooms": "1",
     "is_bmr": false,
     "is_income_limited": false,
