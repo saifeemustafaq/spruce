@@ -284,8 +284,13 @@
 | 2 | D-210 | 416 sq. ft. | Floor 2 | Sep 05, 2026 | 🟢 Added | Price: $3194/12mo | Jul 13, 2026 14:13 PT |
 | 2.1 | D-210 | 416 sq. ft. | Floor 2 | Sep 05, 2026 | 🟡 Price Changed | $3194/12mo ➔ $3211/12mo | Jul 20, 2026 13:41 PT |
 | 2.2 | D-210 | 416 sq. ft. | Floor 2 | Sep 05, 2026 | 🟡 Price Changed | $3211/12mo ➔ $3238/12mo | Jul 22, 2026 18:16 PT |
+| 2.3 | D-210 | 416 sq. ft. | Floor 2 | Sep 05, 2026 | 🟡 Price Changed | $3238/12mo ➔ $3211/12mo | Jul 24, 2026 21:29 PT |
 
 ## Latest Updates
+
+**July 24, 2026**
+
+- D-210 (Studio A) **`price changed`** from $3238/12mo to $3211/12mo
 
 **July 23, 2026**
 
