@@ -80,11 +80,6 @@
 | **`2.1`** | **`1078198_8_75`** | 664 sq. ft. | Floor 1 | Jul 25, 2026 | 🔵 Date Changed | **`Jul 24, 2026 ➔ Jul 25, 2026`** | Jul 25, 2026 08:28 PT |
 | **`7.1`** | **`1078248_34_118`** | 835 sq. ft. | Floor 1 | Jul 25, 2026 | 🔵 Date Changed | **`Jul 24, 2026 ➔ Jul 25, 2026`** | Jul 25, 2026 08:28 PT |
 | **`2`** | **`1078248_41_142`** | 1108 sq. ft. | Floor 1 | Jul 25, 2026 | 🔵 Date Changed | **`Jul 24, 2026 ➔ Jul 25, 2026`** | Jul 25, 2026 08:28 PT |
-
-## BMR (VeryLow) (8 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078197_54_277`** | 723 sq. ft. | Floor 2 | Jul 26, 2026 | 🔵 Date Changed | **`Jul 25, 2026 ➔ Jul 26, 2026`** | Jul 26, 2026 08:30 PT |
 | **`2.1`** | **`1078198_8_75`** | 664 sq. ft. | Floor 1 | Jul 26, 2026 | 🔵 Date Changed | **`Jul 25, 2026 ➔ Jul 26, 2026`** | Jul 26, 2026 08:30 PT |
 | **`7.1`** | **`1078248_34_118`** | 835 sq. ft. | Floor 1 | Jul 26, 2026 | 🔵 Date Changed | **`Jul 25, 2026 ➔ Jul 26, 2026`** | Jul 26, 2026 08:30 PT |
@@ -109,11 +104,6 @@
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Jul 23, 2026 | 🔵 Date Changed | **`Jul 22, 2026 ➔ Jul 23, 2026`** | Jul 23, 2026 08:44 PT |
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Jul 24, 2026 | 🔵 Date Changed | **`Jul 23, 2026 ➔ Jul 24, 2026`** | Jul 24, 2026 08:17 PT |
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Jul 25, 2026 | 🔵 Date Changed | **`Jul 24, 2026 ➔ Jul 25, 2026`** | Jul 25, 2026 08:28 PT |
-
-## Studio BMR (VeryLow) (1 unit available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Jul 26, 2026 | 🔵 Date Changed | **`Jul 25, 2026 ➔ Jul 26, 2026`** | Jul 26, 2026 08:30 PT |
 
 ## Latest Updates
