@@ -38,15 +38,20 @@
 |---|---|---|---|---|---|---|---|
 | 1 | None-3208 | 1027 sq. ft. | Floor 2 | Sep 01, 2026 | 🟢 Added | Price: $4685/13mo | Jul 28, 2026 18:11 PT |
 
-## Plan 3A (1 unit available)
+## Plan 3A (2 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
 | 1 | None-1312 | 1386 sq. ft. | Floor 3 | Aug 22, 2026 | 🟢 Added | Price: $5450/13mo | Jul 17, 2026 16:09 PT |
 | 1.1 | None-1312 | 1386 sq. ft. | Floor 3 | Aug 22, 2026 | 🔴 Removed | Was $5450/13mo | Jul 17, 2026 17:10 PT |
 | 2 | None-1312 | 1386 sq. ft. | Floor 3 | Aug 22, 2026 | 🟢 Added | Price: $5450/13mo | Jul 17, 2026 20:33 PT |
+| 3 | None-4312 | 1386 sq. ft. | Floor 3 | Sep 06, 2026 | 🟢 Added | Price: $5450/13mo | Jul 31, 2026 14:29 PT |
 
 ## Latest Updates
+
+**July 31, 2026**
+
+- None-4312 (Plan 3A) **`listed`** at $5450/13mo
 
 **July 29, 2026**
 
