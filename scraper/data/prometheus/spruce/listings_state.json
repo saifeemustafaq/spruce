@@ -1,9 +1,21 @@
 {
+  "I-217": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Jul 30, 2026",
+    "price": "$3539/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "O-107": {
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
     "floor": "Floor 1",
-    "available": "Aug 05, 2026",
+    "available": "Jul 30, 2026",
     "price": "$3525/13mo",
     "bedrooms": "1",
     "bathrooms": "1",
@@ -17,18 +29,6 @@
     "floor": "Floor 1",
     "available": "Aug 07, 2026",
     "price": "$3600/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
-  "I-217": {
-    "plan": "Plan 1B",
-    "sqft": "570 sq. ft.",
-    "floor": "Floor 2",
-    "available": "Aug 11, 2026",
-    "price": "$3539/13mo",
     "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
