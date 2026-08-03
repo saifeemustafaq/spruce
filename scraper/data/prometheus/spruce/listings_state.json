@@ -39,7 +39,7 @@
     "plan": "Plan 1C",
     "sqft": "572 sq. ft.",
     "floor": "Floor 1",
-    "available": "Aug 17, 2026",
+    "available": "Aug 18, 2026",
     "price": "$3359/13mo",
     "bedrooms": "1",
     "bathrooms": "1",
@@ -95,6 +95,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "L-309": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 3",
+    "available": "Sep 09, 2026",
+    "price": "$3640/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "M-104": {
     "plan": "Plan 2B",
     "sqft": "936 sq. ft.",
@@ -103,18 +115,6 @@
     "price": "$4512/13mo",
     "bedrooms": "2",
     "bathrooms": "2",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
-  "L-309": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
-    "floor": "Floor 3",
-    "available": "Sep 17, 2026",
-    "price": "$3640/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
