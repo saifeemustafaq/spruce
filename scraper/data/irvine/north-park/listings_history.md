@@ -128,18 +128,8 @@
 | **`2.1`** | **`1078198_8_75`** | 664 sq. ft. | Floor 1 | Aug 03, 2026 | 🔵 Date Changed | **`Aug 02, 2026 ➔ Aug 03, 2026`** | Aug 03, 2026 08:17 PT |
 | **`7.1`** | **`1078248_34_118`** | 835 sq. ft. | Floor 1 | Aug 03, 2026 | 🔵 Date Changed | **`Aug 02, 2026 ➔ Aug 03, 2026`** | Aug 03, 2026 08:17 PT |
 | **`2`** | **`1078248_41_142`** | 1108 sq. ft. | Floor 1 | Aug 03, 2026 | 🔵 Date Changed | **`Aug 02, 2026 ➔ Aug 03, 2026`** | Aug 03, 2026 08:17 PT |
-
-## BMR (Moderate) (3 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078247_8_9`** | 966 sq. ft. | Floor 1 | Oct 16, 2026 | 🟢 Added | **`Price: $3200/12mo`** | Aug 04, 2026 08:10 PT |
 | 2 | 1078248_40_267 | 1108 sq. ft. | Floor 3 | Oct 08, 2026 | 🔴 Removed | Was $3200/12mo | Aug 04, 2026 08:10 PT |
-
-## BMR (VeryLow) (8 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078197_54_277`** | 723 sq. ft. | Floor 2 | Aug 04, 2026 | 🔵 Date Changed | **`Aug 03, 2026 ➔ Aug 04, 2026`** | Aug 04, 2026 08:10 PT |
 | **`2.1`** | **`1078198_8_75`** | 664 sq. ft. | Floor 1 | Aug 04, 2026 | 🔵 Date Changed | **`Aug 03, 2026 ➔ Aug 04, 2026`** | Aug 04, 2026 08:10 PT |
 | **`7.1`** | **`1078248_34_118`** | 835 sq. ft. | Floor 1 | Aug 04, 2026 | 🔵 Date Changed | **`Aug 03, 2026 ➔ Aug 04, 2026`** | Aug 04, 2026 08:10 PT |
@@ -173,11 +163,6 @@
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 01, 2026 | 🔵 Date Changed | **`Jul 31, 2026 ➔ Aug 01, 2026`** | Aug 01, 2026 08:27 PT |
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 02, 2026 | 🔵 Date Changed | **`Aug 01, 2026 ➔ Aug 02, 2026`** | Aug 02, 2026 08:28 PT |
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 03, 2026 | 🔵 Date Changed | **`Aug 02, 2026 ➔ Aug 03, 2026`** | Aug 03, 2026 08:17 PT |
-
-## Studio BMR (VeryLow) (1 unit available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 04, 2026 | 🔵 Date Changed | **`Aug 03, 2026 ➔ Aug 04, 2026`** | Aug 04, 2026 08:10 PT |
 
 ## Latest Updates
