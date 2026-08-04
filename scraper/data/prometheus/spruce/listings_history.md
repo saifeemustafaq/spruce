@@ -91,8 +91,9 @@
 | 3.9 | N-202 | 570 sq. ft. | Floor 2 | Aug 29, 2026 | 🔴 Removed | Was $3624/13mo | Jul 29, 2026 21:41 PT |
 | 6.11 | I-217 | 570 sq. ft. | Floor 2 | Jul 30, 2026 | 🔵 Date Changed | Aug 11, 2026 ➔ Jul 30, 2026 | Jul 30, 2026 18:15 PT |
 | 7.2 | B-102 | 570 sq. ft. | Floor 1 | Sep 15, 2026 | 🟡 Price Changed | $3444/13mo ➔ $3470/13mo | Aug 01, 2026 17:13 PT |
+| 7.3 | B-102 | 570 sq. ft. | Floor 1 | Sep 15, 2026 | 🟡 Price Changed | $3470/13mo ➔ $3444/13mo | Aug 03, 2026 20:54 PT |
 
-## Plan 1C (1 unit available)
+## Plan 1C (2 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -116,8 +117,9 @@
 | 8 | G-103 | 572 sq. ft. | Floor 1 | Aug 17, 2026 | 🟢 Added | Price: $3359/13mo | Aug 03, 2026 14:53 PT |
 | 8.1 | G-103 | 572 sq. ft. | Floor 1 | Aug 18, 2026 | 🔵 Date Changed | Aug 17, 2026 ➔ Aug 18, 2026 | Aug 03, 2026 16:19 PT |
 | 8.2 | G-103 | 572 sq. ft. | Floor 1 | Aug 18, 2026 | 🔴 Removed | Was $3359/13mo | Aug 03, 2026 20:38 PT |
+| 9 | G-103 | 572 sq. ft. | Floor 1 | Aug 18, 2026 | 🟢 Added | Price: $3359/13mo | Aug 03, 2026 20:54 PT |
 
-## Plan 1D (5 units available)
+## Plan 1D (6 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -226,6 +228,8 @@
 | 18 | L-309 | 676 sq. ft. | Floor 3 | Sep 17, 2026 | 🟢 Added | Price: $3640/13mo | Aug 03, 2026 14:53 PT |
 | 18.1 | L-309 | 676 sq. ft. | Floor 3 | Sep 09, 2026 | 🔵 Date Changed | Sep 17, 2026 ➔ Sep 09, 2026 | Aug 03, 2026 16:19 PT |
 | 18.2 | L-309 | 676 sq. ft. | Floor 3 | Sep 09, 2026 | 🔴 Removed | Was $3640/13mo | Aug 03, 2026 20:38 PT |
+| 19 | L-309 | 676 sq. ft. | Floor 3 | Sep 09, 2026 | 🟢 Added | Price: $3640/13mo | Aug 03, 2026 20:54 PT |
+| 14.2 | P-115 | 676 sq. ft. | Floor 1 | Aug 03, 2026 | 🔵 Date Changed | Aug 07, 2026 ➔ Aug 03, 2026 | Aug 03, 2026 20:54 PT |
 
 ## Plan 2A (0 units available)
 
@@ -323,6 +327,10 @@
 - L-309 (Plan 1D) **`date changed`** from Sep 17, 2026 to Sep 09, 2026
 - G-103 (Plan 1C) **`removed`** (was $3359/13mo)
 - L-309 (Plan 1D) **`removed`** (was $3640/13mo)
+- B-102 (Plan 1B) **`price changed`** from $3470/13mo to $3444/13mo
+- G-103 (Plan 1C) **`listed`** at $3359/13mo
+- L-309 (Plan 1D) **`listed`** at $3640/13mo
+- P-115 (Plan 1D) **`date changed`** from Aug 07, 2026 to Aug 03, 2026
 
 **August 02, 2026**
 
