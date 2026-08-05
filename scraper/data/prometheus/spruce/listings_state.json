@@ -119,12 +119,12 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "J-307": {
+  "L-309": {
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
     "floor": "Floor 3",
-    "available": "Sep 18, 2026",
-    "price": "$3605/13mo",
+    "available": "Sep 16, 2026",
+    "price": "$3640/13mo",
     "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
@@ -143,12 +143,36 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "L-309": {
+  "J-307": {
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
     "floor": "Floor 3",
-    "available": "Sep 16, 2026",
-    "price": "$3668/13mo",
+    "available": "Sep 18, 2026",
+    "price": "$3633/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
+  "K-305": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 3",
+    "available": "Sep 18, 2026",
+    "price": "$2618/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": true
+  },
+  "O-313": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 3",
+    "available": "Sep 17, 2026",
+    "price": "$3592/13mo",
     "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
