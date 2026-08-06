@@ -25,7 +25,7 @@
 |---|---|---|---|---|---|---|---|
 | 1 | None-4105 | 750 sq. ft. | Floor 1 | Aug 19, 2026 | 🟢 Added | Price: $3732/13mo | Jul 14, 2026 12:44 PT |
 
-## Plan 2A (2 units available)
+## Plan 2A (3 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -36,12 +36,16 @@
 | 3 | None-2303 | 1087 sq. ft. | Floor 3 | Sep 13, 2026 | 🟢 Added | Price: $4824/13mo | Aug 03, 2026 20:38 PT |
 | 3.1 | None-2303 | 1087 sq. ft. | Floor 3 | Sep 13, 2026 | 🔴 Removed | Was $4824/13mo | Aug 03, 2026 20:54 PT |
 | 4 | None-2303 | 1087 sq. ft. | Floor 3 | Sep 13, 2026 | 🟢 Added | Price: $4824/13mo | Aug 03, 2026 23:41 PT |
+| 4.1 | None-2303 | 1087 sq. ft. | Floor 3 | Sep 13, 2026 | 🟡 Price Changed | $4824/13mo ➔ $4822/13mo | Aug 06, 2026 02:59 PT |
+| 5 | None-3303 | 1087 sq. ft. | Floor 3 | Jul 06, 2026 | 🟢 Added | Price: $4823/13mo | Aug 06, 2026 02:59 PT |
+| 2.1 | None-3306 | 1087 sq. ft. | Floor 3 | Aug 30, 2026 | 🟡 Price Changed | $4599/13mo ➔ $4773/13mo | Aug 06, 2026 02:59 PT |
 
 ## Plan 2C (1 unit available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
 | 1 | None-3208 | 1027 sq. ft. | Floor 2 | Sep 01, 2026 | 🟢 Added | Price: $4685/13mo | Jul 28, 2026 18:11 PT |
+| 1.1 | None-3208 | 1027 sq. ft. | Floor 2 | Sep 01, 2026 | 🟡 Price Changed | $4685/13mo ➔ $4683/13mo | Aug 06, 2026 02:59 PT |
 
 ## Plan 3A (2 units available)
 
@@ -51,8 +55,19 @@
 | 1.1 | None-1312 | 1386 sq. ft. | Floor 3 | Aug 22, 2026 | 🔴 Removed | Was $5450/13mo | Jul 17, 2026 17:10 PT |
 | 2 | None-1312 | 1386 sq. ft. | Floor 3 | Aug 22, 2026 | 🟢 Added | Price: $5450/13mo | Jul 17, 2026 20:33 PT |
 | 3 | None-4312 | 1386 sq. ft. | Floor 3 | Sep 06, 2026 | 🟢 Added | Price: $5450/13mo | Jul 31, 2026 14:29 PT |
+| 2.1 | None-1312 | 1386 sq. ft. | Floor 3 | Aug 22, 2026 | 🟡 Price Changed | $5450/13mo ➔ $5448/13mo | Aug 06, 2026 02:59 PT |
+| 3.1 | None-4312 | 1386 sq. ft. | Floor 3 | Sep 06, 2026 | 🟡 Price Changed | $5450/13mo ➔ $5448/13mo | Aug 06, 2026 02:59 PT |
 
 ## Latest Updates
+
+**August 06, 2026**
+
+- None-2303 (Plan 2A) **`price changed`** from $4824/13mo to $4822/13mo
+- None-3303 (Plan 2A) **`listed`** at $4823/13mo
+- None-3306 (Plan 2A) **`price changed`** from $4599/13mo to $4773/13mo
+- None-3208 (Plan 2C) **`price changed`** from $4685/13mo to $4683/13mo
+- None-1312 (Plan 3A) **`price changed`** from $5450/13mo to $5448/13mo
+- None-4312 (Plan 3A) **`price changed`** from $5450/13mo to $5448/13mo
 
 **August 03, 2026**
 
