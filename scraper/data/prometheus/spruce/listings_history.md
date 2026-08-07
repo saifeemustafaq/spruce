@@ -240,6 +240,7 @@
 | 22 | O-107 | 676 sq. ft. | Floor 1 | Jul 30, 2026 | 🟢 Added | Price: $3525/13mo | Aug 05, 2026 12:55 PT |
 | 22.1 | O-107 | 676 sq. ft. | Floor 1 | Jul 30, 2026 | 🔴 Removed | Was $3525/13mo | Aug 05, 2026 14:57 PT |
 | 21.1 | O-313 | 676 sq. ft. | Floor 3 | Sep 17, 2026 | 🟡 Price Changed | $3592/13mo ➔ $3565/13mo | Aug 05, 2026 20:40 PT |
+| 17.2 | J-307 | 676 sq. ft. | Floor 3 | Sep 18, 2026 | 🟡 Price Changed | $3633/13mo ➔ $3605/13mo | Aug 06, 2026 20:20 PT |
 
 ## Plan 2A (1 unit available)
 
@@ -334,6 +335,7 @@
 
 - I-117 (Plan 1B) **`date changed`** from Aug 25, 2026 to Aug 13, 2026
 - D-201 (Plan 2A) **`listed`** at $4100/13mo
+- J-307 (Plan 1D) **`price changed`** from $3633/13mo to $3605/13mo
 
 **August 05, 2026**
 
