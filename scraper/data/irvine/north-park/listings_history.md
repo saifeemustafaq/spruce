@@ -140,6 +140,15 @@
 | **`7.1`** | **`1078248_34_118`** | 835 sq. ft. | Floor 1 | Aug 05, 2026 | 🔵 Date Changed | **`Aug 04, 2026 ➔ Aug 05, 2026`** | Aug 05, 2026 08:28 PT |
 | **`2`** | **`1078248_41_142`** | 1108 sq. ft. | Floor 1 | Aug 05, 2026 | 🔵 Date Changed | **`Aug 04, 2026 ➔ Aug 05, 2026`** | Aug 05, 2026 08:28 PT |
 
+## BMR (VeryLow) (8 units available)
+
+| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
+|---|---|---|---|---|---|---|---|
+| **`1`** | **`1078197_54_277`** | 723 sq. ft. | Floor 2 | Aug 06, 2026 | 🔵 Date Changed | **`Aug 05, 2026 ➔ Aug 06, 2026`** | Aug 06, 2026 17:16 PT |
+| **`2.1`** | **`1078198_8_75`** | 664 sq. ft. | Floor 1 | Aug 06, 2026 | 🔵 Date Changed | **`Aug 05, 2026 ➔ Aug 06, 2026`** | Aug 06, 2026 17:16 PT |
+| **`7.1`** | **`1078248_34_118`** | 835 sq. ft. | Floor 1 | Aug 06, 2026 | 🔵 Date Changed | **`Aug 05, 2026 ➔ Aug 06, 2026`** | Aug 06, 2026 17:16 PT |
+| **`2`** | **`1078248_41_142`** | 1108 sq. ft. | Floor 1 | Aug 06, 2026 | 🔵 Date Changed | **`Aug 05, 2026 ➔ Aug 06, 2026`** | Aug 06, 2026 17:16 PT |
+
 ## Studio BMR (0 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
@@ -171,7 +180,21 @@
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 04, 2026 | 🔵 Date Changed | **`Aug 03, 2026 ➔ Aug 04, 2026`** | Aug 04, 2026 08:10 PT |
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 05, 2026 | 🔵 Date Changed | **`Aug 04, 2026 ➔ Aug 05, 2026`** | Aug 05, 2026 08:28 PT |
 
+## Studio BMR (VeryLow) (1 unit available)
+
+| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
+|---|---|---|---|---|---|---|---|
+| **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 06, 2026 | 🔵 Date Changed | **`Aug 05, 2026 ➔ Aug 06, 2026`** | Aug 06, 2026 17:16 PT |
+
 ## Latest Updates
+
+**August 06, 2026**
+
+- 1078197_54_277 (BMR (VeryLow)) **`date changed`** from Aug 05, 2026 to Aug 06, 2026
+- 1078198_8_75 (BMR (VeryLow)) **`date changed`** from Aug 05, 2026 to Aug 06, 2026
+- 1078248_34_118 (BMR (VeryLow)) **`date changed`** from Aug 05, 2026 to Aug 06, 2026
+- 1078248_41_142 (BMR (VeryLow)) **`date changed`** from Aug 05, 2026 to Aug 06, 2026
+- 1078199_55_171 (Studio BMR (VeryLow)) **`date changed`** from Aug 05, 2026 to Aug 06, 2026
 
 **August 05, 2026**
 
