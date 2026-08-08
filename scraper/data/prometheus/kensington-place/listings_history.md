@@ -21,6 +21,7 @@
 | 4.1 | None-4216 | 687 sq. ft. | Floor 2 | Aug 14, 2026 | 🔵 Date Changed | Aug 15, 2026 ➔ Aug 14, 2026 | Aug 07, 2026 19:21 PT |
 | 4.2 | None-4216 | 687 sq. ft. | Floor 2 | Aug 15, 2026 | 🔵 Date Changed | Aug 14, 2026 ➔ Aug 15, 2026 | Aug 07, 2026 23:25 PT |
 | 4.3 | None-4216 | 687 sq. ft. | Floor 2 | Aug 14, 2026 | 🔵 Date Changed | Aug 15, 2026 ➔ Aug 14, 2026 | Aug 08, 2026 00:35 PT |
+| 4.4 | None-4216 | 687 sq. ft. | Floor 2 | Aug 15, 2026 | 🔵 Date Changed | Aug 14, 2026 ➔ Aug 15, 2026 | Aug 08, 2026 02:01 PT |
 
 ## Plan 1B (1 unit available)
 
@@ -69,6 +70,7 @@
 **August 08, 2026**
 
 - None-4216 (Plan 1A) **`date changed`** from Aug 15, 2026 to Aug 14, 2026
+- None-4216 (Plan 1A) **`date changed`** from Aug 14, 2026 to Aug 15, 2026
 
 **August 07, 2026**
 
