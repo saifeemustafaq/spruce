@@ -1,6 +1,6 @@
 # Apartment Listings History
 
-## Plan 1A (3 units available)
+## Plan 1A (4 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -28,6 +28,7 @@
 | 7 | None-2216 | 687 sq. ft. | Floor 2 | Sep 15, 2026 | 🟢 Added | Price: $3652/13mo | Aug 08, 2026 15:05 PT |
 | 8 | None-2206 | 687 sq. ft. | Floor 2 | Sep 13, 2026 | 🟢 Added | Price: $3617/13mo | Aug 09, 2026 10:16 PT |
 | 4.8 | None-4216 | 687 sq. ft. | Floor 2 | Aug 14, 2026 | 🔴 Removed | Was $3652/13mo | Aug 11, 2026 17:00 PT |
+| 9 | None-4216 | 687 sq. ft. | Floor 2 | Aug 14, 2026 | 🟢 Added | Price: $3652/13mo | Aug 11, 2026 19:45 PT |
 
 ## Plan 1B (1 unit available)
 
@@ -38,6 +39,7 @@
 | 1.2 | None-4105 | 750 sq. ft. | Floor 1 | Aug 19, 2026 | 🔵 Date Changed | Aug 14, 2026 ➔ Aug 19, 2026 | Aug 07, 2026 11:31 PT |
 | 1.3 | None-4105 | 750 sq. ft. | Floor 1 | Aug 14, 2026 | 🔵 Date Changed | Aug 19, 2026 ➔ Aug 14, 2026 | Aug 07, 2026 13:23 PT |
 | 1.4 | None-4105 | 750 sq. ft. | Floor 1 | Aug 11, 2026 | 🟡 Price Changed | $3732/13mo ➔ $3732/12mo | Aug 11, 2026 17:43 PT |
+| 1.5 | None-4105 | 750 sq. ft. | Floor 1 | Aug 14, 2026 | 🟡 Price Changed | $3732/12mo ➔ $3732/13mo | Aug 11, 2026 19:45 PT |
 
 ## Plan 2A (3 units available)
 
@@ -78,6 +80,8 @@
 
 - None-4216 (Plan 1A) **`removed`** (was $3652/13mo)
 - None-4105 (Plan 1B) **`price changed`** from $3732/13mo to $3732/12mo
+- None-4216 (Plan 1A) **`listed`** at $3652/13mo
+- None-4105 (Plan 1B) **`price changed`** from $3732/12mo to $3732/13mo
 
 **August 09, 2026**
 
