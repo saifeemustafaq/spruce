@@ -42,6 +42,7 @@
 | 1.4 | None-4105 | 750 sq. ft. | Floor 1 | Aug 11, 2026 | 🟡 Price Changed | $3732/13mo ➔ $3732/12mo | Aug 11, 2026 17:43 PT |
 | 1.5 | None-4105 | 750 sq. ft. | Floor 1 | Aug 14, 2026 | 🟡 Price Changed | $3732/12mo ➔ $3732/13mo | Aug 11, 2026 19:45 PT |
 | 1.6 | None-4105 | 750 sq. ft. | Floor 1 | Aug 11, 2026 | 🟡 Price Changed | $3732/13mo ➔ $3732/12mo | Aug 11, 2026 20:13 PT |
+| 1.7 | None-4105 | 750 sq. ft. | Floor 1 | Aug 11, 2026 | 🟡 Price Changed | $3732/12mo ➔ $3751/13mo | Aug 12, 2026 03:26 PT |
 
 ## Plan 2A (3 units available)
 
@@ -77,6 +78,10 @@
 | 3.1 | None-4312 | 1386 sq. ft. | Floor 3 | Sep 06, 2026 | 🟡 Price Changed | $5450/13mo ➔ $5448/13mo | Aug 06, 2026 02:59 PT |
 
 ## Latest Updates
+
+**August 12, 2026**
+
+- None-4105 (Plan 1B) **`price changed`** from $3732/12mo to $3751/13mo
 
 **August 11, 2026**
 
