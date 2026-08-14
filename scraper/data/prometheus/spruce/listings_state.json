@@ -11,18 +11,6 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "I-117": {
-    "plan": "Plan 1B",
-    "sqft": "570 sq. ft.",
-    "floor": "Floor 1",
-    "available": "Aug 20, 2026",
-    "price": "$3558/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
   "J-311": {
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
