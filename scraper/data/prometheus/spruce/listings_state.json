@@ -35,6 +35,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "O-313": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 3",
+    "available": "Sep 05, 2026",
+    "price": "$3564/12mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "M-104": {
     "plan": "Plan 2B",
     "sqft": "936 sq. ft.",
