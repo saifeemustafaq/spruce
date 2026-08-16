@@ -131,18 +131,6 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "D-201": {
-    "plan": "Plan 2A",
-    "sqft": "858 sq. ft.",
-    "floor": "Floor 2",
-    "available": "Sep 29, 2026",
-    "price": "$4099/13mo",
-    "bedrooms": "2",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
   "K-101": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
@@ -175,6 +163,18 @@
     "price": "$4451/14mo",
     "bedrooms": "2",
     "bathrooms": "2",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
+  "D-201": {
+    "plan": "Plan 2A",
+    "sqft": "858 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Sep 29, 2026",
+    "price": "$4133/12mo",
+    "bedrooms": "2",
+    "bathrooms": "1",
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
