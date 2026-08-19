@@ -147,6 +147,7 @@
 | 15 | I-117 | 570 sq. ft. | Floor 1 | Aug 14, 2026 | 🟢 Added | Price: $3558/13mo | Aug 18, 2026 12:16 PT |
 | 7.15 | B-102 | 570 sq. ft. | Floor 1 | Sep 18, 2026 | 🔵 Date Changed | Sep 15, 2026 ➔ Sep 18, 2026 | Aug 18, 2026 14:39 PT |
 | 7.16 | B-102 | 570 sq. ft. | Floor 1 | Sep 15, 2026 | 🔵 Date Changed | Sep 18, 2026 ➔ Sep 15, 2026 | Aug 18, 2026 15:00 PT |
+| 7.17 | B-102 | 570 sq. ft. | Floor 1 | Sep 18, 2026 | 🔵 Date Changed | Sep 15, 2026 ➔ Sep 18, 2026 | Aug 18, 2026 18:53 PT |
 
 ## Plan 1C (3 units available)
 
@@ -414,6 +415,7 @@
 | 24 | G-110 | 676 sq. ft. | Floor 1 | Oct 01, 2026 | 🟢 Added | Price: $3614/12mo | Aug 17, 2026 18:51 PT |
 | 16.17 | J-311 | 676 sq. ft. | Floor 3 | Aug 25, 2026 | 🟡 Price Changed | $3654/12mo ➔ $3654/13mo | Aug 18, 2026 14:39 PT |
 | 16.18 | J-311 | 676 sq. ft. | Floor 3 | Sep 02, 2026 | 🟡 Price Changed | $3654/13mo ➔ $3654/12mo | Aug 18, 2026 15:00 PT |
+| 16.19 | J-311 | 676 sq. ft. | Floor 3 | Sep 05, 2026 | 🔵 Date Changed | Sep 02, 2026 ➔ Sep 05, 2026 | Aug 18, 2026 18:53 PT |
 
 ## Plan 2A (1 unit available)
 
@@ -512,6 +514,7 @@
 | 14 | E-106 | 936 sq. ft. | Floor 1 | Sep 25, 2026 | 🟢 Added | Price: $4461/13mo | Aug 14, 2026 18:50 PT |
 | 15 | E-204 | 936 sq. ft. | Floor 2 | Oct 14, 2026 | 🟢 Added | Price: $4451/14mo | Aug 14, 2026 18:50 PT |
 | 10.15 | M-104 | 936 sq. ft. | Floor 1 | Aug 23, 2026 | 🔵 Date Changed | Sep 12, 2026 ➔ Aug 23, 2026 | Aug 17, 2026 18:51 PT |
+| 10.16 | M-104 | 936 sq. ft. | Floor 1 | Sep 05, 2026 | 🟡 Price Changed | $4561/13mo ➔ $4561/12mo | Aug 18, 2026 18:53 PT |
 
 ## Plan 2C with Den (0 units available)
 
@@ -555,6 +558,9 @@
 - J-311 (Plan 1D) **`price changed`** from $3654/12mo to $3654/13mo
 - B-102 (Plan 1B) **`date changed`** from Sep 18, 2026 to Sep 15, 2026
 - J-311 (Plan 1D) **`price changed`** from $3654/13mo to $3654/12mo
+- B-102 (Plan 1B) **`date changed`** from Sep 15, 2026 to Sep 18, 2026
+- J-311 (Plan 1D) **`date changed`** from Sep 02, 2026 to Sep 05, 2026
+- M-104 (Plan 2B) **`price changed`** from $4561/13mo to $4561/12mo
 
 **August 17, 2026**
 
