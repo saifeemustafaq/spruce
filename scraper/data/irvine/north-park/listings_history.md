@@ -227,17 +227,7 @@
 | **`3`** | **`1078247_4_349`** | 664 sq. ft. | Floor 3 | Aug 18, 2026 | 🔵 Date Changed | **`Aug 17, 2026 ➔ Aug 18, 2026`** | Aug 18, 2026 07:53 PT |
 | **`7.1`** | **`1078248_34_118`** | 835 sq. ft. | Floor 1 | Aug 18, 2026 | 🔵 Date Changed | **`Aug 17, 2026 ➔ Aug 18, 2026`** | Aug 18, 2026 07:53 PT |
 | **`4`** | **`1078248_41_142`** | 1108 sq. ft. | Floor 1 | Aug 18, 2026 | 🔵 Date Changed | **`Aug 17, 2026 ➔ Aug 18, 2026`** | Aug 18, 2026 07:53 PT |
-
-## BMR (Moderate) (4 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078247_3_122`** | 664 sq. ft. | Floor 1 | Sep 23, 2026 | 🟢 Added | **`Price: $2650/12mo`** | Aug 19, 2026 07:53 PT |
-
-## BMR (VeryLow) (6 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078197_54_277`** | 723 sq. ft. | Floor 2 | Aug 19, 2026 | 🔵 Date Changed | **`Aug 18, 2026 ➔ Aug 19, 2026`** | Aug 19, 2026 07:53 PT |
 | **`2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Aug 19, 2026 | 🔵 Date Changed | **`Aug 18, 2026 ➔ Aug 19, 2026`** | Aug 19, 2026 07:53 PT |
 | **`2.1`** | **`1078198_8_75`** | 664 sq. ft. | Floor 1 | Aug 19, 2026 | 🔵 Date Changed | **`Aug 18, 2026 ➔ Aug 19, 2026`** | Aug 19, 2026 07:53 PT |
@@ -289,11 +279,6 @@
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 16, 2026 | 🔵 Date Changed | **`Aug 15, 2026 ➔ Aug 16, 2026`** | Aug 16, 2026 08:00 PT |
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 17, 2026 | 🔵 Date Changed | **`Aug 16, 2026 ➔ Aug 17, 2026`** | Aug 17, 2026 08:04 PT |
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 18, 2026 | 🔵 Date Changed | **`Aug 17, 2026 ➔ Aug 18, 2026`** | Aug 18, 2026 07:53 PT |
-
-## Studio BMR (VeryLow) (1 unit available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 19, 2026 | 🔵 Date Changed | **`Aug 18, 2026 ➔ Aug 19, 2026`** | Aug 19, 2026 07:53 PT |
 
 ## Latest Updates
