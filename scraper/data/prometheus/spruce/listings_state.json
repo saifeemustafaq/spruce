@@ -1,16 +1,4 @@
 {
-  "G-103": {
-    "plan": "Plan 1C",
-    "sqft": "572 sq. ft.",
-    "floor": "Floor 1",
-    "available": "Aug 13, 2026",
-    "price": "$3425/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
   "M-104": {
     "plan": "Plan 2B",
     "sqft": "936 sq. ft.",
@@ -119,12 +107,24 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "E-317": {
+  "G-110": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Oct 01, 2026",
+    "price": "$3601/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
+  "K-101": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
-    "floor": "Floor 3",
-    "available": "Oct 03, 2026",
-    "price": "$3625/12mo",
+    "floor": "Floor 1",
+    "available": "Oct 01, 2026",
+    "price": "$3525/13mo",
     "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
@@ -143,24 +143,24 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "G-110": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
+  "I-102": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
     "floor": "Floor 1",
-    "available": "Oct 01, 2026",
-    "price": "$3631/12mo",
+    "available": "Oct 19, 2026",
+    "price": "$3565/13mo",
     "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
   },
-  "K-101": {
+  "E-317": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
-    "floor": "Floor 1",
-    "available": "Oct 01, 2026",
-    "price": "$3554/12mo",
+    "floor": "Floor 3",
+    "available": "Oct 03, 2026",
+    "price": "$3655/12mo",
     "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
