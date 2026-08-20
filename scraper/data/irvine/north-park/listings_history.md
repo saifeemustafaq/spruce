@@ -236,6 +236,16 @@
 | **`4`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Aug 19, 2026 | 🟢 Added | **`Price: $1774/12mo`** | Aug 19, 2026 07:53 PT |
 | **`5`** | **`1078248_41_142`** | 1108 sq. ft. | Floor 1 | Aug 19, 2026 | 🔵 Date Changed | **`Aug 18, 2026 ➔ Aug 19, 2026`** | Aug 19, 2026 07:53 PT |
 
+## BMR (VeryLow) (6 units available)
+
+| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
+|---|---|---|---|---|---|---|---|
+| **`1`** | **`1078197_54_277`** | 723 sq. ft. | Floor 2 | Aug 20, 2026 | 🔵 Date Changed | **`Aug 19, 2026 ➔ Aug 20, 2026`** | Aug 20, 2026 07:55 PT |
+| **`2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Aug 20, 2026 | 🔵 Date Changed | **`Aug 19, 2026 ➔ Aug 20, 2026`** | Aug 20, 2026 07:55 PT |
+| **`2.1`** | **`1078198_8_75`** | 664 sq. ft. | Floor 1 | Aug 20, 2026 | 🔵 Date Changed | **`Aug 19, 2026 ➔ Aug 20, 2026`** | Aug 20, 2026 07:55 PT |
+| **`3.1`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Aug 20, 2026 | 🔵 Date Changed | **`Aug 19, 2026 ➔ Aug 20, 2026`** | Aug 20, 2026 07:55 PT |
+| **`3`** | **`1078248_41_142`** | 1108 sq. ft. | Floor 1 | Aug 20, 2026 | 🔵 Date Changed | **`Aug 19, 2026 ➔ Aug 20, 2026`** | Aug 20, 2026 07:55 PT |
+
 ## Studio BMR (0 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
@@ -281,7 +291,22 @@
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 18, 2026 | 🔵 Date Changed | **`Aug 17, 2026 ➔ Aug 18, 2026`** | Aug 18, 2026 07:53 PT |
 | **`1`** | **`1078199_55_171`** | 533 sq. ft. | Floor 1 | Aug 19, 2026 | 🔵 Date Changed | **`Aug 18, 2026 ➔ Aug 19, 2026`** | Aug 19, 2026 07:53 PT |
 
+## Studio BMR (VeryLow) (0 units available)
+
+| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
+|---|---|---|---|---|---|---|---|
+| 1 | 1078199_55_171 | 533 sq. ft. | Floor 1 | Aug 19, 2026 | 🔴 Removed | Was $1530/12mo | Aug 20, 2026 07:55 PT |
+
 ## Latest Updates
+
+**August 20, 2026**
+
+- 1078197_54_277 (BMR (VeryLow)) **`date changed`** from Aug 19, 2026 to Aug 20, 2026
+- 1078198_8_327 (BMR (VeryLow)) **`date changed`** from Aug 19, 2026 to Aug 20, 2026
+- 1078198_8_75 (BMR (VeryLow)) **`date changed`** from Aug 19, 2026 to Aug 20, 2026
+- 1078248_34_159 (BMR (VeryLow)) **`date changed`** from Aug 19, 2026 to Aug 20, 2026
+- 1078248_41_142 (BMR (VeryLow)) **`date changed`** from Aug 19, 2026 to Aug 20, 2026
+- 1078199_55_171 (Studio BMR (VeryLow)) **`removed`** (was $1530/12mo)
 
 **August 19, 2026**
 
