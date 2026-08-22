@@ -157,6 +157,7 @@
 | 12.5 | E-317 | 570 sq. ft. | Floor 3 | Oct 03, 2026 | 🟡 Price Changed | $3625/12mo ➔ $3655/12mo | Aug 19, 2026 18:52 PT |
 | 17 | I-102 | 570 sq. ft. | Floor 1 | Oct 19, 2026 | 🟢 Added | Price: $3565/13mo | Aug 19, 2026 18:52 PT |
 | 14.3 | K-101 | 570 sq. ft. | Floor 1 | Oct 01, 2026 | 🟡 Price Changed | $3554/12mo ➔ $3525/13mo | Aug 19, 2026 18:52 PT |
+| 12.6 | E-317 | 570 sq. ft. | Floor 3 | Oct 03, 2026 | 🟡 Price Changed | $3655/12mo ➔ $3625/12mo | Aug 21, 2026 18:50 PT |
 
 ## Plan 1C (2 units available)
 
@@ -572,6 +573,10 @@
 | 2.4 | D-210 | 416 sq. ft. | Floor 2 | Sep 05, 2026 | 🔴 Removed | Was $3211/12mo | Jul 28, 2026 15:17 PT |
 
 ## Latest Updates
+
+**August 21, 2026**
+
+- E-317 (Plan 1B) **`price changed`** from $3655/12mo to $3625/12mo
 
 **August 19, 2026**
 

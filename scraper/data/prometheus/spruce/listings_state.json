@@ -131,6 +131,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "E-317": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
+    "floor": "Floor 3",
+    "available": "Oct 03, 2026",
+    "price": "$3625/12mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "E-204": {
     "plan": "Plan 2B",
     "sqft": "936 sq. ft.",
@@ -149,18 +161,6 @@
     "floor": "Floor 1",
     "available": "Oct 19, 2026",
     "price": "$3565/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
-  "E-317": {
-    "plan": "Plan 1B",
-    "sqft": "570 sq. ft.",
-    "floor": "Floor 3",
-    "available": "Oct 03, 2026",
-    "price": "$3655/12mo",
     "bedrooms": "1",
     "bathrooms": "1",
     "is_bmr": false,
