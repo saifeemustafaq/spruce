@@ -1,4 +1,16 @@
 {
+  "G-103": {
+    "plan": "Plan 1C",
+    "sqft": "572 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Aug 13, 2026",
+    "price": "$3425/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "M-104": {
     "plan": "Plan 2B",
     "sqft": "936 sq. ft.",
