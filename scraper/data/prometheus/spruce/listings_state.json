@@ -154,17 +154,5 @@
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
-  },
-  "I-102": {
-    "plan": "Plan 1B",
-    "sqft": "570 sq. ft.",
-    "floor": "Floor 1",
-    "available": "Oct 19, 2026",
-    "price": "$3565/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
   }
 }
