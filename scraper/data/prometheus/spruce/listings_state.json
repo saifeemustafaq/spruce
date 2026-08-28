@@ -190,17 +190,5 @@
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
-  },
-  "I-208": {
-    "plan": "Plan 2C with Den",
-    "sqft": "1092 sq. ft.",
-    "floor": "Floor 2",
-    "available": "Oct 23, 2026",
-    "price": "$4953/14mo",
-    "bedrooms": "2",
-    "bathrooms": "2",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
   }
 }
