@@ -112,8 +112,13 @@
 | 3.2 | None-4312 | 1386 sq. ft. | Floor 3 | Sep 06, 2026 | 🟡 Price Changed | $5448/13mo ➔ $5448/12mo | Aug 25, 2026 10:16 PT |
 | 5 | None-1312 | 1386 sq. ft. | Floor 3 | Aug 21, 2026 | 🟢 Added | Price: $5448/12mo | Aug 26, 2026 16:35 PT |
 | 5.1 | None-1312 | 1386 sq. ft. | Floor 3 | Aug 21, 2026 | 🔴 Removed | Was $5448/12mo | Aug 27, 2026 06:06 PT |
+| 3.3 | None-4312 | 1386 sq. ft. | Floor 3 | Sep 05, 2026 | 🔵 Date Changed | Sep 06, 2026 ➔ Sep 05, 2026 | Aug 29, 2026 14:18 PT |
 
 ## Latest Updates
+
+**August 29, 2026**
+
+- None-4312 (Plan 3A) **`date changed`** from Sep 06, 2026 to Sep 05, 2026
 
 **August 28, 2026**
 

@@ -23,18 +23,6 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "J-311": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
-    "floor": "Floor 3",
-    "available": "Aug 28, 2026",
-    "price": "$3670/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
   "L-309": {
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
