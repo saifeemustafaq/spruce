@@ -460,6 +460,7 @@
 | 19.15 | L-309 | 676 sq. ft. | Floor 3 | Sep 16, 2026 | 🟡 Price Changed | $3656/13mo ➔ $3705/13mo | Aug 29, 2026 02:05 PT |
 | 26.2 | L-305 | 676 sq. ft. | Floor 3 | Oct 12, 2026 | 🟡 Price Changed | $3695/13mo ➔ $3723/13mo | Aug 29, 2026 10:55 PT |
 | 16.23 | J-311 | 676 sq. ft. | Floor 3 | Aug 28, 2026 | 🔴 Removed | Was $3670/13mo | Aug 29, 2026 14:18 PT |
+| 26.3 | L-305 | 676 sq. ft. | Floor 3 | Oct 12, 2026 | 🟡 Price Changed | $3723/13mo ➔ $3695/13mo | Aug 30, 2026 22:38 PT |
 
 ## Plan 2A (2 units available)
 
@@ -491,6 +492,7 @@
 | 5.1 | N-301 | 858 sq. ft. | Floor 3 | Oct 12, 2026 | 🟡 Price Changed | $4285/13mo ➔ $4318/13mo | Aug 28, 2026 19:27 PT |
 | 4.15 | D-201 | 858 sq. ft. | Floor 2 | Sep 29, 2026 | 🟡 Price Changed | $4120/13mo ➔ $4169/13mo | Aug 29, 2026 02:05 PT |
 | 5.2 | N-301 | 858 sq. ft. | Floor 3 | Oct 12, 2026 | 🟡 Price Changed | $4318/13mo ➔ $4367/13mo | Aug 29, 2026 02:05 PT |
+| 5.3 | N-301 | 858 sq. ft. | Floor 3 | Oct 12, 2026 | 🟡 Price Changed | $4367/13mo ➔ $4334/13mo | Aug 30, 2026 22:38 PT |
 
 ## Plan 2B (3 units available)
 
@@ -574,6 +576,7 @@
 | 14.3 | E-106 | 936 sq. ft. | Floor 1 | Sep 25, 2026 | 🟡 Price Changed | $4483/13mo ➔ $4532/13mo | Aug 29, 2026 02:05 PT |
 | 15.3 | E-204 | 936 sq. ft. | Floor 2 | Oct 14, 2026 | 🟡 Price Changed | $4473/14mo ➔ $4522/14mo | Aug 29, 2026 02:05 PT |
 | 10.20 | M-104 | 936 sq. ft. | Floor 1 | Aug 28, 2026 | 🟡 Price Changed | $4583/13mo ➔ $4582/13mo | Aug 29, 2026 02:05 PT |
+| 15.4 | E-204 | 936 sq. ft. | Floor 2 | Oct 14, 2026 | 🟡 Price Changed | $4522/14mo ➔ $4554/14mo | Aug 30, 2026 22:38 PT |
 
 ## Plan 2C with Den (1 unit available)
 
@@ -616,6 +619,12 @@
 | 2.4 | D-210 | 416 sq. ft. | Floor 2 | Sep 05, 2026 | 🔴 Removed | Was $3211/12mo | Jul 28, 2026 15:17 PT |
 
 ## Latest Updates
+
+**August 30, 2026**
+
+- L-305 (Plan 1D) **`price changed`** from $3723/13mo to $3695/13mo
+- N-301 (Plan 2A) **`price changed`** from $4367/13mo to $4334/13mo
+- E-204 (Plan 2B) **`price changed`** from $4522/14mo to $4554/14mo
 
 **August 29, 2026**
 
