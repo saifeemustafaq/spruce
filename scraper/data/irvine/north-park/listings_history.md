@@ -287,11 +287,6 @@
 | **`1`** | **`1078200_32_369`** | 723 sq. ft. | Floor 2 | Aug 30, 2026 | 🔵 Date Changed | **`Aug 29, 2026 ➔ Aug 30, 2026`** | Aug 30, 2026 10:30 PT |
 | **`3.1`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Aug 30, 2026 | 🔵 Date Changed | **`Aug 29, 2026 ➔ Aug 30, 2026`** | Aug 30, 2026 10:30 PT |
 | **`2`** | **`1078248_41_142`** | 1108 sq. ft. | Floor 1 | Aug 30, 2026 | 🔵 Date Changed | **`Aug 29, 2026 ➔ Aug 30, 2026`** | Aug 30, 2026 10:30 PT |
-
-## BMR (VeryLow) (5 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`2.1`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Aug 31, 2026 | 🔵 Date Changed | **`Aug 30, 2026 ➔ Aug 31, 2026`** | Aug 31, 2026 13:07 PT |
 | **`1`** | **`1078200_32_369`** | 723 sq. ft. | Floor 2 | Aug 31, 2026 | 🔵 Date Changed | **`Aug 30, 2026 ➔ Aug 31, 2026`** | Aug 31, 2026 13:07 PT |
 | **`3.1`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Aug 31, 2026 | 🔵 Date Changed | **`Aug 30, 2026 ➔ Aug 31, 2026`** | Aug 31, 2026 13:07 PT |
