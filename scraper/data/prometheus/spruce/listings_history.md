@@ -580,6 +580,7 @@
 | 14.4 | E-106 | 936 sq. ft. | Floor 1 | Sep 06, 2026 | 🟡 Price Changed | $4532/13mo ➔ $4532/12mo | Aug 31, 2026 22:12 PT |
 | 14.5 | E-106 | 936 sq. ft. | Floor 1 | Sep 25, 2026 | 🟡 Price Changed | $4532/12mo ➔ $4532/13mo | Aug 31, 2026 22:43 PT |
 | 14.6 | E-106 | 936 sq. ft. | Floor 1 | Sep 06, 2026 | 🟡 Price Changed | $4532/13mo ➔ $4532/12mo | Sep 01, 2026 03:30 PT |
+| 15.5 | E-204 | 936 sq. ft. | Floor 2 | Oct 14, 2026 | 🟡 Price Changed | $4554/14mo ➔ $4522/14mo | Sep 01, 2026 11:51 PT |
 
 ## Plan 2C with Den (1 unit available)
 
@@ -626,6 +627,7 @@
 **September 01, 2026**
 
 - E-106 (Plan 2B) **`price changed`** from $4532/13mo to $4532/12mo
+- E-204 (Plan 2B) **`price changed`** from $4554/14mo to $4522/14mo
 
 **August 31, 2026**
 
