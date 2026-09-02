@@ -297,6 +297,23 @@
 | **`3.1`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Sep 01, 2026 | 🔵 Date Changed | **`Aug 31, 2026 ➔ Sep 01, 2026`** | Sep 01, 2026 08:13 PT |
 | **`3`** | **`1078248_41_142`** | 1108 sq. ft. | Floor 1 | Sep 01, 2026 | 🔵 Date Changed | **`Aug 31, 2026 ➔ Sep 01, 2026`** | Sep 01, 2026 08:13 PT |
 
+## BMR (Moderate) (2 units available)
+
+| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
+|---|---|---|---|---|---|---|---|
+| 1 | 1078198_7_132 | 664 sq. ft. | Floor 2 | Oct 04, 2026 | 🔴 Removed | Was $2650/12mo | Sep 02, 2026 11:07 PT |
+| **`2`** | **`1078200_30_251`** | 731 sq. ft. | Floor 1 | Sep 13, 2026 | 🟢 Added | **`Price: $2650/12mo`** | Sep 02, 2026 11:07 PT |
+
+## BMR (VeryLow) (5 units available)
+
+| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
+|---|---|---|---|---|---|---|---|
+| **`2.1`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Sep 02, 2026 | 🔵 Date Changed | **`Sep 01, 2026 ➔ Sep 02, 2026`** | Sep 02, 2026 11:07 PT |
+| 2.2 | 1078198_8_75 | 664 sq. ft. | Floor 1 | Sep 01, 2026 | 🔴 Removed | Was $1774/12mo | Sep 02, 2026 11:07 PT |
+| **`1`** | **`1078200_32_369`** | 723 sq. ft. | Floor 2 | Sep 02, 2026 | 🔵 Date Changed | **`Sep 01, 2026 ➔ Sep 02, 2026`** | Sep 02, 2026 11:07 PT |
+| **`3.1`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Sep 02, 2026 | 🔵 Date Changed | **`Sep 01, 2026 ➔ Sep 02, 2026`** | Sep 02, 2026 11:07 PT |
+| **`2`** | **`1078248_41_142`** | 1108 sq. ft. | Floor 1 | Sep 02, 2026 | 🔵 Date Changed | **`Sep 01, 2026 ➔ Sep 02, 2026`** | Sep 02, 2026 11:07 PT |
+
 ## Studio BMR (0 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
@@ -344,6 +361,16 @@
 | 1 | 1078199_55_171 | 533 sq. ft. | Floor 1 | Aug 19, 2026 | 🔴 Removed | Was $1530/12mo | Aug 20, 2026 07:55 PT |
 
 ## Latest Updates
+
+**September 02, 2026**
+
+- 1078198_7_132 (BMR (Moderate)) **`removed`** (was $2650/12mo)
+- 1078200_30_251 (BMR (Moderate)) **`listed`** at $2650/12mo
+- 1078198_8_327 (BMR (VeryLow)) **`date changed`** from Sep 01, 2026 to Sep 02, 2026
+- 1078198_8_75 (BMR (VeryLow)) **`removed`** (was $1774/12mo)
+- 1078200_32_369 (BMR (VeryLow)) **`date changed`** from Sep 01, 2026 to Sep 02, 2026
+- 1078248_34_159 (BMR (VeryLow)) **`date changed`** from Sep 01, 2026 to Sep 02, 2026
+- 1078248_41_142 (BMR (VeryLow)) **`date changed`** from Sep 01, 2026 to Sep 02, 2026
 
 **September 01, 2026**
 
