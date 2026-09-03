@@ -615,7 +615,7 @@
 | 2 | C-114 | 1274 sq. ft. | Floor 1 | Aug 15, 2026 | 🟢 Added | Price: $5553/13mo | Jun 29, 2026 16:16 PT |
 | 2.1 | C-114 | 1274 sq. ft. | Floor 1 | Aug 15, 2026 | 🔴 Removed | Was $5553/13mo | Jun 29, 2026 18:28 PT |
 
-## Studio A (1 unit available)
+## Studio A (0 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -628,8 +628,13 @@
 | 2.4 | D-210 | 416 sq. ft. | Floor 2 | Sep 05, 2026 | 🔴 Removed | Was $3211/12mo | Jul 28, 2026 15:17 PT |
 | 3 | M-310 | 416 sq. ft. | Floor 3 | Oct 03, 2026 | 🟢 Added | Price: $3291/12mo | Sep 02, 2026 11:07 PT |
 | 3.1 | M-310 | 416 sq. ft. | Floor 3 | Oct 10, 2026 | 🟡 Price Changed | $3291/12mo ➔ $3291/13mo | Sep 02, 2026 17:17 PT |
+| 3.2 | M-310 | 416 sq. ft. | Floor 3 | Oct 10, 2026 | 🔴 Removed | Was $3291/13mo | Sep 03, 2026 04:17 PT |
 
 ## Latest Updates
+
+**September 03, 2026**
+
+- M-310 (Studio A) **`removed`** (was $3291/13mo)
 
 **September 02, 2026**
 
