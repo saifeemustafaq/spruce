@@ -627,6 +627,7 @@
 | 2.3 | D-210 | 416 sq. ft. | Floor 2 | Sep 05, 2026 | 🟡 Price Changed | $3238/12mo ➔ $3211/12mo | Jul 24, 2026 21:29 PT |
 | 2.4 | D-210 | 416 sq. ft. | Floor 2 | Sep 05, 2026 | 🔴 Removed | Was $3211/12mo | Jul 28, 2026 15:17 PT |
 | 3 | M-310 | 416 sq. ft. | Floor 3 | Oct 03, 2026 | 🟢 Added | Price: $3291/12mo | Sep 02, 2026 11:07 PT |
+| 3.1 | M-310 | 416 sq. ft. | Floor 3 | Oct 10, 2026 | 🟡 Price Changed | $3291/12mo ➔ $3291/13mo | Sep 02, 2026 17:17 PT |
 
 ## Latest Updates
 
@@ -635,6 +636,7 @@
 - G-103 (Plan 1C) **`price changed`** from $3424/13mo to $3424/12mo
 - M-104 (Plan 2B) **`price changed`** from $4582/13mo to $4582/12mo
 - M-310 (Studio A) **`listed`** at $3291/12mo
+- M-310 (Studio A) **`price changed`** from $3291/12mo to $3291/13mo
 
 **September 01, 2026**
 
