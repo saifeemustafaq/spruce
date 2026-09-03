@@ -83,6 +83,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "A-314": {
+    "plan": "Plan 2B",
+    "sqft": "936 sq. ft.",
+    "floor": "Floor 3",
+    "available": "Sep 29, 2026",
+    "price": "$4662/13mo",
+    "bedrooms": "2",
+    "bathrooms": "2",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "D-201": {
     "plan": "Plan 2A",
     "sqft": "858 sq. ft.",
