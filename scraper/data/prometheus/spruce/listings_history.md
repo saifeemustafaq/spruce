@@ -469,6 +469,7 @@
 | 17.16 | J-307 | 676 sq. ft. | Floor 3 | Sep 11, 2026 | 🔵 Date Changed | Sep 18, 2026 ➔ Sep 11, 2026 | Sep 04, 2026 18:26 PT |
 | 17.17 | J-307 | 676 sq. ft. | Floor 3 | Sep 18, 2026 | 🔵 Date Changed | Sep 11, 2026 ➔ Sep 18, 2026 | Sep 05, 2026 11:19 PT |
 | 17.18 | J-307 | 676 sq. ft. | Floor 3 | Sep 11, 2026 | 🔵 Date Changed | Sep 18, 2026 ➔ Sep 11, 2026 | Sep 05, 2026 12:33 PT |
+| 17.19 | J-307 | 676 sq. ft. | Floor 3 | Sep 18, 2026 | 🔵 Date Changed | Sep 11, 2026 ➔ Sep 18, 2026 | Sep 05, 2026 14:16 PT |
 
 ## Plan 2A (2 units available)
 
@@ -643,6 +644,7 @@
 - E-317 (Plan 1B) **`removed`** (was $3674/12mo)
 - J-307 (Plan 1D) **`date changed`** from Sep 11, 2026 to Sep 18, 2026
 - J-307 (Plan 1D) **`date changed`** from Sep 18, 2026 to Sep 11, 2026
+- J-307 (Plan 1D) **`date changed`** from Sep 11, 2026 to Sep 18, 2026
 
 **September 04, 2026**
 
