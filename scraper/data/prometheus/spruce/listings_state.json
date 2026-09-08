@@ -167,6 +167,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "K-204": {
+    "plan": "Plan 1C",
+    "sqft": "572 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Oct 22, 2026",
+    "price": "$3381/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "I-102": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
