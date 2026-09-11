@@ -15,7 +15,7 @@
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
     "floor": "Floor 3",
-    "available": "Sep 15, 2026",
+    "available": "Sep 10, 2026",
     "price": "$3722/13mo",
     "bedrooms": "1",
     "bathrooms": "1",
@@ -163,6 +163,18 @@
     "price": "$4545/14mo",
     "bedrooms": "2",
     "bathrooms": "2",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
+  "D-102": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Oct 14, 2026",
+    "price": "$3551/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
