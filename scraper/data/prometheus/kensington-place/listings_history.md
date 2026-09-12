@@ -42,6 +42,7 @@
 | 11.4 | None-3207 | 687 sq. ft. | Floor 2 | Sep 26, 2026 | 🟡 Price Changed | $3617/12mo ➔ $3667/12mo | Aug 25, 2026 16:39 PT |
 | 11.5 | None-3207 | 687 sq. ft. | Floor 2 | Sep 26, 2026 | 🟡 Price Changed | $3667/12mo ➔ $3617/12mo | Aug 25, 2026 17:01 PT |
 | 11.6 | None-3207 | 687 sq. ft. | Floor 2 | Sep 26, 2026 | 🟡 Price Changed | $3617/12mo ➔ $3667/12mo | Aug 25, 2026 18:58 PT |
+| 11.7 | None-3207 | 687 sq. ft. | Floor 2 | Sep 19, 2026 | 🔵 Date Changed | Sep 26, 2026 ➔ Sep 19, 2026 | Sep 12, 2026 15:19 PT |
 
 ## Plan 1B (0 units available)
 
@@ -134,6 +135,10 @@
 | 3.7 | None-4312 | 1386 sq. ft. | Floor 3 | Sep 04, 2026 | 🔵 Date Changed | Sep 05, 2026 ➔ Sep 04, 2026 | Sep 11, 2026 14:44 PT |
 
 ## Latest Updates
+
+**September 12, 2026**
+
+- None-3207 (Plan 1A) **`date changed`** from Sep 26, 2026 to Sep 19, 2026
 
 **September 11, 2026**
 
