@@ -22,7 +22,7 @@
 | 3.6 | J-303 | 546 sq. ft. | Floor 3 | Jul 17, 2026 | 🟡 Price Changed | $3526/13mo ➔ $3543/13mo | Jul 20, 2026 13:41 PT |
 | 3.7 | J-303 | 546 sq. ft. | Floor 3 | Jul 17, 2026 | 🔴 Removed | Was $3543/13mo | Jul 23, 2026 20:45 PT |
 
-## Plan 1B (2 units available)
+## Plan 1B (3 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -170,6 +170,7 @@
 | 19 | D-102 | 570 sq. ft. | Floor 1 | Oct 14, 2026 | 🟢 Added | Price: $3551/13mo | Sep 10, 2026 18:29 PT |
 | 18.3 | I-102 | 570 sq. ft. | Floor 1 | Oct 28, 2026 | 🔴 Removed | Was $3631/13mo | Sep 11, 2026 14:44 PT |
 | 20 | K-101 | 570 sq. ft. | Floor 1 | Oct 01, 2026 | 🟢 Added | Price: $3591/13mo | Sep 13, 2026 12:28 PT |
+| 21 | I-102 | 570 sq. ft. | Floor 1 | Oct 28, 2026 | 🟢 Added | Price: $3631/13mo | Sep 14, 2026 12:23 PT |
 
 ## Plan 1C (4 units available)
 
@@ -487,7 +488,7 @@
 | 19.19 | L-309 | 676 sq. ft. | Floor 3 | Sep 10, 2026 | 🔵 Date Changed | Sep 15, 2026 ➔ Sep 10, 2026 | Sep 10, 2026 18:29 PT |
 | 19.20 | L-309 | 676 sq. ft. | Floor 3 | Sep 10, 2026 | 🔴 Removed | Was $3722/13mo | Sep 13, 2026 10:04 PT |
 
-## Plan 2A (2 units available)
+## Plan 2A (3 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -522,6 +523,7 @@
 | 5.4 | N-301 | 858 sq. ft. | Floor 3 | Oct 12, 2026 | 🟡 Price Changed | $4334/13mo ➔ $4355/13mo | Sep 08, 2026 11:08 PT |
 | 6 | P-302 | 858 sq. ft. | Floor 3 | Oct 30, 2026 | 🟢 Added | Price: $4285/13mo | Sep 09, 2026 13:01 PT |
 | 6.1 | P-302 | 858 sq. ft. | Floor 3 | Oct 30, 2026 | 🔴 Removed | Was $4285/13mo | Sep 11, 2026 14:44 PT |
+| 7 | P-302 | 858 sq. ft. | Floor 3 | Oct 30, 2026 | 🟢 Added | Price: $4285/13mo | Sep 14, 2026 12:23 PT |
 
 ## Plan 2B (3 units available)
 
@@ -664,6 +666,11 @@
 | 3.2 | M-310 | 416 sq. ft. | Floor 3 | Oct 10, 2026 | 🔴 Removed | Was $3291/13mo | Sep 03, 2026 04:17 PT |
 
 ## Latest Updates
+
+**September 14, 2026**
+
+- I-102 (Plan 1B) **`listed`** at $3631/13mo
+- P-302 (Plan 2A) **`listed`** at $4285/13mo
 
 **September 13, 2026**
 

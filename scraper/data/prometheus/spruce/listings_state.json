@@ -190,5 +190,29 @@
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
+  },
+  "I-102": {
+    "plan": "Plan 1B",
+    "sqft": "570 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Oct 28, 2026",
+    "price": "$3631/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
+  "P-302": {
+    "plan": "Plan 2A",
+    "sqft": "858 sq. ft.",
+    "floor": "Floor 3",
+    "available": "Oct 30, 2026",
+    "price": "$4285/13mo",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
   }
 }
