@@ -349,11 +349,6 @@
 | 1.1 | 1078198_7_132 | 664 sq. ft. | Floor 2 | Oct 04, 2026 | 🔴 Removed | Was $2650/12mo | Sep 14, 2026 10:03 PT |
 | **`2.1`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Sep 14, 2026 | 🔵 Date Changed | **`Sep 13, 2026 ➔ Sep 14, 2026`** | Sep 14, 2026 10:03 PT |
 | **`3.1`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Sep 14, 2026 | 🔵 Date Changed | **`Sep 13, 2026 ➔ Sep 14, 2026`** | Sep 14, 2026 10:03 PT |
-
-## BMR (VeryLow) (4 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`2.1`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Sep 15, 2026 | 🔵 Date Changed | **`Sep 14, 2026 ➔ Sep 15, 2026`** | Sep 15, 2026 08:16 PT |
 | **`3.1`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Sep 15, 2026 | 🔵 Date Changed | **`Sep 14, 2026 ➔ Sep 15, 2026`** | Sep 15, 2026 08:16 PT |
 
