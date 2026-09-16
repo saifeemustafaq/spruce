@@ -1,6 +1,6 @@
 # Apartment Listings History
 
-## Plan 1A (0 units available)
+## Plan 1A (1 unit available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -23,8 +23,9 @@
 | 3.7 | J-303 | 546 sq. ft. | Floor 3 | Jul 17, 2026 | 🔴 Removed | Was $3543/13mo | Jul 23, 2026 20:45 PT |
 | 4 | E-315 | 546 sq. ft. | Floor 3 | Oct 30, 2026 | 🟢 Added | Price: $3525/13mo | Sep 15, 2026 14:24 PT |
 | 4.1 | E-315 | 546 sq. ft. | Floor 3 | Oct 30, 2026 | 🔴 Removed | Was $3525/13mo | Sep 15, 2026 17:23 PT |
+| 5 | E-315 | 546 sq. ft. | Floor 3 | Oct 31, 2026 | 🟢 Added | Price: $3525/13mo | Sep 15, 2026 23:03 PT |
 
-## Plan 1B (3 units available)
+## Plan 1B (4 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -173,6 +174,7 @@
 | 18.3 | I-102 | 570 sq. ft. | Floor 1 | Oct 28, 2026 | 🔴 Removed | Was $3631/13mo | Sep 11, 2026 14:44 PT |
 | 20 | K-101 | 570 sq. ft. | Floor 1 | Oct 01, 2026 | 🟢 Added | Price: $3591/13mo | Sep 13, 2026 12:28 PT |
 | 21 | I-102 | 570 sq. ft. | Floor 1 | Oct 28, 2026 | 🟢 Added | Price: $3631/13mo | Sep 14, 2026 12:23 PT |
+| 22 | D-117 | 570 sq. ft. | Floor 1 | Oct 28, 2026 | 🟢 Added | Price: $3476/13mo | Sep 15, 2026 23:03 PT |
 
 ## Plan 1C (4 units available)
 
@@ -491,6 +493,7 @@
 | 19.19 | L-309 | 676 sq. ft. | Floor 3 | Sep 10, 2026 | 🔵 Date Changed | Sep 15, 2026 ➔ Sep 10, 2026 | Sep 10, 2026 18:29 PT |
 | 19.20 | L-309 | 676 sq. ft. | Floor 3 | Sep 10, 2026 | 🔴 Removed | Was $3722/13mo | Sep 13, 2026 10:04 PT |
 | 17.21 | J-307 | 676 sq. ft. | Floor 3 | Sep 14, 2026 | 🔵 Date Changed | Sep 18, 2026 ➔ Sep 14, 2026 | Sep 14, 2026 18:29 PT |
+| 24.5 | G-110 | 676 sq. ft. | Floor 1 | Oct 07, 2026 | 🔵 Date Changed | Oct 01, 2026 ➔ Oct 07, 2026 | Sep 15, 2026 23:03 PT |
 
 ## Plan 2A (3 units available)
 
@@ -675,6 +678,9 @@
 
 - E-315 (Plan 1A) **`listed`** at $3525/13mo
 - E-315 (Plan 1A) **`removed`** (was $3525/13mo)
+- E-315 (Plan 1A) **`listed`** at $3525/13mo
+- D-117 (Plan 1B) **`listed`** at $3476/13mo
+- G-110 (Plan 1D) **`date changed`** from Oct 01, 2026 to Oct 07, 2026
 
 **September 14, 2026**
 
