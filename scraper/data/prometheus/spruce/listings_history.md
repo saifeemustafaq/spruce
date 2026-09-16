@@ -1,6 +1,6 @@
 # Apartment Listings History
 
-## Plan 1A (1 unit available)
+## Plan 1A (0 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -22,6 +22,7 @@
 | 3.6 | J-303 | 546 sq. ft. | Floor 3 | Jul 17, 2026 | 🟡 Price Changed | $3526/13mo ➔ $3543/13mo | Jul 20, 2026 13:41 PT |
 | 3.7 | J-303 | 546 sq. ft. | Floor 3 | Jul 17, 2026 | 🔴 Removed | Was $3543/13mo | Jul 23, 2026 20:45 PT |
 | 4 | E-315 | 546 sq. ft. | Floor 3 | Oct 30, 2026 | 🟢 Added | Price: $3525/13mo | Sep 15, 2026 14:24 PT |
+| 4.1 | E-315 | 546 sq. ft. | Floor 3 | Oct 30, 2026 | 🔴 Removed | Was $3525/13mo | Sep 15, 2026 17:23 PT |
 
 ## Plan 1B (3 units available)
 
@@ -673,6 +674,7 @@
 **September 15, 2026**
 
 - E-315 (Plan 1A) **`listed`** at $3525/13mo
+- E-315 (Plan 1A) **`removed`** (was $3525/13mo)
 
 **September 14, 2026**
 
