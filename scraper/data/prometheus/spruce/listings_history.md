@@ -652,6 +652,7 @@
 | 2.4 | L-308 | 1092 sq. ft. | Floor 3 | Oct 08, 2026 | 🟡 Price Changed | $4997/12mo ➔ $5020/12mo | Sep 08, 2026 11:08 PT |
 | 2.5 | L-308 | 1092 sq. ft. | Floor 3 | Sep 24, 2026 | 🟡 Price Changed | $5020/12mo ➔ $5020/13mo | Sep 17, 2026 16:07 PT |
 | 2.6 | L-308 | 1092 sq. ft. | Floor 3 | Oct 02, 2026 | 🟡 Price Changed | $5020/13mo ➔ $5020/12mo | Sep 18, 2026 12:14 PT |
+| 2.7 | L-308 | 1092 sq. ft. | Floor 3 | Oct 10, 2026 | 🟡 Price Changed | $5020/12mo ➔ $5020/14mo | Sep 18, 2026 15:35 PT |
 
 ## Plan 3A (0 units available)
 
@@ -685,6 +686,7 @@
 - D-117 (Plan 1B) **`date changed`** from Oct 03, 2026 to Oct 02, 2026
 - L-308 (Plan 2C with Den) **`price changed`** from $5020/13mo to $5020/12mo
 - D-117 (Plan 1B) **`removed`** (was $3476/12mo)
+- L-308 (Plan 2C with Den) **`price changed`** from $5020/12mo to $5020/14mo
 
 **September 17, 2026**
 
