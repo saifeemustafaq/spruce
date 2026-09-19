@@ -83,18 +83,6 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "G-110": {
-    "plan": "Plan 1D",
-    "sqft": "676 sq. ft.",
-    "floor": "Floor 1",
-    "available": "Oct 07, 2026",
-    "price": "$3667/13mo",
-    "bedrooms": "1",
-    "bathrooms": "1",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
   "C-213": {
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
@@ -163,6 +151,18 @@
     "price": "$4545/14mo",
     "bedrooms": "2",
     "bathrooms": "2",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
+  "G-110": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Oct 14, 2026",
+    "price": "$3667/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
