@@ -182,6 +182,7 @@
 | 19.1 | D-102 | 570 sq. ft. | Floor 1 | Oct 14, 2026 | 🟡 Price Changed | $3551/13mo ➔ $3568/13mo | Sep 24, 2026 12:11 PT |
 | 21.1 | I-102 | 570 sq. ft. | Floor 1 | Oct 28, 2026 | 🟡 Price Changed | $3631/13mo ➔ $3648/13mo | Sep 24, 2026 12:11 PT |
 | 20.1 | K-101 | 570 sq. ft. | Floor 1 | Oct 01, 2026 | 🟡 Price Changed | $3591/13mo ➔ $3608/13mo | Sep 24, 2026 12:11 PT |
+| 20.2 | K-101 | 570 sq. ft. | Floor 1 | Sep 24, 2026 | 🔵 Date Changed | Oct 01, 2026 ➔ Sep 24, 2026 | Sep 24, 2026 18:32 PT |
 
 ## Plan 1C (4 units available)
 
@@ -261,7 +262,7 @@
 | 14.1 | K-204 | 572 sq. ft. | Floor 2 | Oct 22, 2026 | 🟡 Price Changed | $3381/13mo ➔ $3398/13mo | Sep 24, 2026 12:11 PT |
 | 10.7 | N-214 | 572 sq. ft. | Floor 2 | Sep 19, 2026 | 🟡 Price Changed | $3521/13mo ➔ $3538/13mo | Sep 24, 2026 12:11 PT |
 
-## Plan 1D (7 units available)
+## Plan 1D (6 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -518,6 +519,8 @@
 | 28.1 | O-205 | 676 sq. ft. | Floor 2 | Nov 06, 2026 | 🟡 Price Changed | $3537/13mo ➔ $3554/13mo | Sep 24, 2026 12:11 PT |
 | 29 | J-113 | 676 sq. ft. | Floor 1 | Oct 29, 2026 | 🔴 Removed | Was $2618/13mo | Sep 24, 2026 15:26 PT |
 | **`30`** | **`J-113`** | 676 sq. ft. | Floor 1 | Oct 29, 2026 | 🟢 Added | **`Price: $2618/13mo`** | Sep 24, 2026 17:02 PT |
+| 25.5 | C-213 | 676 sq. ft. | Floor 2 | Oct 11, 2026 | 🔵 Date Changed | Oct 09, 2026 ➔ Oct 11, 2026 | Sep 24, 2026 18:32 PT |
+| 29.1 | J-113 | 676 sq. ft. | Floor 1 | Oct 29, 2026 | 🔴 Removed | Was $2618/13mo | Sep 24, 2026 18:32 PT |
 
 ## Plan 2A (4 units available)
 
@@ -732,6 +735,9 @@
 - L-308 (Plan 2C with Den) **`price changed`** from $5020/14mo to $5043/14mo
 - J-113 (Plan 1D) **`removed`** (was $2618/13mo)
 - J-113 (Plan 1D) **`listed`** at $2618/13mo
+- K-101 (Plan 1B) **`date changed`** from Oct 01, 2026 to Sep 24, 2026
+- C-213 (Plan 1D) **`date changed`** from Oct 09, 2026 to Oct 11, 2026
+- J-113 (Plan 1D) **`removed`** (was $2618/13mo)
 
 **September 23, 2026**
 
