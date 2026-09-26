@@ -26,7 +26,7 @@
 | 5 | E-315 | 546 sq. ft. | Floor 3 | Oct 31, 2026 | 🟢 Added | Price: $3525/13mo | Sep 15, 2026 23:03 PT |
 | 5.1 | E-315 | 546 sq. ft. | Floor 3 | Oct 31, 2026 | 🟡 Price Changed | $3525/13mo ➔ $3542/13mo | Sep 24, 2026 12:11 PT |
 
-## Plan 1B (3 units available)
+## Plan 1B (4 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -183,6 +183,7 @@
 | 21.1 | I-102 | 570 sq. ft. | Floor 1 | Oct 28, 2026 | 🟡 Price Changed | $3631/13mo ➔ $3648/13mo | Sep 24, 2026 12:11 PT |
 | 20.1 | K-101 | 570 sq. ft. | Floor 1 | Oct 01, 2026 | 🟡 Price Changed | $3591/13mo ➔ $3608/13mo | Sep 24, 2026 12:11 PT |
 | 20.2 | K-101 | 570 sq. ft. | Floor 1 | Sep 24, 2026 | 🔵 Date Changed | Oct 01, 2026 ➔ Sep 24, 2026 | Sep 24, 2026 18:32 PT |
+| 23 | P-116 | 570 sq. ft. | Floor 1 | Oct 08, 2026 | 🟢 Added | Price: $3573/13mo | Sep 26, 2026 15:53 PT |
 
 ## Plan 1C (4 units available)
 
@@ -564,7 +565,7 @@
 | 8 | H-102 | 858 sq. ft. | Floor 1 | Oct 31, 2026 | 🟢 Added | Price: $4255/13mo | Sep 21, 2026 16:18 PT |
 | 4.17 | D-201 | 858 sq. ft. | Floor 2 | Sep 23, 2026 | 🔵 Date Changed | Sep 29, 2026 ➔ Sep 23, 2026 | Sep 23, 2026 10:03 PT |
 
-## Plan 2B (3 units available)
+## Plan 2B (2 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -664,6 +665,7 @@
 | 16.3 | A-314 | 936 sq. ft. | Floor 3 | Sep 23, 2026 | 🟡 Price Changed | $4685/13mo ➔ $4708/13mo | Sep 24, 2026 12:11 PT |
 | 14.11 | E-106 | 936 sq. ft. | Floor 1 | Sep 09, 2026 | 🟡 Price Changed | $4578/13mo ➔ $4601/13mo | Sep 24, 2026 12:11 PT |
 | 15.7 | E-204 | 936 sq. ft. | Floor 2 | Oct 14, 2026 | 🟡 Price Changed | $4545/14mo ➔ $4568/14mo | Sep 24, 2026 12:11 PT |
+| 15.8 | E-204 | 936 sq. ft. | Floor 2 | Oct 14, 2026 | 🔴 Removed | Was $4568/14mo | Sep 26, 2026 15:53 PT |
 
 ## Plan 2C with Den (1 unit available)
 
@@ -714,6 +716,11 @@
 | 3.2 | M-310 | 416 sq. ft. | Floor 3 | Oct 10, 2026 | 🔴 Removed | Was $3291/13mo | Sep 03, 2026 04:17 PT |
 
 ## Latest Updates
+
+**September 26, 2026**
+
+- P-116 (Plan 1B) **`listed`** at $3573/13mo
+- E-204 (Plan 2B) **`removed`** (was $4568/14mo)
 
 **September 25, 2026**
 
