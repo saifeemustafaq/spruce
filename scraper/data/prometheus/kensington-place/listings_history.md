@@ -121,6 +121,7 @@
 | 3 | None-4112 | 1055 sq. ft. | Floor 1 | Oct 18, 2026 | 🟢 Added | Price: $4693/12mo | Sep 18, 2026 14:53 PT |
 | 2.1 | None-4113 | 1055 sq. ft. | Floor 1 | Nov 01, 2026 | 🔵 Date Changed | Oct 24, 2026 ➔ Nov 01, 2026 | Sep 22, 2026 15:11 PT |
 | 2.2 | None-4113 | 1055 sq. ft. | Floor 1 | Nov 01, 2026 | 🔴 Removed | Was $4693/12mo | Sep 28, 2026 13:50 PT |
+| 1.4 | None-1113 | 1055 sq. ft. | Floor 1 | Sep 25, 2026 | 🟡 Price Changed | $4728/12mo ➔ $4868/11mo | Sep 29, 2026 12:40 PT |
 
 ## Plan 2C (0 units available)
 
@@ -171,6 +172,10 @@
 | 3.12 | None-4312 | 1386 sq. ft. | Floor 3 | Sep 04, 2026 | 🟡 Price Changed | $5445/12mo ➔ $5585/11mo | Sep 23, 2026 10:29 PT |
 
 ## Latest Updates
+
+**September 29, 2026**
+
+- None-1113 (Plan 2B) **`price changed`** from $4728/12mo to $4868/11mo
 
 **September 28, 2026**
 
