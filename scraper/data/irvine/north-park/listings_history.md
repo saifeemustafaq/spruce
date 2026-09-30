@@ -381,17 +381,7 @@
 | **`3.1`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Sep 27, 2026 | 🔵 Date Changed | **`Sep 26, 2026 ➔ Sep 27, 2026`** | Sep 27, 2026 11:25 PT |
 | **`3.1`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Sep 28, 2026 | 🔵 Date Changed | **`Sep 27, 2026 ➔ Sep 28, 2026`** | Sep 28, 2026 08:30 PT |
 | **`3.1`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Sep 29, 2026 | 🔵 Date Changed | **`Sep 28, 2026 ➔ Sep 29, 2026`** | Sep 29, 2026 08:54 PT |
-
-## BMR (Moderate) (1 unit available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078200_35_9`** | 946 sq. ft. | Floor 1 | Nov 10, 2026 | 🟢 Added | **`Price: $3075/12mo`** | Sep 30, 2026 09:06 PT |
-
-## BMR (VeryLow) (3 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078197_54_323`** | 724 sq. ft. | Floor 3 | Oct 10, 2026 | 🔵 Date Changed | **`Oct 11, 2026 ➔ Oct 10, 2026`** | Sep 30, 2026 09:06 PT |
 | **`3.1`** | **`1078248_34_159`** | 835 sq. ft. | Floor 1 | Sep 30, 2026 | 🔵 Date Changed | **`Sep 29, 2026 ➔ Sep 30, 2026`** | Sep 30, 2026 09:06 PT |
 
