@@ -203,6 +203,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "N-201": {
+    "plan": "Plan 2A",
+    "sqft": "858 sq. ft.",
+    "floor": "Floor 2",
+    "available": "Nov 07, 2026",
+    "price": "$4245/13mo",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "P-116": {
     "plan": "Plan 1B",
     "sqft": "570 sq. ft.",
