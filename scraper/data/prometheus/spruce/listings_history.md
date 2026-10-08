@@ -192,6 +192,7 @@
 | 23.2 | P-116 | 570 sq. ft. | Floor 1 | Nov 07, 2026 | 🔵 Date Changed | Oct 07, 2026 ➔ Nov 07, 2026 | Oct 01, 2026 13:33 PT |
 | 20.3 | K-101 | 570 sq. ft. | Floor 1 | Sep 24, 2026 | 🟡 Price Changed | $3608/13mo ➔ $3608/12mo | Oct 01, 2026 22:40 PT |
 | 23.3 | P-116 | 570 sq. ft. | Floor 1 | Nov 14, 2026 | 🔵 Date Changed | Nov 07, 2026 ➔ Nov 14, 2026 | Oct 08, 2026 15:05 PT |
+| 23.4 | P-116 | 570 sq. ft. | Floor 1 | Nov 07, 2026 | 🔵 Date Changed | Nov 14, 2026 ➔ Nov 07, 2026 | Oct 08, 2026 15:29 PT |
 
 ## Plan 1C (3 units available)
 
@@ -277,6 +278,7 @@
 | 7.19 | A-304 | 572 sq. ft. | Floor 3 | Sep 14, 2026 | 🟡 Price Changed | $3678/13mo ➔ $3678/12mo | Oct 01, 2026 22:40 PT |
 | 10.8 | N-214 | 572 sq. ft. | Floor 2 | Sep 19, 2026 | 🟡 Price Changed | $3538/13mo ➔ $3538/12mo | Oct 01, 2026 22:40 PT |
 | 14.4 | K-204 | 572 sq. ft. | Floor 2 | Nov 08, 2026 | 🔵 Date Changed | Oct 31, 2026 ➔ Nov 08, 2026 | Oct 08, 2026 15:05 PT |
+| 14.5 | K-204 | 572 sq. ft. | Floor 2 | Oct 31, 2026 | 🔵 Date Changed | Nov 08, 2026 ➔ Oct 31, 2026 | Oct 08, 2026 15:29 PT |
 
 ## Plan 1D (5 units available)
 
@@ -598,6 +600,7 @@
 | 10.1 | N-201 | 858 sq. ft. | Floor 2 | Nov 07, 2026 | 🟡 Price Changed | $4245/13mo ➔ $4287/13mo | Oct 07, 2026 14:59 PT |
 | 7.2 | P-302 | 858 sq. ft. | Floor 3 | Oct 30, 2026 | 🟡 Price Changed | $4335/13mo ➔ $4377/13mo | Oct 07, 2026 14:59 PT |
 | 10.2 | N-201 | 858 sq. ft. | Floor 2 | Nov 14, 2026 | 🔵 Date Changed | Nov 07, 2026 ➔ Nov 14, 2026 | Oct 08, 2026 15:05 PT |
+| 10.3 | N-201 | 858 sq. ft. | Floor 2 | Nov 07, 2026 | 🔵 Date Changed | Nov 14, 2026 ➔ Nov 07, 2026 | Oct 08, 2026 15:29 PT |
 
 ## Plan 2B (2 units available)
 
@@ -763,6 +766,9 @@
 - P-116 (Plan 1B) **`date changed`** from Nov 07, 2026 to Nov 14, 2026
 - K-204 (Plan 1C) **`date changed`** from Oct 31, 2026 to Nov 08, 2026
 - N-201 (Plan 2A) **`date changed`** from Nov 07, 2026 to Nov 14, 2026
+- P-116 (Plan 1B) **`date changed`** from Nov 14, 2026 to Nov 07, 2026
+- K-204 (Plan 1C) **`date changed`** from Nov 08, 2026 to Oct 31, 2026
+- N-201 (Plan 2A) **`date changed`** from Nov 14, 2026 to Nov 07, 2026
 
 **October 07, 2026**
 
