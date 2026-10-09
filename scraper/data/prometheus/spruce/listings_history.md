@@ -282,7 +282,7 @@
 | 14.5 | K-204 | 572 sq. ft. | Floor 2 | Oct 31, 2026 | 🔵 Date Changed | Nov 08, 2026 ➔ Oct 31, 2026 | Oct 08, 2026 15:29 PT |
 | 14.6 | K-204 | 572 sq. ft. | Floor 2 | Nov 08, 2026 | 🔵 Date Changed | Oct 31, 2026 ➔ Nov 08, 2026 | Oct 08, 2026 19:11 PT |
 
-## Plan 1D (5 units available)
+## Plan 1D (4 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -553,6 +553,7 @@
 | 26.8 | L-305 | 676 sq. ft. | Floor 3 | Oct 12, 2026 | 🟡 Price Changed | $3779/12mo ➔ $3779/13mo | Oct 05, 2026 20:21 PT |
 | 26.9 | L-305 | 676 sq. ft. | Floor 3 | Oct 05, 2026 | 🟡 Price Changed | $3779/13mo ➔ $3779/12mo | Oct 06, 2026 03:21 PT |
 | 24.8 | G-110 | 676 sq. ft. | Floor 1 | Oct 08, 2026 | 🔵 Date Changed | Oct 14, 2026 ➔ Oct 08, 2026 | Oct 08, 2026 19:11 PT |
+| 28.2 | O-205 | 676 sq. ft. | Floor 2 | Nov 06, 2026 | 🔴 Removed | Was $3554/13mo | Oct 09, 2026 13:58 PT |
 
 ## Plan 2A (4 units available)
 
@@ -606,6 +607,7 @@
 | 10.3 | N-201 | 858 sq. ft. | Floor 2 | Nov 07, 2026 | 🔵 Date Changed | Nov 14, 2026 ➔ Nov 07, 2026 | Oct 08, 2026 15:29 PT |
 | 10.4 | N-201 | 858 sq. ft. | Floor 2 | Nov 14, 2026 | 🔵 Date Changed | Nov 07, 2026 ➔ Nov 14, 2026 | Oct 08, 2026 19:11 PT |
 | 7.3 | P-302 | 858 sq. ft. | Floor 3 | Oct 15, 2026 | 🔵 Date Changed | Oct 30, 2026 ➔ Oct 15, 2026 | Oct 08, 2026 19:11 PT |
+| 7.4 | P-302 | 858 sq. ft. | Floor 3 | Oct 22, 2026 | 🔵 Date Changed | Oct 15, 2026 ➔ Oct 22, 2026 | Oct 09, 2026 13:58 PT |
 
 ## Plan 2B (2 units available)
 
@@ -740,6 +742,7 @@
 | 2.9 | L-308 | 1092 sq. ft. | Floor 3 | Oct 12, 2026 | 🔵 Date Changed | Oct 10, 2026 ➔ Oct 12, 2026 | Oct 06, 2026 14:54 PT |
 | 2.10 | L-308 | 1092 sq. ft. | Floor 3 | Oct 14, 2026 | 🔵 Date Changed | Oct 12, 2026 ➔ Oct 14, 2026 | Oct 09, 2026 09:14 PT |
 | 2.11 | L-308 | 1092 sq. ft. | Floor 3 | Oct 12, 2026 | 🔵 Date Changed | Oct 14, 2026 ➔ Oct 12, 2026 | Oct 09, 2026 09:37 PT |
+| 2.12 | L-308 | 1092 sq. ft. | Floor 3 | Oct 14, 2026 | 🔵 Date Changed | Oct 12, 2026 ➔ Oct 14, 2026 | Oct 09, 2026 13:58 PT |
 
 ## Plan 3A (0 units available)
 
@@ -772,6 +775,9 @@
 
 - L-308 (Plan 2C with Den) **`date changed`** from Oct 12, 2026 to Oct 14, 2026
 - L-308 (Plan 2C with Den) **`date changed`** from Oct 14, 2026 to Oct 12, 2026
+- O-205 (Plan 1D) **`removed`** (was $3554/13mo)
+- P-302 (Plan 2A) **`date changed`** from Oct 15, 2026 to Oct 22, 2026
+- L-308 (Plan 2C with Den) **`date changed`** from Oct 12, 2026 to Oct 14, 2026
 
 **October 08, 2026**
 
