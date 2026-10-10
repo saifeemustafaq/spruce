@@ -194,6 +194,7 @@
 | 23.3 | P-116 | 570 sq. ft. | Floor 1 | Nov 14, 2026 | 🔵 Date Changed | Nov 07, 2026 ➔ Nov 14, 2026 | Oct 08, 2026 15:05 PT |
 | 23.4 | P-116 | 570 sq. ft. | Floor 1 | Nov 07, 2026 | 🔵 Date Changed | Nov 14, 2026 ➔ Nov 07, 2026 | Oct 08, 2026 15:29 PT |
 | 23.5 | P-116 | 570 sq. ft. | Floor 1 | Nov 14, 2026 | 🔵 Date Changed | Nov 07, 2026 ➔ Nov 14, 2026 | Oct 08, 2026 19:11 PT |
+| 19.3 | D-102 | 570 sq. ft. | Floor 1 | Oct 09, 2026 | 🔵 Date Changed | Oct 14, 2026 ➔ Oct 09, 2026 | Oct 09, 2026 18:18 PT |
 
 ## Plan 1C (3 units available)
 
@@ -282,7 +283,7 @@
 | 14.5 | K-204 | 572 sq. ft. | Floor 2 | Oct 31, 2026 | 🔵 Date Changed | Nov 08, 2026 ➔ Oct 31, 2026 | Oct 08, 2026 15:29 PT |
 | 14.6 | K-204 | 572 sq. ft. | Floor 2 | Nov 08, 2026 | 🔵 Date Changed | Oct 31, 2026 ➔ Nov 08, 2026 | Oct 08, 2026 19:11 PT |
 
-## Plan 1D (4 units available)
+## Plan 1D (3 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -554,6 +555,7 @@
 | 26.9 | L-305 | 676 sq. ft. | Floor 3 | Oct 05, 2026 | 🟡 Price Changed | $3779/13mo ➔ $3779/12mo | Oct 06, 2026 03:21 PT |
 | 24.8 | G-110 | 676 sq. ft. | Floor 1 | Oct 08, 2026 | 🔵 Date Changed | Oct 14, 2026 ➔ Oct 08, 2026 | Oct 08, 2026 19:11 PT |
 | 28.2 | O-205 | 676 sq. ft. | Floor 2 | Nov 06, 2026 | 🔴 Removed | Was $3554/13mo | Oct 09, 2026 13:58 PT |
+| 25.7 | C-213 | 676 sq. ft. | Floor 2 | Oct 14, 2026 | 🔴 Removed | Was $3679/13mo | Oct 09, 2026 18:18 PT |
 
 ## Plan 2A (4 units available)
 
@@ -778,6 +780,8 @@
 - O-205 (Plan 1D) **`removed`** (was $3554/13mo)
 - P-302 (Plan 2A) **`date changed`** from Oct 15, 2026 to Oct 22, 2026
 - L-308 (Plan 2C with Den) **`date changed`** from Oct 12, 2026 to Oct 14, 2026
+- D-102 (Plan 1B) **`date changed`** from Oct 14, 2026 to Oct 09, 2026
+- C-213 (Plan 1D) **`removed`** (was $3679/13mo)
 
 **October 08, 2026**
 
