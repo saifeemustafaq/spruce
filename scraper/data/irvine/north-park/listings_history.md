@@ -413,17 +413,7 @@
 | **`1.2`** | **`1078197_57_132`** | 946 sq. ft. | Floor 1 | Oct 11, 2026 | 🔵 Date Changed | **`Oct 10, 2026 ➔ Oct 11, 2026`** | Oct 11, 2026 08:43 PT |
 | **`1`** | **`1078197_54_323`** | 724 sq. ft. | Floor 3 | Oct 11, 2026 | 🔵 Date Changed | **`Oct 10, 2026 ➔ Oct 11, 2026`** | Oct 11, 2026 08:43 PT |
 | **`2.2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Oct 11, 2026 | 🔵 Date Changed | **`Oct 10, 2026 ➔ Oct 11, 2026`** | Oct 11, 2026 08:43 PT |
-
-## BMR (Moderate) (2 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1.2`** | **`1078197_57_132`** | 946 sq. ft. | Floor 1 | Oct 12, 2026 | 🔵 Date Changed | **`Oct 11, 2026 ➔ Oct 12, 2026`** | Oct 12, 2026 09:09 PT |
-
-## BMR (VeryLow) (3 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078197_54_323`** | 724 sq. ft. | Floor 3 | Oct 12, 2026 | 🔵 Date Changed | **`Oct 11, 2026 ➔ Oct 12, 2026`** | Oct 12, 2026 09:09 PT |
 | **`2.2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Oct 12, 2026 | 🔵 Date Changed | **`Oct 11, 2026 ➔ Oct 12, 2026`** | Oct 12, 2026 09:09 PT |
 
