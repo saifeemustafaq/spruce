@@ -751,6 +751,7 @@
 | 2.13 | L-308 | 1092 sq. ft. | Floor 3 | Oct 13, 2026 | 🔵 Date Changed | Oct 14, 2026 ➔ Oct 13, 2026 | Oct 13, 2026 14:16 PT |
 | 2.14 | L-308 | 1092 sq. ft. | Floor 3 | Oct 14, 2026 | 🔵 Date Changed | Oct 13, 2026 ➔ Oct 14, 2026 | Oct 13, 2026 16:26 PT |
 | 2.15 | L-308 | 1092 sq. ft. | Floor 3 | Oct 13, 2026 | 🔵 Date Changed | Oct 14, 2026 ➔ Oct 13, 2026 | Oct 13, 2026 17:22 PT |
+| 2.16 | L-308 | 1092 sq. ft. | Floor 3 | Oct 14, 2026 | 🔵 Date Changed | Oct 13, 2026 ➔ Oct 14, 2026 | Oct 13, 2026 19:10 PT |
 
 ## Plan 3A (0 units available)
 
@@ -784,6 +785,7 @@
 - L-308 (Plan 2C with Den) **`date changed`** from Oct 14, 2026 to Oct 13, 2026
 - L-308 (Plan 2C with Den) **`date changed`** from Oct 13, 2026 to Oct 14, 2026
 - L-308 (Plan 2C with Den) **`date changed`** from Oct 14, 2026 to Oct 13, 2026
+- L-308 (Plan 2C with Den) **`date changed`** from Oct 13, 2026 to Oct 14, 2026
 
 **October 11, 2026**
 
