@@ -562,6 +562,7 @@
 | 32 | J-205 | 676 sq. ft. | Floor 2 | Nov 22, 2026 | 🟢 Added | Price: $3554/13mo | Oct 15, 2026 18:22 PT |
 | 32.1 | J-205 | 676 sq. ft. | Floor 2 | Nov 22, 2026 | 🔴 Removed | Was $3554/13mo | Oct 15, 2026 18:41 PT |
 | 33 | J-205 | 676 sq. ft. | Floor 2 | Nov 22, 2026 | 🟢 Added | Price: $3554/13mo | Oct 15, 2026 23:26 PT |
+| 33.1 | J-205 | 676 sq. ft. | Floor 2 | Nov 30, 2026 | 🔵 Date Changed | Nov 22, 2026 ➔ Nov 30, 2026 | Oct 16, 2026 09:59 PT |
 
 ## Plan 2A (5 units available)
 
@@ -785,6 +786,10 @@
 | 3.2 | M-310 | 416 sq. ft. | Floor 3 | Oct 10, 2026 | 🔴 Removed | Was $3291/13mo | Sep 03, 2026 04:17 PT |
 
 ## Latest Updates
+
+**October 16, 2026**
+
+- J-205 (Plan 1D) **`date changed`** from Nov 22, 2026 to Nov 30, 2026
 
 **October 15, 2026**
 
