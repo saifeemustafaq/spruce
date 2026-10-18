@@ -1,6 +1,6 @@
 # Apartment Listings History
 
-## Plan 1A (1 unit available)
+## Plan 1A (2 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -52,6 +52,7 @@
 | 12.1 | None-2205 | 687 sq. ft. | Floor 2 | Sep 24, 2026 | 🔵 Date Changed | Sep 27, 2026 ➔ Sep 24, 2026 | Sep 24, 2026 12:11 PT |
 | 14.1 | None-4202 | 687 sq. ft. | Floor 2 | Oct 29, 2026 | 🔴 Removed | Was $3733/12mo | Oct 13, 2026 23:10 PT |
 | 13.1 | None-3207 | 687 sq. ft. | Floor 2 | Sep 16, 2026 | 🔴 Removed | Was $3667/12mo | Oct 15, 2026 23:26 PT |
+| 15 | None-4202 | 687 sq. ft. | Floor 2 | Oct 29, 2026 | 🟢 Added | Price: $3733/12mo | Oct 17, 2026 18:33 PT |
 
 ## Plan 1B (0 units available)
 
@@ -182,6 +183,10 @@
 | 3.13 | None-4312 | 1386 sq. ft. | Floor 3 | Sep 04, 2026 | 🟡 Price Changed | $5585/11mo ➔ $5445/12mo | Oct 02, 2026 05:38 PT |
 
 ## Latest Updates
+
+**October 17, 2026**
+
+- None-4202 (Plan 1A) **`listed`** at $3733/12mo
 
 **October 15, 2026**
 
