@@ -263,6 +263,18 @@
     "is_income_limited": false,
     "is_deal": false
   },
+  "O-113": {
+    "plan": "Plan 1D",
+    "sqft": "676 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Nov 29, 2026",
+    "price": "$3564/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
+  },
   "J-205": {
     "plan": "Plan 1D",
     "sqft": "676 sq. ft.",
