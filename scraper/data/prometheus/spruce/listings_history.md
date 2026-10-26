@@ -586,6 +586,7 @@
 | 36 | P-305 | 676 sq. ft. | Floor 3 | Nov 27, 2026 | 🟢 Added | Price: $3718/13mo | Oct 21, 2026 12:21 PT |
 | 36.1 | P-305 | 676 sq. ft. | Floor 3 | Dec 03, 2026 | 🔵 Date Changed | Nov 27, 2026 ➔ Dec 03, 2026 | Oct 21, 2026 16:22 PT |
 | 37 | P-307 | 676 sq. ft. | Floor 3 | Dec 11, 2026 | 🟢 Added | Price: $3678/13mo | Oct 22, 2026 18:02 PT |
+| 31.3 | J-315 | 676 sq. ft. | Floor 3 | Oct 31, 2026 | 🔵 Date Changed | Nov 14, 2026 ➔ Oct 31, 2026 | Oct 26, 2026 13:45 PT |
 
 ## Plan 2A (5 units available)
 
@@ -820,6 +821,10 @@
 | 3.2 | M-310 | 416 sq. ft. | Floor 3 | Oct 10, 2026 | 🔴 Removed | Was $3291/13mo | Sep 03, 2026 04:17 PT |
 
 ## Latest Updates
+
+**October 26, 2026**
+
+- J-315 (Plan 1D) **`date changed`** from Nov 14, 2026 to Oct 31, 2026
 
 **October 25, 2026**
 
