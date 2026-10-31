@@ -800,6 +800,7 @@
 | 2.17 | L-308 | 1092 sq. ft. | Floor 3 | Oct 13, 2026 | 🔵 Date Changed | Oct 14, 2026 ➔ Oct 13, 2026 | Oct 13, 2026 23:10 PT |
 | 4.2 | I-208 | 1092 sq. ft. | Floor 2 | Nov 13, 2026 | 🟡 Price Changed | $4998/14mo ➔ $5048/14mo | Oct 20, 2026 03:26 PT |
 | 4.3 | I-208 | 1092 sq. ft. | Floor 2 | Nov 06, 2026 | 🔵 Date Changed | Nov 13, 2026 ➔ Nov 06, 2026 | Oct 31, 2026 10:45 PT |
+| 4.4 | I-208 | 1092 sq. ft. | Floor 2 | Nov 13, 2026 | 🔵 Date Changed | Nov 06, 2026 ➔ Nov 13, 2026 | Oct 31, 2026 14:37 PT |
 
 ## Plan 3A (0 units available)
 
@@ -832,6 +833,7 @@
 
 - I-208 (Plan 2C with Den) **`date changed`** from Nov 13, 2026 to Nov 06, 2026
 - D-217 (Plan 1B) **`date changed`** from Nov 15, 2026 to Nov 07, 2026
+- I-208 (Plan 2C with Den) **`date changed`** from Nov 06, 2026 to Nov 13, 2026
 
 **October 29, 2026**
 
