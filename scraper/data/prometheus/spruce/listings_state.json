@@ -287,18 +287,6 @@
     "is_income_limited": false,
     "is_deal": false
   },
-  "C-206": {
-    "plan": "Plan 2B",
-    "sqft": "936 sq. ft.",
-    "floor": "Floor 2",
-    "available": "Dec 05, 2026",
-    "price": "$4548/14mo",
-    "bedrooms": "2",
-    "bathrooms": "2",
-    "is_bmr": false,
-    "is_income_limited": false,
-    "is_deal": false
-  },
   "M-316": {
     "plan": "Plan 2A",
     "sqft": "858 sq. ft.",
