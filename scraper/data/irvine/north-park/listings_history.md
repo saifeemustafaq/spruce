@@ -475,6 +475,12 @@
 | **`2.2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Nov 08, 2026 | 🔵 Date Changed | **`Nov 07, 2026 ➔ Nov 08, 2026`** | Nov 08, 2026 11:10 PT |
 | **`2.2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Nov 09, 2026 | 🔵 Date Changed | **`Nov 08, 2026 ➔ Nov 09, 2026`** | Nov 09, 2026 09:31 PT |
 
+## BMR (VeryLow) (3 units available)
+
+| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
+|---|---|---|---|---|---|---|---|
+| **`2.2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Nov 10, 2026 | 🔵 Date Changed | **`Nov 09, 2026 ➔ Nov 10, 2026`** | Nov 10, 2026 09:52 PT |
+
 ## Studio BMR (0 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
@@ -522,6 +528,10 @@
 | 1 | 1078199_55_171 | 533 sq. ft. | Floor 1 | Aug 19, 2026 | 🔴 Removed | Was $1530/12mo | Aug 20, 2026 07:55 PT |
 
 ## Latest Updates
+
+**November 10, 2026**
+
+- 1078198_8_327 (BMR (VeryLow)) **`date changed`** from Nov 09, 2026 to Nov 10, 2026
 
 **November 09, 2026**
 
