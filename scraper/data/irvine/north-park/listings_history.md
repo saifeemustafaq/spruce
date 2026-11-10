@@ -474,11 +474,6 @@
 | **`1`** | **`1078200_38_312`** | 992 sq. ft. | Floor 3 | Jan 09, 2027 | 🟢 Added | **`Price: $1988/12mo`** | Nov 07, 2026 08:29 PT |
 | **`2.2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Nov 08, 2026 | 🔵 Date Changed | **`Nov 07, 2026 ➔ Nov 08, 2026`** | Nov 08, 2026 11:10 PT |
 | **`2.2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Nov 09, 2026 | 🔵 Date Changed | **`Nov 08, 2026 ➔ Nov 09, 2026`** | Nov 09, 2026 09:31 PT |
-
-## BMR (VeryLow) (3 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`2.2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Nov 10, 2026 | 🔵 Date Changed | **`Nov 09, 2026 ➔ Nov 10, 2026`** | Nov 10, 2026 09:52 PT |
 
 ## Studio BMR (0 units available)
