@@ -298,5 +298,17 @@
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
+  },
+  "G-104": {
+    "plan": "Plan 1A",
+    "sqft": "546 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Dec 31, 2026",
+    "price": "$3499/13mo",
+    "bedrooms": "1",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
   }
 }
