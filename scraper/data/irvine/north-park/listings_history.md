@@ -486,17 +486,7 @@
 | **`2.2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Nov 14, 2026 | 🔵 Date Changed | **`Nov 13, 2026 ➔ Nov 14, 2026`** | Nov 14, 2026 10:05 PT |
 | **`1`** | **`1078198_7_328`** | 664 sq. ft. | Floor 1 | Nov 15, 2026 | 🔵 Date Changed | **`Nov 14, 2026 ➔ Nov 15, 2026`** | Nov 15, 2026 09:43 PT |
 | **`2.2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Nov 15, 2026 | 🔵 Date Changed | **`Nov 14, 2026 ➔ Nov 15, 2026`** | Nov 15, 2026 09:43 PT |
-
-## BMR (Moderate) (2 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`1`** | **`1078198_7_328`** | 664 sq. ft. | Floor 1 | Nov 16, 2026 | 🔵 Date Changed | **`Nov 15, 2026 ➔ Nov 16, 2026`** | Nov 16, 2026 14:06 PT |
-
-## BMR (VeryLow) (3 units available)
-
-| # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
-|---|---|---|---|---|---|---|---|
 | **`2.2`** | **`1078198_8_327`** | 664 sq. ft. | Floor 1 | Nov 16, 2026 | 🔵 Date Changed | **`Nov 15, 2026 ➔ Nov 16, 2026`** | Nov 16, 2026 14:06 PT |
 
 ## Studio BMR (0 units available)
