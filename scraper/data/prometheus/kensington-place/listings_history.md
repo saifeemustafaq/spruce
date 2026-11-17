@@ -152,6 +152,8 @@
 | 7.16 | None-3311 | 1087 sq. ft. | Floor 3 | Sep 04, 2026 | 🟡 Price Changed | $4681/12mo ➔ $4630/12mo | Nov 06, 2026 02:56 PT |
 | 8.10 | None-3305 | 1087 sq. ft. | Floor 3 | Oct 22, 2026 | 🔴 Removed | Was $4609/12mo | Nov 11, 2026 20:21 PT |
 | 9.7 | None-2305 | 1087 sq. ft. | Floor 3 | Nov 21, 2026 | 🔴 Removed | Was $4648/12mo | Nov 16, 2026 20:30 PT |
+| 2.20 | None-3306 | 1087 sq. ft. | Floor 3 | Sep 09, 2026 | 🟡 Price Changed | $4610/12mo ➔ $4750/11mo | Nov 17, 2026 06:27 PT |
+| 7.17 | None-3311 | 1087 sq. ft. | Floor 3 | Sep 04, 2026 | 🟡 Price Changed | $4630/12mo ➔ $4770/11mo | Nov 17, 2026 06:27 PT |
 
 ## Plan 2B (2 units available)
 
@@ -194,6 +196,7 @@
 | 5.6 | None-4108 | 1055 sq. ft. | Floor 1 | Nov 15, 2026 | 🔴 Removed | Was $4515/12mo | Nov 02, 2026 17:49 PT |
 | 1.12 | None-1113 | 1055 sq. ft. | Floor 1 | Sep 25, 2026 | 🟡 Price Changed | $4619/12mo ➔ $4568/12mo | Nov 06, 2026 02:56 PT |
 | 1.13 | None-1113 | 1055 sq. ft. | Floor 1 | Sep 25, 2026 | 🔴 Removed | Was $4568/12mo | Nov 16, 2026 03:24 PT |
+| 3.7 | None-4112 | 1055 sq. ft. | Floor 1 | Oct 16, 2026 | 🟡 Price Changed | $4533/12mo ➔ $4673/11mo | Nov 17, 2026 06:27 PT |
 
 ## Plan 2C (2 units available)
 
@@ -262,8 +265,16 @@
 | 3.20 | None-4312 | 1386 sq. ft. | Floor 3 | Sep 04, 2026 | 🟡 Price Changed | $5344/12mo ➔ $5285/12mo | Nov 06, 2026 02:56 PT |
 | 6.15 | None-1312 | 1386 sq. ft. | Floor 3 | Aug 21, 2026 | 🔴 Removed | Was $5285/12mo | Nov 12, 2026 03:16 PT |
 | 7 | None-2309 | 1386 sq. ft. | Floor 3 | Dec 22, 2026 | 🟢 Added | Price: $5434/12mo | Nov 16, 2026 20:30 PT |
+| 3.21 | None-4312 | 1386 sq. ft. | Floor 3 | Sep 04, 2026 | 🟡 Price Changed | $5285/12mo ➔ $5425/11mo | Nov 17, 2026 06:27 PT |
 
 ## Latest Updates
+
+**November 17, 2026**
+
+- None-3306 (Plan 2A) **`price changed`** from $4610/12mo to $4750/11mo
+- None-3311 (Plan 2A) **`price changed`** from $4630/12mo to $4770/11mo
+- None-4112 (Plan 2B) **`price changed`** from $4533/12mo to $4673/11mo
+- None-4312 (Plan 3A) **`price changed`** from $5285/12mo to $5425/11mo
 
 **November 16, 2026**
 
