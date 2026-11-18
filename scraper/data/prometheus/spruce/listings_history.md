@@ -719,6 +719,7 @@
 | 10.8 | N-201 | 858 sq. ft. | Floor 2 | Nov 11, 2026 | 🔵 Date Changed | Nov 14, 2026 ➔ Nov 11, 2026 | Nov 11, 2026 19:01 PT |
 | 12.1 | M-316 | 858 sq. ft. | Floor 3 | Dec 19, 2026 | 🔴 Removed | Was $4337/13mo | Nov 12, 2026 18:09 PT |
 | 8.7 | H-102 | 858 sq. ft. | Floor 1 | Oct 28, 2026 | 🔴 Removed | Was $4352/13mo | Nov 16, 2026 20:30 PT |
+| 11.5 | M-116 | 858 sq. ft. | Floor 1 | Nov 17, 2026 | 🔵 Date Changed | Nov 23, 2026 ➔ Nov 17, 2026 | Nov 17, 2026 20:24 PT |
 
 ## Plan 2B (2 units available)
 
@@ -902,6 +903,10 @@
 | 3.2 | M-310 | 416 sq. ft. | Floor 3 | Oct 10, 2026 | 🔴 Removed | Was $3291/13mo | Sep 03, 2026 04:17 PT |
 
 ## Latest Updates
+
+**November 17, 2026**
+
+- M-116 (Plan 2A) **`date changed`** from Nov 23, 2026 to Nov 17, 2026
 
 **November 16, 2026**
 
