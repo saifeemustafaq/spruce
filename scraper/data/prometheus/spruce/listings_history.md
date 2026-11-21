@@ -28,6 +28,7 @@
 | 5.2 | E-315 | 546 sq. ft. | Floor 3 | Oct 31, 2026 | 🟡 Price Changed | $3542/13mo ➔ $3592/13mo | Sep 29, 2026 01:33 PT |
 | 5.3 | E-315 | 546 sq. ft. | Floor 3 | Oct 31, 2026 | 🔴 Removed | Was $3592/13mo | Oct 11, 2026 13:19 PT |
 | 6 | G-104 | 546 sq. ft. | Floor 1 | Dec 31, 2026 | 🟢 Added | Price: $3499/13mo | Nov 14, 2026 15:25 PT |
+| 6.1 | G-104 | 546 sq. ft. | Floor 1 | Dec 31, 2026 | 🟡 Price Changed | $3499/13mo ➔ $3463/13mo | Nov 20, 2026 16:57 PT |
 
 ## Plan 1B (6 units available)
 
@@ -220,6 +221,12 @@
 | 24.7 | D-217 | 570 sq. ft. | Floor 2 | Nov 10, 2026 | 🔵 Date Changed | Nov 13, 2026 ➔ Nov 10, 2026 | Nov 10, 2026 16:54 PT |
 | 25 | I-117 | 570 sq. ft. | Floor 1 | Dec 22, 2026 | 🟢 Added | Price: $3600/13mo | Nov 11, 2026 19:01 PT |
 | 23.9 | P-116 | 570 sq. ft. | Floor 1 | Nov 11, 2026 | 🔵 Date Changed | Nov 14, 2026 ➔ Nov 11, 2026 | Nov 11, 2026 19:01 PT |
+| 19.7 | D-102 | 570 sq. ft. | Floor 1 | Oct 09, 2026 | 🟡 Price Changed | $3625/13mo ➔ $3589/13mo | Nov 20, 2026 16:57 PT |
+| 24.8 | D-217 | 570 sq. ft. | Floor 2 | Nov 10, 2026 | 🟡 Price Changed | $3495/13mo ➔ $3459/13mo | Nov 20, 2026 16:57 PT |
+| 21.6 | I-102 | 570 sq. ft. | Floor 1 | Oct 21, 2026 | 🟡 Price Changed | $3655/13mo ➔ $3619/13mo | Nov 20, 2026 16:57 PT |
+| 25.1 | I-117 | 570 sq. ft. | Floor 1 | Dec 22, 2026 | 🟡 Price Changed | $3600/13mo ➔ $3564/13mo | Nov 20, 2026 16:57 PT |
+| 20.9 | K-101 | 570 sq. ft. | Floor 1 | Sep 24, 2026 | 🟡 Price Changed | $3600/13mo ➔ $3564/13mo | Nov 20, 2026 16:57 PT |
+| 23.10 | P-116 | 570 sq. ft. | Floor 1 | Nov 11, 2026 | 🟡 Price Changed | $3630/13mo ➔ $3594/13mo | Nov 20, 2026 16:57 PT |
 
 ## Plan 1C (4 units available)
 
@@ -329,6 +336,10 @@
 | 15.7 | O-112 | 572 sq. ft. | Floor 1 | Oct 29, 2026 | 🟡 Price Changed | $3466/13mo ➔ $3465/13mo | Nov 04, 2026 22:50 PT |
 | 7.24 | A-304 | 572 sq. ft. | Floor 3 | Sep 14, 2026 | 🟡 Price Changed | $3694/13mo ➔ $3685/13mo | Nov 06, 2026 02:55 PT |
 | 10.13 | N-214 | 572 sq. ft. | Floor 2 | Sep 19, 2026 | 🟡 Price Changed | $3539/13mo ➔ $3530/13mo | Nov 06, 2026 02:55 PT |
+| 7.25 | A-304 | 572 sq. ft. | Floor 3 | Sep 14, 2026 | 🟡 Price Changed | $3685/13mo ➔ $3649/13mo | Nov 20, 2026 16:57 PT |
+| 14.11 | K-204 | 572 sq. ft. | Floor 2 | Nov 04, 2026 | 🟡 Price Changed | $3440/13mo ➔ $3404/13mo | Nov 20, 2026 16:57 PT |
+| 10.14 | N-214 | 572 sq. ft. | Floor 2 | Sep 19, 2026 | 🟡 Price Changed | $3530/13mo ➔ $3494/13mo | Nov 20, 2026 16:57 PT |
+| 15.8 | O-112 | 572 sq. ft. | Floor 1 | Oct 29, 2026 | 🟡 Price Changed | $3465/13mo ➔ $3429/13mo | Nov 20, 2026 16:57 PT |
 
 ## Plan 1D (6 units available)
 
@@ -640,6 +651,12 @@
 | 38 | C-313 | 676 sq. ft. | Floor 3 | Dec 20, 2026 | 🟢 Added | Price: $3681/13mo | Nov 07, 2026 12:32 PT |
 | 38.1 | C-313 | 676 sq. ft. | Floor 3 | Dec 28, 2026 | 🔵 Date Changed | Dec 20, 2026 ➔ Dec 28, 2026 | Nov 07, 2026 22:44 PT |
 | 24.12 | G-110 | 676 sq. ft. | Floor 1 | Oct 08, 2026 | 🔴 Removed | Was $3691/13mo | Nov 12, 2026 16:27 PT |
+| 34.4 | C-107 | 676 sq. ft. | Floor 1 | Nov 29, 2026 | 🟡 Price Changed | $3696/13mo ➔ $3660/13mo | Nov 20, 2026 16:57 PT |
+| 38.2 | C-313 | 676 sq. ft. | Floor 3 | Dec 28, 2026 | 🟡 Price Changed | $3681/13mo ➔ $3645/13mo | Nov 20, 2026 16:57 PT |
+| 33.5 | J-205 | 676 sq. ft. | Floor 2 | Nov 30, 2026 | 🟡 Price Changed | $3596/13mo ➔ $3560/13mo | Nov 20, 2026 16:57 PT |
+| 31.8 | J-315 | 676 sq. ft. | Floor 3 | Nov 04, 2026 | 🟡 Price Changed | $3696/13mo ➔ $3660/13mo | Nov 20, 2026 16:57 PT |
+| 26.15 | L-305 | 676 sq. ft. | Floor 3 | Oct 05, 2026 | 🟡 Price Changed | $3786/13mo ➔ $3750/13mo | Nov 20, 2026 16:57 PT |
+| 35.4 | O-113 | 676 sq. ft. | Floor 1 | Nov 29, 2026 | 🟡 Price Changed | $3621/13mo ➔ $3585/13mo | Nov 20, 2026 16:57 PT |
 
 ## Plan 2A (4 units available)
 
@@ -903,6 +920,26 @@
 | 3.2 | M-310 | 416 sq. ft. | Floor 3 | Oct 10, 2026 | 🔴 Removed | Was $3291/13mo | Sep 03, 2026 04:17 PT |
 
 ## Latest Updates
+
+**November 20, 2026**
+
+- G-104 (Plan 1A) **`price changed`** from $3499/13mo to $3463/13mo
+- D-102 (Plan 1B) **`price changed`** from $3625/13mo to $3589/13mo
+- D-217 (Plan 1B) **`price changed`** from $3495/13mo to $3459/13mo
+- I-102 (Plan 1B) **`price changed`** from $3655/13mo to $3619/13mo
+- I-117 (Plan 1B) **`price changed`** from $3600/13mo to $3564/13mo
+- K-101 (Plan 1B) **`price changed`** from $3600/13mo to $3564/13mo
+- P-116 (Plan 1B) **`price changed`** from $3630/13mo to $3594/13mo
+- A-304 (Plan 1C) **`price changed`** from $3685/13mo to $3649/13mo
+- K-204 (Plan 1C) **`price changed`** from $3440/13mo to $3404/13mo
+- N-214 (Plan 1C) **`price changed`** from $3530/13mo to $3494/13mo
+- O-112 (Plan 1C) **`price changed`** from $3465/13mo to $3429/13mo
+- C-107 (Plan 1D) **`price changed`** from $3696/13mo to $3660/13mo
+- C-313 (Plan 1D) **`price changed`** from $3681/13mo to $3645/13mo
+- J-205 (Plan 1D) **`price changed`** from $3596/13mo to $3560/13mo
+- J-315 (Plan 1D) **`price changed`** from $3696/13mo to $3660/13mo
+- L-305 (Plan 1D) **`price changed`** from $3786/13mo to $3750/13mo
+- O-113 (Plan 1D) **`price changed`** from $3621/13mo to $3585/13mo
 
 **November 17, 2026**
 
