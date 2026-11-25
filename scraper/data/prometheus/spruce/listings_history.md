@@ -228,7 +228,7 @@
 | 20.9 | K-101 | 570 sq. ft. | Floor 1 | Sep 24, 2026 | 🟡 Price Changed | $3600/13mo ➔ $3564/13mo | Nov 20, 2026 16:57 PT |
 | 23.10 | P-116 | 570 sq. ft. | Floor 1 | Nov 11, 2026 | 🟡 Price Changed | $3630/13mo ➔ $3594/13mo | Nov 20, 2026 16:57 PT |
 
-## Plan 1C (5 units available)
+## Plan 1C (4 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -341,6 +341,7 @@
 | 10.14 | N-214 | 572 sq. ft. | Floor 2 | Sep 19, 2026 | 🟡 Price Changed | $3530/13mo ➔ $3494/13mo | Nov 20, 2026 16:57 PT |
 | 15.8 | O-112 | 572 sq. ft. | Floor 1 | Oct 29, 2026 | 🟡 Price Changed | $3465/13mo ➔ $3429/13mo | Nov 20, 2026 16:57 PT |
 | 16 | L-314 | 572 sq. ft. | Floor 3 | Jan 19, 2027 | 🟢 Added | Price: $3454/13mo | Nov 23, 2026 16:53 PT |
+| 10.15 | N-214 | 572 sq. ft. | Floor 2 | Sep 19, 2026 | 🔴 Removed | Was $3494/13mo | Nov 25, 2026 15:38 PT |
 
 ## Plan 1D (5 units available)
 
@@ -860,7 +861,7 @@
 | 17.3 | C-206 | 936 sq. ft. | Floor 2 | Dec 05, 2026 | 🔴 Removed | Was $4548/14mo | Nov 09, 2026 04:10 PT |
 | 18 | N-304 | 936 sq. ft. | Floor 3 | Jan 08, 2027 | 🟢 Added | Price: $4693/14mo | Nov 21, 2026 14:26 PT |
 
-## Plan 2C with Den (2 units available)
+## Plan 2C with Den (3 units available)
 
 | # | Unit | Sq.Ft. | Floor | Available | Event | Details | Date |
 |---|---|---|---|---|---|---|---|
@@ -899,6 +900,7 @@
 | 4.5 | I-208 | 1092 sq. ft. | Floor 2 | Nov 13, 2026 | 🟡 Price Changed | $5048/14mo ➔ $5053/14mo | Nov 03, 2026 02:07 PT |
 | 2.18 | L-308 | 1092 sq. ft. | Floor 3 | Oct 13, 2026 | 🟡 Price Changed | $5043/14mo ➔ $5033/14mo | Nov 03, 2026 02:07 PT |
 | 4.6 | I-208 | 1092 sq. ft. | Floor 2 | Nov 10, 2026 | 🔵 Date Changed | Nov 13, 2026 ➔ Nov 10, 2026 | Nov 10, 2026 16:54 PT |
+| 5 | P-210 | 1092 sq. ft. | Floor 2 | Jan 11, 2027 | 🟢 Added | Price: $4983/14mo | Nov 25, 2026 15:38 PT |
 
 ## Plan 3A (0 units available)
 
@@ -926,6 +928,11 @@
 | 3.2 | M-310 | 416 sq. ft. | Floor 3 | Oct 10, 2026 | 🔴 Removed | Was $3291/13mo | Sep 03, 2026 04:17 PT |
 
 ## Latest Updates
+
+**November 25, 2026**
+
+- N-214 (Plan 1C) **`removed`** (was $3494/13mo)
+- P-210 (Plan 2C with Den) **`listed`** at $4983/14mo
 
 **November 24, 2026**
 
