@@ -662,6 +662,7 @@
 | 38.3 | C-313 | 676 sq. ft. | Floor 3 | Dec 28, 2026 | 🔴 Removed | Was $3645/13mo | Nov 21, 2026 15:19 PT |
 | 34.5 | C-107 | 676 sq. ft. | Floor 1 | Nov 24, 2026 | 🔵 Date Changed | Nov 29, 2026 ➔ Nov 24, 2026 | Nov 24, 2026 20:15 PT |
 | 35.5 | O-113 | 676 sq. ft. | Floor 1 | Nov 24, 2026 | 🔵 Date Changed | Nov 29, 2026 ➔ Nov 24, 2026 | Nov 24, 2026 20:15 PT |
+| 33.6 | J-205 | 676 sq. ft. | Floor 2 | Nov 25, 2026 | 🔵 Date Changed | Nov 30, 2026 ➔ Nov 25, 2026 | Nov 25, 2026 19:11 PT |
 
 ## Plan 2A (3 units available)
 
@@ -933,6 +934,7 @@
 
 - N-214 (Plan 1C) **`removed`** (was $3494/13mo)
 - P-210 (Plan 2C with Den) **`listed`** at $4983/14mo
+- J-205 (Plan 1D) **`date changed`** from Nov 30, 2026 to Nov 25, 2026
 
 **November 24, 2026**
 
