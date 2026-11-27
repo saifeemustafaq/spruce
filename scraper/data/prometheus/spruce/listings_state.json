@@ -298,5 +298,17 @@
     "is_bmr": false,
     "is_income_limited": false,
     "is_deal": false
+  },
+  "A-108": {
+    "plan": "Studio A",
+    "sqft": "416 sq. ft.",
+    "floor": "Floor 1",
+    "available": "Jan 22, 2027",
+    "price": "$3281/13mo",
+    "bedrooms": "0",
+    "bathrooms": "1",
+    "is_bmr": false,
+    "is_income_limited": false,
+    "is_deal": false
   }
 }
